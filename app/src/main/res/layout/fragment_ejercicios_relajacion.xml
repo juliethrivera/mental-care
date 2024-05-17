@@ -55,7 +55,7 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/local_florist_"
+                android:src="@drawable/local_florist_48dp_fill0_wght400_grad0_opsz48"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -164,7 +164,7 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:src="@drawable/pulmonology_fill0"
+                android:src="@drawable/pulmonology_"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -189,7 +189,7 @@
                 android:layout_marginBottom="16dp"
                 android:lines="2"
                 android:singleLine="false"
-                android:text="  Es una practica que sirve para reducir el estres y promover la relajacion."
+                android:text="Es una practica que sirve para reducir el estres y promover la relajacion."
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imagenRespiracionProfunda"
