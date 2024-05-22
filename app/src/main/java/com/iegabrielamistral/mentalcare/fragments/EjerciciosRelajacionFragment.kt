@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.content.Intent
 import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -65,22 +66,27 @@ class EjerciciosRelajacionFragment : Fragment() {
 
 
 
+
+
+
         anterior.setOnClickListener{
             activity?.onBackPressedDispatcher?.onBackPressed()
         }
 
 
-        yoga.setOnClickListener{
+        cardYoga.setOnClickListener{
 
         }
 
-        meditacion.setOnClickListener{
+        cardMeditacion.setOnClickListener{
 
         }
 
-        ejerciciosDeRelajacion.setOnClickListener{
+        cardRespiracionProfunda.setOnClickListener{
 
         }
+
+
 
 
     }

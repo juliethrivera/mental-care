@@ -25,69 +25,71 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Primer ejercicio"
+        android:text="Ejercicio #1"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/tiempo"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        />
-
-    <TextView
-        android:id="@+id/textView"
+    <FrameLayout
+        android:id="@+id/contador"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="570dp"
-        android:text="10:00"
-        android:textSize="9dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
+        app:layout_constraintTop_toBottomOf="@id/titulo">
+
+        <TextView
+            android:id="@+id/texto_contador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="10:00"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/tiempo"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardEjercicio"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/nombreEjercicio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo">
+        app:layout_constraintTop_toBottomOf="@id/contador">
 
-        <ImageView
+        <pl.droidsonroids.gif.GifImageView
             android:id="@+id/imageView"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="190dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/self_improvement" />
+            android:src="@drawable/postura_del_nino" />
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/nombreEjercicio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="170dp"
+        android:layout_marginTop="32dp"
         android:text="POSTURA DE LA MONTAÑA"
+        android:textColor="@color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anterior"
-        app:layout_constraintVertical_bias="0.638" />
+        app:layout_constraintTop_toBottomOf="@id/cardEjercicio" />
 
     <TextView
         android:id="@+id/decripcion"
@@ -98,11 +100,28 @@
         android:layout_marginEnd="32dp"
         android:text="Nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo"
         android:textAlignment="textStart"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreEjercicio" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreEjercicio"
+        android:justificationMode="inter_word"
+        />
+
+    <Button
+        android:id="@+id/siguienteEjercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#AADEE4"
+        android:text="Siguiente ejercicio"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decripcion" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
