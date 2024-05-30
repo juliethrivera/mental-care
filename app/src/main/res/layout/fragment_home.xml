@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_secondary"
+    android:background="@color/design_default_color_surface"
     tools:context=".fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -22,7 +22,7 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="30dp"
         android:text="¿ Como te sientes hoy ?"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,53 +30,103 @@
         app:layout_constraintTop_toBottomOf="@id/Mental" />
 
     <ImageView
-        android:id="@+id/horrible"
+        android:id="@+id/Horrible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/horrible"
+        app:layout_constraintEnd_toStartOf="@id/Mal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text" />
 
     <TextView
-        android:id="@+id/Horrible"
+        android:id="@+id/horrible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
         android:text="Horrible"
-        android:textSize="12dp"
+        app:layout_constraintEnd_toStartOf="@id/mal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horrible" />
+        app:layout_constraintTop_toBottomOf="@id/Horrible" />
 
     <ImageView
         android:id="@+id/Mal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/mal"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Aburrido"
+        app:layout_constraintStart_toEndOf="@id/Horrible"
         app:layout_constraintTop_toBottomOf="@id/text" />
 
     <TextView
         android:id="@+id/mal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="13dp"
         android:text="Mal"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/Aburrido"
+        app:layout_constraintStart_toEndOf="@id/horrible"
         app:layout_constraintTop_toBottomOf="@id/Mal" />
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnvView"
-        android:layout_width="match_parent"
+
+    <ImageView
+        android:id="@+id/Aburrido"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/aburrido"
+        app:layout_constraintEnd_toStartOf="@id/Bien"
+        app:layout_constraintStart_toEndOf="@id/Mal"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/aburrido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:text="Aburrido"
+        app:layout_constraintEnd_toStartOf="@id/bien"
+        app:layout_constraintStart_toEndOf="@id/mal"
+        app:layout_constraintTop_toBottomOf="@id/Aburrido" />
+
+    <ImageView
+        android:id="@+id/Bien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/bien"
+        app:layout_constraintEnd_toStartOf="@id/Excelente"
+        app:layout_constraintStart_toEndOf="@id/Aburrido"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/bien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Bien"
+        app:layout_constraintEnd_toStartOf="@id/excelente"
+        app:layout_constraintStart_toEndOf="@id/aburrido"
+        app:layout_constraintTop_toBottomOf="@id/Bien" />
+
+    <ImageView
+        android:id="@+id/Excelente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/excelente"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navi" />
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <TextView
+        android:id="@+id/excelente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:text="Excelente"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/Excelente" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

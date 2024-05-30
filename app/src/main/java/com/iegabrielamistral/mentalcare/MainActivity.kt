@@ -8,7 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
-import com.iegabrielamistral.mentalcare.fragments.PerfilUsuarioFragment
+import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
 import com.iegabrielamistral.mentalcare.fragments.RelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.TestFragment
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.perfil_usuario ->{
-                    loadFragment(PerfilUsuarioFragment())
+                    loadFragment(PerfilFragment())
                     true
                 }
                 else ->{
