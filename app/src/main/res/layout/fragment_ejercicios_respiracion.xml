@@ -14,7 +14,7 @@
         android:layout_marginEnd="68dp"
         android:text="Ejercicios de respiracion profunda "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
     <ImageView
@@ -22,9 +22,9 @@
         android:layout_width="307dp"
         android:layout_height="198dp"
         android:src="@drawable/recurso_2"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="115dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="196dp" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -33,24 +33,24 @@
         android:src="@drawable/recurso_2"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="439dp" />
+        tools:layout_editor_absoluteY="457dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Empezar "
+        android:text="@string/empezar"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="151dp" />
+        tools:layout_editor_absoluteX="153dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="42dp"
-        android:layout_height="48dp"
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="58dp"
+        android:layout_height="41dp"
         android:src="@drawable/arrow_back_24dp_fill0_wght400_grad0_opsz24"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="19dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
