@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ProgressBar
+import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import com.iegabrielamistral.mentalcare.R
@@ -21,7 +22,12 @@ class TestMentalBlankFragment : Fragment() {
     private lateinit var cantidadPreguntas : TextView
     private lateinit var pregunta : TextView
     private lateinit var opciones : RadioGroup
-    private lateinit var siguientePregunta : Button
+    private lateinit var opcion_1 : RadioButton
+    private lateinit var opcion_2 : RadioButton
+    private lateinit var opcion_3 : RadioButton
+    private lateinit var opcion_4 : RadioButton
+    private lateinit var opcion_5 : RadioButton
+    private lateinit var siguiente : Button
 
     var question : Int = 0
 
@@ -52,20 +58,25 @@ class TestMentalBlankFragment : Fragment() {
         cantidadPreguntas = view.findViewById(R.id.cantidadPreguntas)
         pregunta = view.findViewById(R.id.pregunta)
         opciones = view.findViewById(R.id.opciones)
-        siguientePregunta = view.findViewById(R.id.Siguiente)
+        opcion_1 = view.findViewById(R.id.opcion_1)
+        opcion_2 = view.findViewById(R.id.opcion_2)
+        opcion_3= view.findViewById(R.id.opcion_3)
+        opcion_4= view.findViewById(R.id.opcion_4)
+        opcion_5= view.findViewById(R.id.opcion_5)
+        siguiente= view.findViewById(R.id.Siguiente)
 
 
         val jsonString = readJsonFromRaw(requireContext(), R.raw.preguntas)
 
         val gson = Gson()
 
-        val test : Test = gson.fromJson(jsonString, object : TypeToken<Test>(){}.type)
+        val test: Test = gson.fromJson(jsonString, object : TypeToken<Test>(){}.type)
 
         cargarPreguntas(test)
 
 
 
-        siguientePregunta.setOnClickListener {
+        siguiente.setOnClickListener {
             question++
             if (question <= 20){
                 obtenerSeleccion()
@@ -83,9 +94,32 @@ class TestMentalBlankFragment : Fragment() {
 
     fun obtenerSeleccion() {
 
-        when(respuestas.checke)
+        when(opciones.checkedRadioButtonId){
+            opcion_1.id ->{
+                selecciones[0] += 1
+            }
+            opcion_2.id ->{
+                selecciones[1] += 1
+            }
+            opcion_3.id ->{
+                selecciones[2] += 1
+            }
+            opcion_4.id ->{
+                selecciones[3] += 1
+            }
+            opcion_5.id ->{
+                selecciones[4] += 1
+            }
+        }
 
 
+    }
+
+    fun cargarPregunta(testMental : TestMental){
+
+        opciones.clearCheck()
+
+        pregunta.text =
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
