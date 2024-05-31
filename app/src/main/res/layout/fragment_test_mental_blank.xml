@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        android:src="@drawable/arrow_back_"
+        android:src="@drawable/keyboard"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,6 +36,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/testMental" />
@@ -45,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:text="1/20"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/pregunta"
@@ -56,9 +58,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="Te sientes abrumado/a por las actividades de tu vida diaria?"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="1. Te sientes abrumad@ por las actividades de tu vida diaria?"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cantidadPreguntas" />
 
@@ -71,44 +75,46 @@
         app:layout_constraintTop_toBottomOf="@id/pregunta">
 
         <RadioButton
-            android:id="@+id/opcion1"
+            android:id="@+id/opcion_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nunca" />
 
         <RadioButton
-            android:id="@+id/opcion2"
+            android:id="@+id/opcion_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Raramente" />
 
         <RadioButton
-            android:id="@+id/opcion3"
+            android:id="@+id/opcion_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="A veces" />
 
         <RadioButton
-            android:id="@+id/opcion4"
+            android:id="@+id/opcion_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Frecuentemente" />
 
         <RadioButton
-            android:id="@+id/opcion5"
+            android:id="@+id/opcion_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Siempre" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/siguientePregunta"
+        android:id="@+id/Siguiente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="400dp"
-        android:backgroundTint="#000000"
-        android:text="Siguiente Pregunta"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#AADEE4#"
+        android:text="Siguiente "
+        android:textColor="@color/white"
+        android:textColorHint="#F6F0F0"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

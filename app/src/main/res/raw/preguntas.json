@@ -1,0 +1,194 @@
+{
+    "preguntas" : [
+        {
+            "pregunta" : "1. Te sientes arbumado/a por las actividades de tu vida diaria?",
+            "categoria":"Estres",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "2. Que tanto afecto tu capacidad para concentrarte en tus tareas o actividades del colegio?",
+            "categoria": "Estres",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+
+
+        },
+        {
+            "pregunta" : "3. Has notado cambios en tu apetito o en tu peso corporal?",
+            "categoria": "Estres",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "4. Te cuesta relacionarte con otras personas?",
+            "categoria": "Estres",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "5. Experimentas con mucha frecuencia la preocupacion intensa o nerviosismo?",
+            "categoria": "Ansiedad",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "6. Sientes que la tension o la inquietud afectan tu capacidad para enfrentar situaciones cotidianas?",
+            "categoria": "Ansiedad",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        },
+        {
+            "pregunta" : "7. Experimentas con mucha frecuencua sintomas fisicos como palpitaciones, sudoracion excesivo o dificultad para respirar?",
+            "categoria": "Ansiedad",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "8. Sientes mucha tension en lugares con demasiadas personas?",
+            "categoria": "Ansiedad",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "9. Con que frecuencia te sientes triste o desanimado sin nunguna razon?",
+            "categoria": "Depresion",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "10. Con que frecuencia experimentas falta de interes o placer en actividades que antes disfrutabaas?",
+            "categoria": "Depresion",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "11. Sientes que la falta de energia o fatiga afecta tu capacidad para realizar tus actividades diarias?",
+            "categoria": "Depresion",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        },
+        {
+            "pregunta" : "12. Crees que la trsiteza y desesperanza estan afectando tu bienestar emocional?",
+            "categoria": "Depresion",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "13. Con que frecuencia experiemntas cambiis repentinos en tu estado de animo?",
+            "categoria": "Cambios de humor ",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "14. Sientes que los cambios en tu estado de animo afectan tus relaciones personales o tu vida cotidiana?",
+            "categoria": "Cambios de humor ",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        },
+        {
+            "pregunta" : "15. Tus cambios de humor son leves hasta el punto de volverse intensios?",
+            "categoria": "Cambios de humor ",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "16. Crees que tu estado de animo este afectando en tu bienestar emocional? ",
+            "categoria": "Cambios de humor ",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        },
+        {
+            "pregunta" : "17. Con que frecuencia te sientes satisfecho/a contigo mismo/a?",
+            "categoria": "Autoestima",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "18. Con que frecuencia te comparas con los demas de una manera negativa o te sientes inferior?",
+            "categoria": "Autoestima",
+            "opcion1": "Nunca",
+            "opcion2": "Raramente",
+            "opcion3": "A veces",
+            "opcion4": "Frecuentemente",
+            "opcion5": "Siempre"
+        },
+        {
+            "pregunta" : "19. Sientes que la falta de confianza en ti mismo afecta tus desiciones y acciones diarias?",
+            "categoria": "Autoestima",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        },
+        {
+            "pregunta" : "20. Sientes que las criticas de los demas afectan en tu percepcion de ti mismo/a?",
+            "categoria": "Autoestima",
+            "opcion1": "Muy poco",
+            "opcion2": "Poco",
+            "opcion3": "Moderamente",
+            "opcion4": "Bastante",
+            "opcion5": "Mucho"
+        }
+    
+    
+        
+    ]
+
+}
+
+
+
+

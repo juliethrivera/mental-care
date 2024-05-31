@@ -23,6 +23,10 @@ class TestMentalBlankFragment : Fragment() {
     private lateinit var opciones : RadioGroup
     private lateinit var siguientePregunta : Button
 
+    var question : Int = 0
+
+    val selecciones = mutableListOf(0,0,0,0)
+
     companion object {
         fun newInstance() = TestMentalBlankFragment()
     }
@@ -48,16 +52,56 @@ class TestMentalBlankFragment : Fragment() {
         cantidadPreguntas = view.findViewById(R.id.cantidadPreguntas)
         pregunta = view.findViewById(R.id.pregunta)
         opciones = view.findViewById(R.id.opciones)
-        siguientePregunta = view.findViewById(R.id.siguientePregunta)
+        siguientePregunta = view.findViewById(R.id.Siguiente)
+
+
+        val jsonString = readJsonFromRaw(requireContext(), R.raw.preguntas)
+
+        val gson = Gson()
+
+        val test : Test = gson.fromJson(jsonString, object : TypeToken<Test>(){}.type)
+
+        cargarPreguntas(test)
+
+
+
+        siguientePregunta.setOnClickListener {
+            question++
+            if (question <= 20){
+                obtenerSeleccion()
+                cargarPregunta(test)
+            }else{
+
+            }
+        }
+
+
 
     }
 
+
+
+    fun obtenerSeleccion() {
+
+        when(respuestas.checke)
+
+
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         return inflater.inflate(R.layout.fragment_test_mental_blank, container, false)
     }
+
+    fun actualizarProgreso(porcentaje : Int){
+        progreso.progress = porcentaje
+        if(porcentaje >= 100){
+
+        }
+    }
+
+
 
 
 }
