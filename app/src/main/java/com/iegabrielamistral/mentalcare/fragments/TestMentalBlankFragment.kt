@@ -119,7 +119,13 @@ class TestMentalBlankFragment : Fragment() {
 
         opciones.clearCheck()
 
-        pregunta.text =
+        pregunta.text = testMental.preguntas[question].pregunta
+        opcion_1.text = testMental.preguntas[question].pregunta
+        opcion_2.text = testMental.preguntas[question].pregunta
+        opcion_3.text = testMental.preguntas[question].pregunta
+        opcion_4.text = testMental.preguntas[question].pregunta
+        opcion_5.text = testMental.preguntas[question].pregunta
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
