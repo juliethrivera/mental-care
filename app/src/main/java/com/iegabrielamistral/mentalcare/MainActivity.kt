@@ -1,12 +1,16 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 package com.iegabrielamistral.mentalcare
 
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.ViewCompat.*
 import androidx.core.view.WindowInsetsCompat
+import com.iegabrielamistral.mentalcare.fragments.EjerciciosRespiracionFragment
 
 class MainActivity : AppCompatActivity()
     fun onCreate(savedInstanceState: Bundle?) {
@@ -24,13 +28,15 @@ fun findViewById(main: Int): View {
     TODO("Not yet implemented")
 }
 
-fun setContentView(activityMain: Int) {
+
+fun setContentView(: Int) {
     TODO("Not yet implemented")
 }
 
 fun enableEdgeToEdge() {
     TODO("Not yet implemented")
 }
+
 
 
 
