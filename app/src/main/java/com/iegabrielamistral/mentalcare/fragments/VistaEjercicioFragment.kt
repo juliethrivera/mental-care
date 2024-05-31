@@ -63,6 +63,7 @@ class VistaEjercicioFragment : Fragment() {
 
         }
 
+
         val jsonString = readJsonFromRaw(requireContext(), R.raw.yoga)
         var jsonObject = JSONObject(jsonString)
 
@@ -90,7 +91,12 @@ class VistaEjercicioFragment : Fragment() {
         nombreEjercicio.text = ejercicio.nombre
         descripcion.text = ejercicio.descripcion
         imagenEjercicio.setImageResource(obtenerImagen(ejercicio.animacion))
+        texto_contador.text = convertirTiempo(ejercicio.tiempo)
+    }
 
+    fun convertirTiempo(tiempo: Int): String{
+        val minutos = tiempo / 60
+        return "$minutos:00"
     }
 
     fun obtenerImagen(nombreArchivo: String): Int {

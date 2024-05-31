@@ -3,49 +3,49 @@
     {
       "nombre": "POSTURA DE LA MONTAÑA",
       "tiempo": 600,
-      "descripcion": "nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo",
+      "descripcion": "Nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo.",
       "animacion": "postura_montana"
     },
     {
       "nombre": "HIGH LUNGE",
       "tiempo": 1200,
-      "descripcion": "mejora el sistema circulatorio, fortalece y tonifica las piernas y toda la parte inferior del cuerpo",
+      "descripcion": "Mejora el sistema circulatorio, fortalece y tonifica las piernas y toda la parte inferior del cuerpo.",
       "animacion": "postura_high_lunge"
     },
     {
       "nombre": "UTTANASANA",
       "tiempo": 1200,
-      "descripcion": "favorece la elasticidad de los musculos posteriores del cuerpo, lo que te ayuda a ir ganando flexibilidad y aliviar problemas de espalda debido a las malas posturas ",
+      "descripcion": "Favorece la elasticidad de los musculos posteriores del cuerpo, lo que te ayuda a ir ganando flexibilidad y aliviar problemas de espalda debido a las malas posturas.",
       "animacion": "postura_uttanasana"
     },
     {
       "nombre": "PLANCHA LATERAL",
       "tiempo": 60,
-      "descripcion": "fortalece el abdomen, especificamente la zona de los oblicuos",
+      "descripcion": "Fortalece el abdomen, especificamente la zona de los oblicuos.",
       "animacion": "postura_plancha_lateral"
     },
     {
       "nombre": "POSTURA DEL PERRO HACIA ARRIBA",
       "tiempo":60,
-      "descripcion": "fortalece los musculos de la espalda, abdomen y piernas.fortalece tobillos y muñecas.estira isquiotibiales y gemelos.estimula el sistema nervioso",
+      "descripcion": "Fortalece los musculos de la espalda, abdomen y piernas.Fortalece tobillos y muñecas,estira isquiotibiales y gemelos.Estimula el sistema nervioso.",
       "animacion": "postura_perro_hacia_arriba"
     },
     {
       "nombre": "POSTURA DEL PERRO HACIA ABAJO",
       "tiempo": 60,
-      "descripcion": "estira,fortalece,alarga la rotacion interna de los flexores de la cadera junto con la extension hacia adelante de la columna,fortalece la pelvis y la espalda baja",
+      "descripcion": "Estira,fortalece,alarga la rotacion interna de los flexores de la cadera junto con la extension hacia adelante de la columna,fortalece la pelvis y la espalda baja.",
       "animacion": "postura_perro_hacia_abajo"
     },
     {
       "nombre": "POSTURA DEL GATO Y LA VACA",
       "tiempo": 900,
-      "descripcion": "estira y moviliza la culumna vertebral, alivia la tension en la espalda baja y mejora la flexibilidad en esta area.tambien ayuda a fortalecer los musculos de la espalda y el abdomen",
+      "descripcion": "Estira y moviliza la culumna vertebral, alivia la tension en la espalda baja y mejora la flexibilidad en esta area.Tambien ayuda a fortalecer los musculos de la espalda y el abdomen.",
       "animacion": "postura_gato_vaca"
     },
     {
       "nombre": "POSTURA DEL NIÑO",
       "tiempo": 1200,
-      "descripcion": "ayuda a estirar la espalda y los musculos alrededor de las caderas",
+      "descripcion": "Ayuda a estirar la espalda y los musculos alrededor de las caderas.",
       "animacion": "postura_del_nino"
     }
   ]
