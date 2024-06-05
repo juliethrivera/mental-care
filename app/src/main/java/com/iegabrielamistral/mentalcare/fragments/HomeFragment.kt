@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.dialogs.MensajeBottomDialog
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -52,20 +55,41 @@ class HomeFragment : Fragment() {
 
         val Mental : TextView = view.findViewById(R.id.Mental)
         val Text : TextView = view.findViewById(R.id.Text)
-        val Horrible : TextView = view.findViewById(R.id.horrible_image)
-        val horrible : TextView = view.findViewById(R.id.horrible_text)
-        val Mal : TextView = view.findViewById(R.id.mal_imege)
-        val mal: TextView = view.findViewById(R.id.mal_text)
-        val Aburrido: TextView = view.findViewById(R.id.aburrido_image)
-        val aburrido : TextView = view.findViewById(R.id.aburrido_text)
-        val Bien : TextView = view.findViewById(R.id.bien_image)
-        val bien : TextView = view.findViewById(R.id.bien_text)
-        val Excelente : TextView = view.findViewById(R.id.excelente_image)
-        val excelente: TextView = view.findViewById(R.id.excelente_text)
-        val card_test : TextView = view.findViewById(R.id.card_test)
-        val Ejercicios_relajación : TextView = view.findViewById(R.id.Ejercicios_relajación)
+        val horribleImage : ImageView = view.findViewById(R.id.horrible_image)
+        val horribleText : TextView = view.findViewById(R.id.horrible_text)
+        val malImage : ImageView = view.findViewById(R.id.mal_imege)
+        val malText : TextView = view.findViewById(R.id.mal_text)
+        val aburridoImage: ImageView = view.findViewById(R.id.aburrido_image)
+        val aburridoText : TextView = view.findViewById(R.id.aburrido_text)
+        val bienImage : ImageView = view.findViewById(R.id.bien_image)
+        val bienText : TextView = view.findViewById(R.id.bien_text)
+        val excelenteImage : ImageView = view.findViewById(R.id.excelente_image)
+        val excelenteText: TextView = view.findViewById(R.id.excelente_text)
+        val cardTest : CardView = view.findViewById(R.id.card_test)
+        val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
+
+
+
+
+        horribleImage.setOnClickListener{
+
+        }
+        malImage.setOnClickListener{
+
+        }
+        aburridoImage.setOnClickListener{
+
+        }
+        bienImage.setOnClickListener{
+
+        }
+        excelenteImage.setOnClickListener{
+
+        }
 
     }
+
+
 
     companion object {
         /**
@@ -86,4 +110,6 @@ class HomeFragment : Fragment() {
                 }
             }
     }
+
+
 }
