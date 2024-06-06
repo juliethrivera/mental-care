@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.content.Context
 import androidx.fragment.app.viewModels
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +13,12 @@ import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.model.TestMental
+import java.io.InputStream
+
 
 class TestMentalBlankFragment : Fragment() {
 
@@ -39,13 +45,11 @@ class TestMentalBlankFragment : Fragment() {
 
     private val viewModel: TestMentalBlankViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-
-
-
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.fragment_test_mental_blank, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -70,26 +74,25 @@ class TestMentalBlankFragment : Fragment() {
 
         val gson = Gson()
 
-        val test: Test = gson.fromJson(jsonString, object : TypeToken<Test>(){}.type)
+        val testMental: TestMental = gson.fromJson(jsonString, object : TypeToken<TestMental>(){}.type)
 
-        cargarPreguntas(test)
-
-
+        cargarPregunta(testMental)
 
         siguiente.setOnClickListener {
             question++
             if (question <= 20){
                 obtenerSeleccion()
-                cargarPregunta(test)
+                cargarPregunta(testMental)
             }else{
 
             }
         }
-
-
-
     }
 
+    private fun readJsonFromRaw(requireContext: Context, preguntas: Int): String {
+        val inputStream : InputStream = requireContext.resources.openRawResource(preguntas)
+        return inputStream.bufferedReader().use { it.readText() }
+    }
 
 
     fun obtenerSeleccion() {
@@ -111,34 +114,29 @@ class TestMentalBlankFragment : Fragment() {
                 selecciones[4] += 1
             }
         }
-
-
     }
 
     fun cargarPregunta(testMental : TestMental){
 
         opciones.clearCheck()
 
+        val p = question + 1
+        actualizarProgreso(p)
+
+        cantidadPreguntas.text = "$p/20"
+
         pregunta.text = testMental.preguntas[question].pregunta
-        opcion_1.text = testMental.preguntas[question].pregunta
-        opcion_2.text = testMental.preguntas[question].pregunta
-        opcion_3.text = testMental.preguntas[question].pregunta
-        opcion_4.text = testMental.preguntas[question].pregunta
-        opcion_5.text = testMental.preguntas[question].pregunta
+        opcion_1.text = testMental.preguntas[question].opcion1
+        opcion_2.text = testMental.preguntas[question].opcion2
+        opcion_3.text = testMental.preguntas[question].opcion3
+        opcion_4.text = testMental.preguntas[question].opcion4
+        opcion_5.text = testMental.preguntas[question].opcion5
 
     }
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_test_mental_blank, container, false)
-    }
 
-    fun actualizarProgreso(porcentaje : Int){
-        progreso.progress = porcentaje
-        if(porcentaje >= 100){
-
-        }
+    fun actualizarProgreso(pregunta: Int){
+        val p = 5 * pregunta
+        progreso.progress = p
     }
 
 

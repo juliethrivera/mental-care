@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFB6C1"
+    android:background="#F6CDF6"
+    android:textAlignment="inherit"
     tools:context=".fragments.TestMentalBlankFragment">
 
     <ImageButton
@@ -25,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Test Mentales"
+        android:textColor="#000000"
+        android:textColorHint="#130C0C"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,6 +40,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:progress="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/testMental" />
@@ -48,6 +52,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:text="1/20"
+        android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/pregunta"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,10 +62,12 @@
         android:id="@+id/pregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="1. Te sientes abrumad@ por las actividades de tu vida diaria?"
+        android:layout_marginEnd="16dp"
+        android:text="1.Te sientes abrumad@ por las actividades de tu vida diaria?"
+        android:textAlignment="viewStart"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,31 +85,36 @@
             android:id="@+id/opcion_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nunca" />
+            android:text="Nunca"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcion_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Raramente" />
+            android:text="Raramente"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcion_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="A veces" />
+            android:text="A veces"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcion_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Frecuentemente" />
+            android:text="Frecuentemente"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/opcion_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Siempre" />
+            android:text="Siempre"
+            android:textColor="#000000" />
     </RadioGroup>
 
     <Button
@@ -110,9 +122,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:backgroundTint="#AADEE4#"
         android:text="Siguiente "
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="#F6F0F0"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
