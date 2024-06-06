@@ -37,7 +37,7 @@ class TestMentalBlankFragment : Fragment() {
 
     var question : Int = 0
 
-    val selecciones = mutableListOf(0,0,0,0)
+    val selecciones = mutableListOf(0,0,0,0,0)
 
     companion object {
         fun newInstance() = TestMentalBlankFragment()
