@@ -92,12 +92,11 @@ class HomeFragment : Fragment() {
 
     fun mostrarMensajes(mensaje : String){
         val mensajeBottomDialog = MensajeBottomDialog()
-        mensajeBottomDialog.arguments?.putString(MENSAJE, mensaje)
+        val bundle = Bundle()
+        bundle.putString(MENSAJE, mensaje)
+        mensajeBottomDialog.arguments = bundle
         mensajeBottomDialog.show(requireActivity().supportFragmentManager, "MensajeBottomDialog")
     }
-
-
-
 
     companion object {
         /**

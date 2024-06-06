@@ -1,6 +1,7 @@
 package com.iegabrielamistral.mentalcare.dialogs
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,9 +24,11 @@ class MensajeBottomDialog: BottomSheetDialogFragment() {
 
         val mensaje = arguments?.getString(MENSAJE)
 
+        Log.d("MensajeBottomDialog", mensaje!!)
+
         val mensajeText: TextView = view.findViewById(R.id.mensaje_text)
 
-        mensajeText.text = mensaje
+        mensajeText.text = mensaje!!
 
     }
 
