@@ -21,7 +21,14 @@ class MensajeBottomDialog: BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val mensaje = arguments?.getString(MENSAJE)
+
         val mensajeText: TextView = view.findViewById(R.id.mensaje_text)
+
+        mensajeText.text = mensaje
+
     }
 
 }
+
+const val MENSAJE = "dialog_message"

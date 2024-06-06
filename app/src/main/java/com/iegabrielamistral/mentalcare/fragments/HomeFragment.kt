@@ -9,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.dialogs.MENSAJE
 import com.iegabrielamistral.mentalcare.dialogs.MensajeBottomDialog
 
 // TODO: Rename parameter arguments, choose names that match
@@ -72,7 +73,7 @@ class HomeFragment : Fragment() {
 
 
         horribleImage.setOnClickListener{
-
+            mostrarMensajes("Julieth no esta estudiando")
         }
         malImage.setOnClickListener{
 
@@ -88,6 +89,13 @@ class HomeFragment : Fragment() {
         }
 
     }
+
+    fun mostrarMensajes(mensaje : String){
+        val mensajeBottomDialog = MensajeBottomDialog()
+        mensajeBottomDialog.arguments?.putString(MENSAJE, mensaje)
+        mensajeBottomDialog.show(requireActivity().supportFragmentManager, "MensajeBottomDialog")
+    }
+
 
 
 
