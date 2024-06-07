@@ -1,8 +1,8 @@
-@file:Suppress("UNREACHABLE_CODE")
 
 package com.iegabrielamistral.mentalcare
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.view.View
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
@@ -12,9 +12,10 @@ import androidx.core.view.ViewCompat.*
 import androidx.core.view.WindowInsetsCompat
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRespiracionFragment
 
-class MainActivity : AppCompatActivity()
-    fun onCreate(savedInstanceState: Bundle?) {
-        val onCreate = super.onCreate(savedInstanceState)
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -24,19 +25,5 @@ class MainActivity : AppCompatActivity()
         }
     }
 
-fun findViewById(main: Int): View {
-    TODO("Not yet implemented")
 }
-
-
-fun setContentView(: Int) {
-    TODO("Not yet implemented")
-}
-
-fun enableEdgeToEdge() {
-    TODO("Not yet implemented")
-}
-
-
-
 
