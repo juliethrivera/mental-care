@@ -69,14 +69,28 @@ class HomeFragment : Fragment() {
         val cardTest : CardView = view.findViewById(R.id.card_test)
         val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
 
+        val mensajesHorrible = listOf(
+            "Recuerda, está bien no estar bien Tómate el tiempo que necesites para sanar y cuidarte a ti mismo.",
+            "La tormenta puede ser intensa, pero la luz del sol siempre volverá a brillar en tu vida. Confía en que los días mejores están por venir.",
+            "No tengas miedo de pedir ayuda y buscar el apoyo que necesitas.",
+            "Eres más fuerte de lo que crees.",
+            "La esperanza nunca se pierde. Mañana será mejor.")
+
+        val mensajesMal = listOf(
+            "Cada desafío te hace más fuerte.",
+            "Tú eres capaz de encontrar la luz en la oscuridad.",
+            "Pequeños pasos conducen a grandes cambios." ,
+            "Tú importas. Tu bienestar es primordial.",
+            "Respira hondo. Tú puedes superar esto")
+
 
 
 
         horribleImage.setOnClickListener{
-            mostrarMensajes("Julieth no esta estudiando")
+            mostrarMensajes(mensajesHorrible.random())
         }
         malImage.setOnClickListener{
-
+            mostrarMensajes(mensajesMal.random())
         }
         aburridoImage.setOnClickListener{
 
@@ -87,7 +101,6 @@ class HomeFragment : Fragment() {
         excelenteImage.setOnClickListener{
 
         }
-
     }
 
     fun mostrarMensajes(mensaje : String){
