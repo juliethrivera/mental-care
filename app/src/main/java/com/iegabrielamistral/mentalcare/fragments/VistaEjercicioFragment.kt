@@ -2,13 +2,13 @@ package com.iegabrielamistral.mentalcare.fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.FrameLayout
 import android.widget.ImageView
-import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
@@ -22,11 +22,11 @@ import org.json.JSONObject
 import pl.droidsonroids.gif.GifImageView
 import java.io.InputStream
 
-class VistaEjercicioFragment : Fragment() {
+class VistaEjercicioFragment<long> : Fragment() {
 
     private lateinit var anterior: ImageView
     private lateinit var titulo: TextView
-    private lateinit var tiempo: ProgressBar
+    private lateinit var tiempo: ImageView
     private lateinit var contador: FrameLayout
     private lateinit var texto_contador: TextView
     private lateinit var cardEjercicio: CardView
@@ -34,11 +34,14 @@ class VistaEjercicioFragment : Fragment() {
     private lateinit var nombreEjercicio: TextView
     private lateinit var descripcion: TextView
     private lateinit var siguienteEjercicio: Button
+    private lateinit var empezarTiempo : Button
+
+    var timer : CountDownTimer? = null
 
     var numeroEjercicio = 0
 
     companion object {
-        fun newInstance() = VistaEjercicioFragment()
+        fun newInstance() = VistaEjercicioFragment<Any>()
     }
 
     private val viewModel: VistaEjercicioViewModel by viewModels()
@@ -56,11 +59,16 @@ class VistaEjercicioFragment : Fragment() {
         nombreEjercicio = view.findViewById(R.id.nombreEjercicio)
         descripcion = view.findViewById(R.id.decripcion)
         siguienteEjercicio = view.findViewById(R.id.siguienteEjercicio)
+        empezarTiempo = view.findViewById(R.id.empezarTiempo)
 
 
         anterior.setOnClickListener {
             activity?.onBackPressedDispatcher?.onBackPressed()
 
+        }
+
+        empezarTiempo.setOnClickListener{
+            timer!!.start()
         }
 
 
@@ -91,8 +99,36 @@ class VistaEjercicioFragment : Fragment() {
         nombreEjercicio.text = ejercicio.nombre
         descripcion.text = ejercicio.descripcion
         imagenEjercicio.setImageResource(obtenerImagen(ejercicio.animacion))
-        texto_contador.text = convertirTiempo(ejercicio.tiempo)
+
+        val millis = (ejercicio.tiempo * 1000).toLong()
+
+        if(timer != null){
+            timer!!.cancel()
+        }
+
+        timer = object :
+        CountDownTimer(millis,1000)
+        {
+            override fun onTick(millisUntilFinished: Long) {
+                texto_contador.text = convertMillisToMinutesSeconds(millisUntilFinished)
+            }
+
+
+            override fun onFinish() {
+
+            }
+        }
+            timer!!.start()
     }
+
+    fun convertMillisToMinutesSeconds(millis: Long): String{
+        val minutos = (millis / 1000) / 60
+        val segundos = (millis / 1000) % 60
+
+        return String.format("%02d:%02d", minutos,segundos)
+    }
+
+
 
     fun convertirTiempo(tiempo: Int): String{
         val minutos = tiempo / 60
