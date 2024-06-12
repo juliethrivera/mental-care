@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.dialogs.MENSAJE
 import com.iegabrielamistral.mentalcare.dialogs.MensajeBottomDialog
@@ -70,21 +71,41 @@ class HomeFragment : Fragment() {
         val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
 
         val mensajesHorrible = listOf(
-            "Recuerda, está bien no estar bien Tómate el tiempo que necesites para sanar y cuidarte a ti mismo.",
-            "La tormenta puede ser intensa, pero la luz del sol siempre volverá a brillar en tu vida. Confía en que los días mejores están por venir.",
-            "No tengas miedo de pedir ayuda y buscar el apoyo que necesitas.",
-            "Eres más fuerte de lo que crees.",
-            "La esperanza nunca se pierde. Mañana será mejor.")
-
+            "Aunque hoy te sientas roto, recuerda que los pedazos pueden reconstruirse más fuertes.",
+            "Tu valentía para enfrentar este día ya te hace más fuerte de lo que crees.",
+            "La tormenta más oscura precede al día más brillante. Aguanta un poco más, el sol volverá a brillar.",
+            "No estás solo en esta batalla. Hay personas que te aman y están dispuestas a apoyarte.",
+            "La cicatrización comienza desde adentro. Permítete sanar y crecer a tu propio ritmo."
+        )
         val mensajesMal = listOf(
-            "Cada desafío te hace más fuerte.",
-            "Tú eres capaz de encontrar la luz en la oscuridad.",
-            "Pequeños pasos conducen a grandes cambios." ,
-            "Tú importas. Tu bienestar es primordial.",
-            "Respira hondo. Tú puedes superar esto")
-
-
-
+            "Hoy puede ser un mal día, pero mañana es una nueva oportunidad para empezar de nuevo.",
+            "No estás solo en esta batalla; hay personas dispuestas a ayudarte y acompañarte en tu camino hacia la recuperación.",
+            "La tormenta pasará, y cuando lo haga, estarás más fuerte y más sabio que antes.",
+            "Tus emociones son validas, y está bien pedir ayuda cuando lo necesites.",
+            "Cada respiración es un recordatorio de tu fuerza interior. Sigue adelante, un paso a la vez."
+        )
+        val mensajeAburrido = listOf(
+            "Cada día es una nueva oportunidad para encontrar la felicidad en las pequeñas cosas.",
+            "El aburrimiento es solo una pausa, no el final. Encuentra algo que te inspire.",
+            "Tu mente es como un jardín; cultiva pensamientos positivos y verás florecer la alegría.",
+            "La creatividad puede ser la chispa que encienda tu espíritu cuando te sientas aburrido.",
+            "La vida está llena de aventuras esperando a ser vividas. ¡Ve y crea las tuyas!"
+        )
+        val mensajeBien = listOf(
+            "Que la felicidad que sientes hoy ilumine cada rincón de tu vida.",
+            "Sigue cultivando tu bienestar mental y emocional; mereces sentirte así todos los días.",
+            "Hoy es un buen día para celebrar tu fuerza y determinación para cuidar tu salud mental.",
+            "Que esta sensación de bienestar te inspire a seguir cuidándote y amándote a ti mismo.",
+            "Tus logros en el camino hacia la salud mental son dignos de celebración. ¡Bravo!"
+        )
+        val mensajeExcelente = listOf(
+            "Tu fortaleza interior es una inspiración para todos los que luchan por encontrar la paz.",
+            "Que esta sensación de excelencia mental te motive a seguir cuidando y nutriendo tu bienestar.",
+            "Eres un testimonio viviente de que la sanación es posible y que la felicidad es un viaje que vale la pena.",
+            "Hoy brillas con una luz interior radiante. ¡Sigue brillando!",
+            "Tu paz mental es una inspiración para todos los que te rodean.",
+            "En este momento, eres la mejor versión de ti mismo. ¡Disfrútalo!"
+        )
 
         horribleImage.setOnClickListener{
             mostrarMensajes(mensajesHorrible.random())
@@ -93,13 +114,19 @@ class HomeFragment : Fragment() {
             mostrarMensajes(mensajesMal.random())
         }
         aburridoImage.setOnClickListener{
-
+            mostrarMensajes(mensajeAburrido.random())
         }
         bienImage.setOnClickListener{
-
+            mostrarMensajes(mensajeBien.random())
         }
         excelenteImage.setOnClickListener{
-
+            mostrarMensajes(mensajeExcelente.random())
+        }
+        cardTest.setOnClickListener{
+            (activity as MainActivity).bnvView.selectedItemId = R.id.test
+        }
+        EjerciciosRelajación.setOnClickListener {
+            (activity as MainActivity).bnvView.selectedItemId = R.id.RELAJACION
         }
     }
 

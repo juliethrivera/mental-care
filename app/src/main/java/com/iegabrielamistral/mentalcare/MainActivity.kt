@@ -14,7 +14,7 @@ import com.iegabrielamistral.mentalcare.fragments.TestFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var bnvView : BottomNavigationView
+    lateinit var bnvView : BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,10 +51,13 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
     }
     private fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.fragmentContainerView,fragment)
         transaction.commit()
     }
+
+
 }
