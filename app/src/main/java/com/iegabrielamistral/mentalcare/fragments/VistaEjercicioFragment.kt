@@ -34,9 +34,9 @@ class VistaEjercicioFragment<long> : Fragment() {
     private lateinit var nombreEjercicio: TextView
     private lateinit var descripcion: TextView
     private lateinit var siguienteEjercicio: Button
-    private lateinit var empezarTiempo : Button
+    private lateinit var empezarTiempo: Button
 
-    var timer : CountDownTimer? = null
+    var timer: CountDownTimer? = null
 
     var numeroEjercicio = 0
 
@@ -66,11 +66,6 @@ class VistaEjercicioFragment<long> : Fragment() {
             activity?.onBackPressedDispatcher?.onBackPressed()
 
         }
-
-        empezarTiempo.setOnClickListener{
-            timer!!.start()
-        }
-
 
         val jsonString = readJsonFromRaw(requireContext(), R.raw.yoga)
         var jsonObject = JSONObject(jsonString)
@@ -102,13 +97,20 @@ class VistaEjercicioFragment<long> : Fragment() {
 
         val millis = (ejercicio.tiempo * 1000).toLong()
 
-        if(timer != null){
+        if (timer != null) {
             timer!!.cancel()
         }
 
+        texto_contador.text = convertMillisToMinutesSeconds(millis)
+
+        empezarTiempo.setOnClickListener {
+            iniciarTiempo(millis)
+        }
+    }
+
+    fun iniciarTiempo(millis: Long) {
         timer = object :
-        CountDownTimer(millis,1000)
-        {
+            CountDownTimer(millis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 texto_contador.text = convertMillisToMinutesSeconds(millisUntilFinished)
             }
@@ -118,19 +120,18 @@ class VistaEjercicioFragment<long> : Fragment() {
 
             }
         }
-            timer!!.start()
+        timer!!.start()
     }
 
-    fun convertMillisToMinutesSeconds(millis: Long): String{
+    fun convertMillisToMinutesSeconds(millis: Long): String {
         val minutos = (millis / 1000) / 60
         val segundos = (millis / 1000) % 60
 
-        return String.format("%02d:%02d", minutos,segundos)
+        return String.format("%02d:%02d", minutos, segundos)
     }
 
 
-
-    fun convertirTiempo(tiempo: Int): String{
+    fun convertirTiempo(tiempo: Int): String {
         val minutos = tiempo / 60
         return "$minutos:00"
     }
