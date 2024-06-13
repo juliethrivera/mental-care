@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-       loadFragment(HomeFragment())
+       ///loadFragment(HomeFragment())
         bnvView = findViewById(R.id.bnvView) as BottomNavigationView
         bnvView.setOnItemSelectedListener {
             when (it.itemId){
