@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#B0EBF3"
-        android:text="Empezar Tiempo"
+        android:text="Iniciar Tiempo"
         android:textColor="#1C1B1B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

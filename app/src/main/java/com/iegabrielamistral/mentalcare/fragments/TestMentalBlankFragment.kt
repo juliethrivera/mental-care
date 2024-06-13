@@ -87,6 +87,12 @@ class TestMentalBlankFragment : Fragment() {
 
             }
         }
+        siguiente.isEnabled = false
+
+        opciones.setOnCheckedChangeListener{ group, checkedId ->
+            siguiente.isEnabled = checkedId != -1
+
+        }
     }
 
     private fun readJsonFromRaw(requireContext: Context, preguntas: Int): String {

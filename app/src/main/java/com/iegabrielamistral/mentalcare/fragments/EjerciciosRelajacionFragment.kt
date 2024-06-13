@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 
 
@@ -75,6 +76,7 @@ class EjerciciosRelajacionFragment : Fragment() {
 
 
         cardYoga.setOnClickListener{
+            
 
         }
 

@@ -11,11 +11,12 @@
         android:id="@+id/anterior"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_back_"
+        app:layout_constraintEnd_toStartOf="@id/ejerciciosDeRelajacion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,13 +25,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Ejercicios De Relajacion"
+        android:layout_marginTop="10dp"
+        android:text="Ejercicios De Relajación"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/anterior"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -38,11 +37,14 @@
         android:id="@+id/cardYoga"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="35dp"
+        android:layout_marginEnd="8dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ejerciciosDeRelajacion">
+        app:layout_constraintTop_toBottomOf="@id/anterior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -54,8 +56,9 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/local_florist_48dp_fill0_wght400_grad0_opsz48"
+                app:layout_constraintEnd_toStartOf="@id/yoga"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -63,12 +66,11 @@
                 android:id="@+id/yoga"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="289dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
                 android:text="Yoga"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imagenYoga"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,8 +78,7 @@
                 android:id="@+id/descripcionYoga"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:lines="2"
                 android:singleLine="false"
@@ -85,7 +86,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imagenYoga"
+                app:layout_constraintStart_toStartOf="@id/yoga"
                 app:layout_constraintTop_toBottomOf="@id/yoga" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -94,9 +95,12 @@
         android:id="@+id/cardMeditacion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardYoga">
 
@@ -110,8 +114,9 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/self_improvement"
+                app:layout_constraintEnd_toStartOf="@id/meditacion"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -119,14 +124,11 @@
                 android:id="@+id/meditacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="260dp"
-                android:text="Meditacion"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Meditación"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@id/imagenMeditacion"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,8 +136,7 @@
                 android:id="@+id/descripcionMeditacion"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:lines="2"
                 android:singleLine="false"
@@ -143,7 +144,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imagenMeditacion"
+                app:layout_constraintStart_toStartOf="@id/meditacion"
                 app:layout_constraintTop_toBottomOf="@id/meditacion" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -153,9 +154,12 @@
         android:id="@+id/cardRespiracionProfunda"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="35dp"
+        android:layout_marginEnd="8dp"
         app:cardCornerRadius="6dp"
         app:cardElevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardMeditacion">
 
@@ -169,8 +173,10 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/pulmonology_"
+                app:layout_constraintEnd_toStartOf="@id/respiracionProfunda"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -178,12 +184,11 @@
                 android:id="@+id/respiracionProfunda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="54dp"
-                android:layout_marginEnd="145dp"
-                android:text="Respiracion profunda"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Respiración profunda"
                 android:textColor="@color/black"
                 android:textSize="24sp"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imagenRespiracionProfunda"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -191,8 +196,7 @@
                 android:id="@+id/descripcionRespiracionProfunda"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="16dp"
                 android:lines="2"
                 android:singleLine="false"
@@ -200,7 +204,7 @@
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/imagenRespiracionProfunda"
+                app:layout_constraintStart_toStartOf="@id/respiracionProfunda"
                 app:layout_constraintTop_toBottomOf="@id/respiracionProfunda" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
