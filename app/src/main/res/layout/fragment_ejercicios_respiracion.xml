@@ -11,52 +11,67 @@
         android:id="@+id/textView"
         android:layout_width="274dp"
         android:layout_height="51dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="52dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="60dp"
         android:text="    Ejercicios de respiracion profunda "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/empezar"
+        android:layout_width="192dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:text="Empezar Ejercicio"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="153dp" />
+        tools:layout_editor_absoluteX="109dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="68dp"
+        android:layout_height="52dp"
+        android:src="@drawable/arrow_back_24dp_fill0_wght400_grad0_opsz24"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/ImegaView1"
-        android:layout_width="55dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="8dp"
-        android:src="@drawable/arrow_back_24dp_fill0_wght400_grad0_opsz24"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        android:id="@+id/imageView"
+        android:layout_width="164dp"
+        android:layout_height="166dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/respiraacion_profunda_boca_arriba"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="94dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="375dp"
-        android:layout_height="280dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/recurso_3"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="190dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/resoiracion_profunda_boca_abajo"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="131dp" />
+        tools:layout_editor_absoluteY="94dp" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="375dp"
-        android:layout_height="280dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="120dp"
-        android:src="@drawable/recurso_3"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="202dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="4dp"
+        android:src="@drawable/resoiracion_profunda_mientras_esta_sentado"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="181dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/bostezo_asta_sonreir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="280dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
