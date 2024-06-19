@@ -9,8 +9,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.replace
 import androidx.fragment.app.viewModels
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.meditacion.MeditacionFragment
 
 
 class EjerciciosRelajacionFragment : Fragment() {
@@ -79,6 +81,9 @@ class EjerciciosRelajacionFragment : Fragment() {
         }
 
         cardMeditacion.setOnClickListener {
+            val meditacionFragment = MeditacionFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, meditacionFragment).commit()
 
         }
 
