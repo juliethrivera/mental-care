@@ -30,7 +30,7 @@ class VistaEjercicioFragment<long> : Fragment() {
     private lateinit var contador: FrameLayout
     private lateinit var texto_contador: TextView
     private lateinit var cardEjercicio: CardView
-    private lateinit var imagenEjercicio: GifImageView
+    private lateinit var imagenEjercicio: ImageView
     private lateinit var nombreEjercicio: TextView
     private lateinit var descripcion: TextView
     private lateinit var siguienteEjercicio: Button

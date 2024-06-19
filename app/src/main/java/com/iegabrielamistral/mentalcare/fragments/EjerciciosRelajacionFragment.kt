@@ -1,7 +1,5 @@
 package com.iegabrielamistral.mentalcare.fragments
 
-import android.content.Intent
-import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,28 +9,27 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import com.iegabrielamistral.mentalcare.MainActivity
+import androidx.fragment.app.viewModels
 import com.iegabrielamistral.mentalcare.R
 
 
 class EjerciciosRelajacionFragment : Fragment() {
 
 
-    private lateinit var anterior : ImageButton
-    private lateinit var ejerciciosDeRelajacion : TextView
-    private lateinit var cardYoga : CardView
-    private lateinit var imagenYoga : ImageView
-    private lateinit var yoga : TextView
-    private lateinit var descripcionYoga : TextView
-    private lateinit var cardMeditacion : CardView
-    private lateinit var imagenMeditacion : ImageView
-    private lateinit var meditacion : TextView
-    private lateinit var descripcionMeditacion : TextView
-    private lateinit var cardRespiracionProfunda : CardView
-    private lateinit var imagenRespiracionProfunda : ImageView
-    private lateinit var respiracionProfunda : TextView
-    private lateinit var descripcionRespiracionProfunda : TextView
-
+    private lateinit var anterior: ImageButton
+    private lateinit var ejerciciosDeRelajacion: TextView
+    private lateinit var cardYoga: CardView
+    private lateinit var imagenYoga: ImageView
+    private lateinit var yoga: TextView
+    private lateinit var descripcionYoga: TextView
+    private lateinit var cardMeditacion: CardView
+    private lateinit var imagenMeditacion: ImageView
+    private lateinit var meditacion: TextView
+    private lateinit var descripcionMeditacion: TextView
+    private lateinit var cardRespiracionProfunda: CardView
+    private lateinit var imagenRespiracionProfunda: ImageView
+    private lateinit var respiracionProfunda: TextView
+    private lateinit var descripcionRespiracionProfunda: TextView
 
 
     companion object {
@@ -70,31 +67,27 @@ class EjerciciosRelajacionFragment : Fragment() {
 
 
 
-        anterior.setOnClickListener{
+        anterior.setOnClickListener {
             activity?.onBackPressedDispatcher?.onBackPressed()
         }
 
 
-        cardYoga.setOnClickListener{
-            
+        cardYoga.setOnClickListener {
+            val yogaFragment = YogaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, yogaFragment).commit()
+        }
+
+        cardMeditacion.setOnClickListener {
 
         }
 
-        cardMeditacion.setOnClickListener{
+        cardRespiracionProfunda.setOnClickListener {
 
         }
-
-        cardRespiracionProfunda.setOnClickListener{
-
-        }
-
-
 
 
     }
-
-
-
 
 
     override fun onCreateView(
