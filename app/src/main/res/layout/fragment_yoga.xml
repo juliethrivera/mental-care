@@ -123,7 +123,7 @@
         app:layout_constraintTop_toBottomOf="@id/Postura_del_perro_hacia_abajo" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_marginBottom="64dp"

@@ -12,6 +12,9 @@ import com.iegabrielamistral.mentalcare.R
 
 class YogaFragment : Fragment() {
 
+    private lateinit var atras : ImageView
+    private lateinit var Button : Button
+
     companion object {
         fun newInstance() = YogaFragment()
     }
@@ -35,7 +38,12 @@ class YogaFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val atras : ImageView = view.findViewById(R.id.atras)
-        val button : Button = view.findViewById(R.id.button)
+        val button : Button = view.findViewById(R.id.button2)
+
+
+        atras.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
 
     }
 
