@@ -39,6 +39,7 @@ class YogaFragment : Fragment() {
 
         atras.setOnClickListener {
             activity?.onBackPressedDispatcher?.onBackPressed()
+
         }
 
     }

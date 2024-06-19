@@ -1,0 +1,10 @@
+{
+  "ejercicios" : [
+    {
+      "nombre": "POSTURA DE LA MONTAÑA",
+      "tiempo": 600,
+      "descripcion": "Nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo.",
+      "animacion": "postura_montana"
+    }
+  ]
+}
