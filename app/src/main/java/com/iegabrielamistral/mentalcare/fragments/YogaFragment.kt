@@ -37,6 +37,10 @@ class YogaFragment : Fragment() {
         val atras : ImageView = view.findViewById(R.id.atras)
         val button : Button = view.findViewById(R.id.button)
 
+        atras.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
+
     }
 
 }
