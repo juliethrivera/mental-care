@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.iegabrielamistral.mentalcare.R
 
- class VistaFragment : Fragment() {
+class SesionFragment : Fragment() {
 
     companion object {
-        fun newInstance() = VistaFragment()
+        fun newInstance() = SesionFragment()
     }
 
-    private val viewModel: VistaViewModel by viewModels()
+    private val viewModel: SesionViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,6 @@ import com.iegabrielamistral.mentalcare.R
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.vista_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_sesion, container, false)
     }
 }
