@@ -28,10 +28,14 @@ class RegistroFragment : Fragment() {
         val google : ImageView = view.findViewById(R.id.google)
 
         iniciar.setOnClickListener {
-
+            val inicioFragment = inicioFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2, inicioFragment).commit()
         }
         crear.setOnClickListener {
-
+            val cuentaFragment = cuentaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2, cuentaFragment).commit()
         }
         facebook.setOnClickListener {
 
