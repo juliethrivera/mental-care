@@ -12,8 +12,11 @@ import com.iegabrielamistral.mentalcare.R
 
 class YogaFragment : Fragment() {
 
+
+
     private lateinit var atras : ImageView
     private lateinit var Button : Button
+
 
     companion object {
         fun newInstance() = YogaFragment()
@@ -45,10 +48,13 @@ class YogaFragment : Fragment() {
             activity?.onBackPressedDispatcher?.onBackPressed()
         }
 
-        atras.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
+        button.setOnClickListener {
+            val vistaEjercicioFragment = VistaEjercicioFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, vistaEjercicioFragment).commit()
 
         }
+
 
     }
 
