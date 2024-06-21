@@ -17,12 +17,11 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.model.Ejercicio
-import com.iegabrielamistral.mentalcare.model.EjerciciosYoga
+import com.iegabrielamistral.mentalcare.model.`EjerciciosRelajacion`
 import org.json.JSONObject
-import pl.droidsonroids.gif.GifImageView
 import java.io.InputStream
 
-class VistaEjercicioFragment<long> : Fragment() {
+class VistaEjercicioFragment: Fragment() {
 
     private lateinit var anterior: ImageView
     private lateinit var titulo: TextView
@@ -41,7 +40,7 @@ class VistaEjercicioFragment<long> : Fragment() {
     var numeroEjercicio = 0
 
     companion object {
-        fun newInstance() = VistaEjercicioFragment<Any>()
+        fun newInstance() = VistaEjercicioFragment()
     }
 
     private val viewModel: VistaEjercicioViewModel by viewModels()
@@ -67,14 +66,26 @@ class VistaEjercicioFragment<long> : Fragment() {
 
         }
 
-        val jsonString = readJsonFromRaw(requireContext(), R.raw.yoga)
-        var jsonObject = JSONObject(jsonString)
+        val tipoEjercicio = requireArguments().getString(TIPO_EJERCICIO, YOGA)
 
+        val jsonString = when(tipoEjercicio){
+            YOGA ->{
+                 readJsonFromRaw(requireContext(), R.raw.yoga)
+            }
+            MEDITACION ->{
+                readJsonFromRaw(requireContext(), R.raw.meditacion)
+            }
+            else ->{
+                readJsonFromRaw(requireContext(), R.raw.respiracion_profunda)
+            }
+        }
+
+        var jsonObject = JSONObject(jsonString)
 
         val gson = Gson()
 
-        val data: EjerciciosYoga =
-            gson.fromJson(jsonString, object : TypeToken<EjerciciosYoga>() {}.type)
+        val data: `EjerciciosRelajacion` =
+            gson.fromJson(jsonString, object : TypeToken<`EjerciciosRelajacion`>() {}.type)
 
         val ejercicios = data.ejercicios
 
@@ -158,3 +169,19 @@ class VistaEjercicioFragment<long> : Fragment() {
         return inflater.inflate(R.layout.fragment_vista_ejercicio, container, false)
     }
 }
+
+const val TIPO_EJERCICIO = "tipo_ejercicio"
+const val YOGA = "yoga"
+const val MEDITACION = "meditacion"
+const val RESPIRACION_PROFUNDA = "respiracion_profunda"
+
+
+
+
+
+
+
+
+
+
+

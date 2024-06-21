@@ -1,10 +1,40 @@
 {
   "ejercicios" : [
     {
-      "nombre": "POSTURA DE LA MONTAÑA",
-      "tiempo": 600,
-      "descripcion": "Nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo.",
-      "animacion": "postura_montana"
+      "nombre": "POSTURA DE LA SILLA",
+      "tiempo": 60,
+      "descripcion": "Fortalece los cuádriceps y mejora el equilibrio y la estabilidad del core,favoreciendo el equilibrio mental y fisico.",
+      "animacion": ""
+    },
+    {
+      "nombre": "POSTURA DE FLEXION EN ANGULO",
+      "tiempo":60 ,
+      "descripcion": "Estira la columna y los musculos de la espalda,mejorando la flexibilidad y aliviando la tension, aliviando el estres y mejorando la flexibilidad",
+      "animacion": ""
+    },
+    {
+      "nombre": "POSTURA DE LA LIBERACION DEL AIRE",
+      "tiempo":120 ,
+      "descripcion": "Alivia la tension abdominal y promueve la tranquilidad al mejorar la digestion y liberar el cuerpo e incomodidades fisicas.",
+      "animacion": ""
+    },
+    {
+      "nombre": "POSTURA DE LA LIBERACION DEL VIENTO",
+      "tiempo":60 ,
+      "descripcion": "Contribuye a la relajacion al aliviar malestares abdominales y facilitar la digestion, lo cual ayuda a calmar la mente.",
+      "animacion": ""
+    },
+    {
+      "nombre": "POSTURA LOW LUNGE",
+      "tiempo": 60,
+      "descripcion": "Mejora la conexion mente-cuerpo al estirar flexores de la cadera y aumentar la flexibilidad en las caderas,reducuiendo el estres y rigidez emocional.",
+      "animacion": ""
+    },
+    {
+      "nombre": "POSTURA DE LA SENTADILLA HINDU",
+      "tiempo": 120,
+      "descripcion": "Fortalece las piernas y mejora la movilidad de las caderas y los tobillos,promoviendo una sensacion de estabilidad mental y fisica.",
+      "animacion": ""
     }
   ]
 }

@@ -1,6 +1,6 @@
 package com.iegabrielamistral.mentalcare.model
 
-data class EjerciciosYoga(
+data class `EjerciciosRelajacion`(
     val ejercicios: ArrayList<Ejercicio> = ArrayList()
 )
 

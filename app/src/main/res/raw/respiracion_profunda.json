@@ -2,9 +2,27 @@
   "ejercicios" : [
     {
       "nombre": "RESPIRACION PROFUNDA BOCA ARRIBA",
-      "tiempo": 600,
-      "descripcion": "Nos ayuda a desarrollar equilibrio, mientras aporta tono y fuerza a la mayoria de los musculos del cuerpo.",
-      "animacion": "postura_montana"
+      "tiempo": 300,
+      "descripcion":"Ayuda a aumentar la cantidad de oxígeno en la sangre, disminuye la presión arterial y la frecuencia cardíaca, y reduce la tensión muscular.",
+      "animacion": ""
+    },
+   {
+      "nombre": "RESPIRACION PROFUNDA BOCA ABAJO",
+      "tiempo": 300,
+      "descripcion":"Ayuda a aumentar la cantidad de oxigeno en la sangre.Mejora la funcion pulmonar, alivia el estres y la ansiedad.. ",
+      "animacion": ""
+      },
+     {
+       "nombre": "RESPIRACION PROFUNDA MIENTRAS ESTA SENTADO",
+       "tiempo": 300,
+       "descripcion": "Ayuda a reducir el estres, mejora la concentracion y regula la presion arterial, promoviendo asi una mejor salud general",
+       "animacion": ""
+     },
+    {
+      "nombre": "BOSTEZO HASTA SONREIR",
+      "tiempo": 120,
+      "descripcion": "Ayuda a relajar el cuerpo, reducir el estres y mejorar el estado de animo al incrementar el flujo de oxigeno.",
+      "animacion": ""
     }
-  ]
-}
+    ]
+     }
