@@ -39,7 +39,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/postura_liberacion_del_viento_1"
         app:layout_constraintEnd_toStartOf="@id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -51,7 +51,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/sentadilla_hindu_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageView1"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -62,7 +62,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/postura_low_lunge_3"
         app:layout_constraintEnd_toStartOf="@id/imageView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView1" />
@@ -73,7 +73,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/postuta_de_la_silla_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageView3"
         app:layout_constraintTop_toBottomOf="@id/imageView2" />
@@ -84,7 +84,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/postura_liberacion_del_aire_5"
         app:layout_constraintEnd_toStartOf="@id/imageView6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView3" />
@@ -95,32 +95,10 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/flexion_en_angulo_hacia_delante_con_giro_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imageView5"
         app:layout_constraintTop_toBottomOf="@id/imageView4" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
-        app:layout_constraintEnd_toStartOf="@id/imageView8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView7"
-        app:layout_constraintTop_toBottomOf="@id/imageView6" />
 
     <Button
         android:id="@+id/button2"
@@ -130,6 +108,6 @@
         android:text="EMPEZAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@id/imageView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

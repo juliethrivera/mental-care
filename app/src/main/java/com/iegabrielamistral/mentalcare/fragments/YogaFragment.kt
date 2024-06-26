@@ -46,6 +46,9 @@ class YogaFragment : Fragment() {
 
         atras.setOnClickListener {
             activity?.onBackPressedDispatcher?.onBackPressed()
+            val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
         }
 
         button.setOnClickListener {

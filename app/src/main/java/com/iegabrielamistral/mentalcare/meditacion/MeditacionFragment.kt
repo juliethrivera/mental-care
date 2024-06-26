@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
+import com.iegabrielamistral.mentalcare.fragments.VistaEjercicioFragment
 
 class MeditacionFragment : Fragment() {
 
@@ -43,6 +45,9 @@ class MeditacionFragment : Fragment() {
 
         atras.setOnClickListener {
             activity?.onBackPressedDispatcher?.onBackPressed()
+            val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
         }
 
     }
