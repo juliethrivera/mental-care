@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.usuario
 
+import android.content.Intent
 import androidx.fragment.app.viewModels
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
+import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
 
@@ -52,9 +54,8 @@ class cuentaFragment : Fragment() {
 
         }
         guadar.setOnClickListener {
-            //val homeFragment = HomeFragment()
-           // requireActivity().supportFragmentManager.beginTransaction()
-                //.replace(R.id.fragmentContainerView, homeFragment).commit()
+            val intent = Intent(requireActivity(), MainActivity::class.java)
+            startActivity(intent)
         }
 
     }
