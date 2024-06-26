@@ -18,6 +18,13 @@ class VistaFragment : Fragment() {
 
     private val viewModel: VistaViewModel by viewModels()
 
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.vista_fragment, container, false)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -30,10 +37,4 @@ class VistaFragment : Fragment() {
         }, 2000)
     }
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.vista_fragment, container, false)
-    }
 }
