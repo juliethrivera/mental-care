@@ -1,7 +1,7 @@
 {
     "preguntas" : [
         {
-            "pregunta" : "1. Te sientes arbumado/a por las actividades de tu vida diaria?",
+            "pregunta" : "1. Te sientes abrumado/a por las actividades de tu vida diaria?",
             "categoria":"Estres",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -57,7 +57,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "7. Experimentas con mucha frecuencua sintomas fisicos como palpitaciones, sudoracion excesivo o dificultad para respirar?",
+            "pregunta" : "7. Experimentas con mucha frecuencua sintomas fisicos como palpitaciones, sudoración excesivo o dificultad para respirar?",
             "categoria": "Ansiedad",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -111,7 +111,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "13. Con que frecuencia experiemntas cambiis repentinos en tu estado de animo?",
+            "pregunta" : "13. Con que frecuencia experimentas cambios repentinos en tu estado de animo?",
             "categoria": "Cambios de humor ",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -129,7 +129,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "15. Tus cambios de humor son leves hasta el punto de volverse intensios?",
+            "pregunta" : "15. Tus cambios de humor son leves hasta el punto de volverse intensos?",
             "categoria": "Cambios de humor ",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -156,7 +156,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "18. Con que frecuencia te comparas con los demas de una manera negativa o te sientes inferior?",
+            "pregunta" : "18. Con que frecuencia te comparas con los demás de una manera negativa o te sientes inferior?",
             "categoria": "Autoestima",
             "opcion1": "Nunca",
             "opcion2": "Raramente",

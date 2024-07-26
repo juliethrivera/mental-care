@@ -12,8 +12,8 @@ import com.iegabrielamistral.mentalcare.R
 
 class YogaFragment : Fragment() {
 
-    private lateinit var atras : ImageView
-    private lateinit var Button : Button
+    private lateinit var atras: ImageView
+    private lateinit var Button: Button
 
     companion object {
         fun newInstance() = YogaFragment()
@@ -37,16 +37,25 @@ class YogaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val atras : ImageView = view.findViewById(R.id.atras)
-        val button : Button = view.findViewById(R.id.button2)
+        val atras: ImageView = view.findViewById(R.id.atras)
+        val button: Button = view.findViewById(R.id.empezar)
 
 
         atras.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
+            val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
+
         }
 
         button.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
+            val bundle: Bundle = Bundle()
+            bundle.putString(TIPO_EJERCICIO, YOGA)
+            val vistaEjercicioFragment = VistaEjercicioFragment()
+            vistaEjercicioFragment.arguments = bundle
+
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, vistaEjercicioFragment).commit()
 
         }
 

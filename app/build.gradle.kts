@@ -52,5 +52,5 @@ dependencies {
 
     implementation ( "com.google.code.gson:gson:2.11.0")
 
-    implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.28")
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
 }

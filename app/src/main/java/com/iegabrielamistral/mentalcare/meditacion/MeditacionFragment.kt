@@ -9,11 +9,12 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 
 class MeditacionFragment : Fragment() {
 
     private lateinit var atras : ImageView
-    private lateinit var Button : Button
+    private lateinit var empezar : Button
 
     companion object {
         fun newInstance() = MeditacionFragment()
@@ -38,11 +39,18 @@ class MeditacionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val atras : ImageView = view.findViewById(R.id.atras)
-        val button : Button = view.findViewById(R.id.button2)
+        val empezar: Button = view.findViewById(R.id.empezar)
 
 
         atras.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
+            val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
+            requireActivity().supportFragmentManager.beginTransaction().
+            replace(R.id.fragmentContainerView,ejerciciosRelajacionFragment).commit()
+
+        }
+
+        empezar.setOnClickListener {
+
         }
 
     }
