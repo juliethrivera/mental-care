@@ -13,15 +13,14 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.model.Ejercicio
 import com.iegabrielamistral.mentalcare.model.`EjerciciosRelajacion`
 import org.json.JSONObject
 import java.io.InputStream
 
-class VistaEjercicioFragment: Fragment() {
+class VistaEjercicioFragment : Fragment() {
 
     private lateinit var anterior: ImageView
     private lateinit var titulo: TextView
@@ -71,14 +70,16 @@ class VistaEjercicioFragment: Fragment() {
 
         val tipoEjercicio = requireArguments().getString(TIPO_EJERCICIO, YOGA)
 
-        val jsonString = when(tipoEjercicio){
-            YOGA ->{
-                 readJsonFromRaw(requireContext(), R.raw.yoga)
+        val jsonString = when (tipoEjercicio) {
+            YOGA -> {
+                readJsonFromRaw(requireContext(), R.raw.yoga)
             }
-            MEDITACION ->{
+
+            MEDITACION -> {
                 readJsonFromRaw(requireContext(), R.raw.meditacion)
             }
-            else ->{
+
+            else -> {
                 readJsonFromRaw(requireContext(), R.raw.respiracion_profunda)
             }
 

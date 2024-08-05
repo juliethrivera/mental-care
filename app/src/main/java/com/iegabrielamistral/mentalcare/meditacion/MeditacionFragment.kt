@@ -10,15 +10,12 @@ import android.widget.Button
 import android.widget.ImageView
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
-import com.iegabrielamistral.mentalcare.fragments.MEDITACION
-import com.iegabrielamistral.mentalcare.fragments.TIPO_EJERCICIO
 import com.iegabrielamistral.mentalcare.fragments.VistaEjercicioFragment
-import com.iegabrielamistral.mentalcare.fragments.YOGA
 
 class MeditacionFragment : Fragment() {
 
     private lateinit var atras : ImageView
-    private lateinit var empezar : Button
+    private lateinit var Button : Button
 
     companion object {
         fun newInstance() = MeditacionFragment()
@@ -43,24 +40,14 @@ class MeditacionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val atras : ImageView = view.findViewById(R.id.atras)
-        val empezar: Button = view.findViewById(R.id.empezar)
+        val button : Button = view.findViewById(R.id.button2)
 
 
         atras.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
             val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
-            requireActivity().supportFragmentManager.beginTransaction().
-            replace(R.id.fragmentContainerView,ejerciciosRelajacionFragment).commit()
-
-        }
-
-        empezar.setOnClickListener {
-            val bundle: Bundle = Bundle()
-            bundle.putString(TIPO_EJERCICIO, MEDITACION)
-            val vistaEjercicioFragment = VistaEjercicioFragment()
-            vistaEjercicioFragment.arguments = bundle
-
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, vistaEjercicioFragment).commit()
+                .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
         }
 
     }
