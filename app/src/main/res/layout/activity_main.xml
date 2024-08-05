@@ -20,12 +20,12 @@
         android:id="@+id/bnvView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:itemBackground="@android:color/transparent"
+        app:itemIconTint="@color/color"
+        app:itemTextColor="@color/color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:itemIconTint="@color/color"
-        app:itemTextColor="@color/color"
-        app:itemBackground="@android:color/transparent"
         app:menu="@menu/bottom_navi" />
 </androidx.constraintlayout.widget.ConstraintLayout>
