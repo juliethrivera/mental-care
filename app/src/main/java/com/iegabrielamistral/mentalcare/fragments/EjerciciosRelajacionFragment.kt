@@ -9,7 +9,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
 import androidx.fragment.app.viewModels
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.meditacion.MeditacionFragment
@@ -50,7 +49,7 @@ class EjerciciosRelajacionFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         anterior = view.findViewById(R.id.anterior)
-        ejerciciosDeRelajacion = view.findViewById(R.id.ejerciciosDeRelajacion)
+        ejerciciosDeRelajacion = view.findViewById(R.id.titulo)
         cardYoga = view.findViewById(R.id.cardYoga)
         imagenYoga = view.findViewById(R.id.imagenYoga)
         yoga = view.findViewById(R.id.yoga)
@@ -88,6 +87,10 @@ class EjerciciosRelajacionFragment : Fragment() {
         }
 
         cardRespiracionProfunda.setOnClickListener {
+            val respiracionProfundaFragment = RespiracionProfundaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, respiracionProfundaFragment).commit()
+
 
         }
 

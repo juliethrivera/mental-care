@@ -62,7 +62,10 @@ class VistaEjercicioFragment: Fragment() {
 
 
         anterior.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
+            val yogaFragment = YogaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, yogaFragment).commit()
+
 
         }
 
@@ -78,6 +81,7 @@ class VistaEjercicioFragment: Fragment() {
             else ->{
                 readJsonFromRaw(requireContext(), R.raw.respiracion_profunda)
             }
+
         }
 
         var jsonObject = JSONObject(jsonString)

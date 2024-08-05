@@ -10,6 +10,10 @@ import android.widget.Button
 import android.widget.ImageView
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
+import com.iegabrielamistral.mentalcare.fragments.MEDITACION
+import com.iegabrielamistral.mentalcare.fragments.TIPO_EJERCICIO
+import com.iegabrielamistral.mentalcare.fragments.VistaEjercicioFragment
+import com.iegabrielamistral.mentalcare.fragments.YOGA
 
 class MeditacionFragment : Fragment() {
 
@@ -50,7 +54,13 @@ class MeditacionFragment : Fragment() {
         }
 
         empezar.setOnClickListener {
+            val bundle: Bundle = Bundle()
+            bundle.putString(TIPO_EJERCICIO, MEDITACION)
+            val vistaEjercicioFragment = VistaEjercicioFragment()
+            vistaEjercicioFragment.arguments = bundle
 
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, vistaEjercicioFragment).commit()
         }
 
     }

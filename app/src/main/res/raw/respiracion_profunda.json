@@ -1,28 +1,51 @@
 {
-  "ejercicios" : [
+  "ejercicios": [
     {
-      "nombre": "RESPIRACION PROFUNDA BOCA ARRIBA",
-      "tiempo": 300,
-      "descripcion":"Ayuda a aumentar la cantidad de oxígeno en la sangre, disminuye la presión arterial y la frecuencia cardíaca, y reduce la tensión muscular.",
+      "nombre": "RESPIRACIÓN CON LABIOS FRUNCIDOS",
+      "tiempo": 120,
+      "descripcion": "Ayuda a controlar la falta de aire y,a proporcionar una forma rápida y fácil de bajar el ritmo de respiración haciendo que cada respiración sea más efectiva.",
       "animacion": ""
     },
-   {
-      "nombre": "RESPIRACION PROFUNDA BOCA ABAJO",
-      "tiempo": 300,
-      "descripcion":"Ayuda a aumentar la cantidad de oxigeno en la sangre.Mejora la funcion pulmonar, alivia el estres y la ansiedad.. ",
-      "animacion": ""
-      },
-     {
-       "nombre": "RESPIRACION PROFUNDA MIENTRAS ESTA SENTADO",
-       "tiempo": 300,
-       "descripcion": "Ayuda a reducir el estres, mejora la concentracion y regula la presion arterial, promoviendo asi una mejor salud general",
-       "animacion": ""
-     },
     {
-      "nombre": "BOSTEZO HASTA SONREIR",
+      "nombre": "RESPIRACIÓN DIAFRAGMÁTICA",
+      "tiempo": 300,
+      "descripcion": "Ayuda a aumentar la cantidad de oxigeno, disminuye la presión arterial y la frecuencia cardiaca, y reduce la tensión arterial. ",
+      "animacion": ""
+    },
+    {
+      "nombre": "RESPIRACIÓN NASAL ALTERNA",
+      "tiempo": 300,
+      "descripcion": "Reduce la ansiedad, el estrés y la depresión a través de la relajación y la realineación de la mente, cuerpo y respiración. ",
+      "animacion": ""
+    },
+    {
+      "nombre": "RESPIRACIÓN EQUILIBRADA",
+      "tiempo": 60,
+      "descripcion": "Mejora la capacidad pulmonar previniendo el organismos de enfermedades respiratorias.Además brinda mayor elasticidad a este órgano,favoreciendo su resistencia ante el esfuerzo.Aumenta la vitalidad del corazón.",
+      "animacion": ""
+    },
+    {
+      "nombre": "RESPIRACIÓN SITALI",
       "tiempo": 120,
-      "descripcion": "Ayuda a relajar el cuerpo, reducir el estres y mejorar el estado de animo al incrementar el flujo de oxigeno.",
+      "descripcion": "ayuda a bajar la temperatura corporal, sino que también induce una sensación de calma y bienestar, contrarrestando el estrés y la fatiga que puede acompañar el calor intenso..",
+      "animacion": ""
+    },
+    {
+      "nombre": "RESPIRACIÓN DEL ABEJORRO",
+      "tiempo": 120,
+      "descripcion": "Alivia la frustración,la ansiedad y la ira.Ayuda a reducir la frecuencia cardíaca, pensar con más claridad y sentirse menos irritable o estresado.",
       "animacion": ""
     }
-    ]
-     }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
