@@ -14,12 +14,9 @@
         tools:targetApi="31">
         <activity
             android:name=".MainActivity2"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.MentalCare" />
-        <activity
-            android:name=".Login_activity"
-            android:exported="true">
+            android:theme="@style/Theme.MentalCare" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,8 +24,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:name=".Login_activity"
+            android:exported="true">
+
+        </activity>
     </application>
 
 </manifest>
