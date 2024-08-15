@@ -13,8 +13,11 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.meditacion.MeditacionFragment
 import com.iegabrielamistral.mentalcare.model.Ejercicio
 import com.iegabrielamistral.mentalcare.model.`EjerciciosRelajacion`
 import org.json.JSONObject
@@ -60,15 +63,29 @@ class VistaEjercicioFragment : Fragment() {
         empezarTiempo = view.findViewById(R.id.empezarTiempo)
 
 
-        anterior.setOnClickListener {
-            val yogaFragment = YogaFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, yogaFragment).commit()
 
-
-        }
 
         val tipoEjercicio = requireArguments().getString(TIPO_EJERCICIO, YOGA)
+
+        anterior.setOnClickListener {
+            var fragment = Fragment()
+
+            when(tipoEjercicio){
+                YOGA -> {
+                    fragment = YogaFragment()
+                }
+                MEDITACION -> {
+                    fragment = MeditacionFragment()
+                }
+                RESPIRACION_PROFUNDA -> {
+                    fragment = RespiracionProfundaFragment()
+                }
+            }
+
+
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, fragment).commit()
+        }
 
         val jsonString = when (tipoEjercicio) {
             YOGA -> {

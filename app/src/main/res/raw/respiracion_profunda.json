@@ -4,37 +4,37 @@
       "nombre": "RESPIRACIÓN CON LABIOS FRUNCIDOS",
       "tiempo": 120,
       "descripcion": "Ayuda a controlar la falta de aire y,a proporcionar una forma rápida y fácil de bajar el ritmo de respiración haciendo que cada respiración sea más efectiva.",
-      "animacion": ""
+      "animacion": "respiracion_con_labios_fruncidos"
     },
     {
       "nombre": "RESPIRACIÓN DIAFRAGMÁTICA",
       "tiempo": 300,
       "descripcion": "Ayuda a aumentar la cantidad de oxigeno, disminuye la presión arterial y la frecuencia cardiaca, y reduce la tensión arterial. ",
-      "animacion": ""
+      "animacion": "respiracion_diafragmatica"
     },
     {
       "nombre": "RESPIRACIÓN NASAL ALTERNA",
       "tiempo": 300,
       "descripcion": "Reduce la ansiedad, el estrés y la depresión a través de la relajación y la realineación de la mente, cuerpo y respiración. ",
-      "animacion": ""
+      "animacion": "respiracion_nasal_alterna"
     },
     {
       "nombre": "RESPIRACIÓN EQUILIBRADA",
       "tiempo": 60,
       "descripcion": "Mejora la capacidad pulmonar previniendo el organismos de enfermedades respiratorias.Además brinda mayor elasticidad a este órgano,favoreciendo su resistencia ante el esfuerzo.Aumenta la vitalidad del corazón.",
-      "animacion": ""
+      "animacion": "respiracion_equilibrada"
     },
     {
       "nombre": "RESPIRACIÓN SITALI",
       "tiempo": 120,
-      "descripcion": "ayuda a bajar la temperatura corporal, sino que también induce una sensación de calma y bienestar, contrarrestando el estrés y la fatiga que puede acompañar el calor intenso..",
-      "animacion": ""
+      "descripcion": "ayuda a bajar la temperatura corporal,también induce una sensación de calma y bienestar, contrarrestando el estrés y la fatiga que puede acompañar el calor intenso..",
+      "animacion": "respiracion_sitali"
     },
     {
       "nombre": "RESPIRACIÓN DEL ABEJORRO",
       "tiempo": 120,
       "descripcion": "Alivia la frustración,la ansiedad y la ira.Ayuda a reducir la frecuencia cardíaca, pensar con más claridad y sentirse menos irritable o estresado.",
-      "animacion": ""
+      "animacion": "respiracion_del_abejorro"
     }
   ]
 }
