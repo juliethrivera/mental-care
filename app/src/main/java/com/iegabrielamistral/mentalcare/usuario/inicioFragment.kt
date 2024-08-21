@@ -47,6 +47,7 @@ class inicioFragment : Fragment() {
         button2.setOnClickListener {
             val intent = Intent(requireActivity(), MainActivity::class.java)
             startActivity(intent)
+
         }
 
     }

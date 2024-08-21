@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
+import com.google.firebase.Firebase
+import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.dialogs.MENSAJE
@@ -128,6 +130,13 @@ private const val ARG_PARAM2 = "param2"
             (activity as MainActivity).bnvView.selectedItemId = R.id.RELAJACION
         }
     }
+
+    private fun signOut() {
+        // [START auth_sign_out]
+        Firebase.auth.signOut()
+        // [END auth_sign_out]
+    }
+
 
     fun mostrarMensajes(mensaje : String){
         val mensajeBottomDialog = MensajeBottomDialog()
