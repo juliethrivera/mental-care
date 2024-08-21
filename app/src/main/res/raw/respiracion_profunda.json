@@ -1,40 +1,30 @@
 {
   "ejercicios": [
     {
-      "nombre": "RESPIRACIÓN CON LABIOS FRUNCIDOS",
+      "nombre": "RESPIRACIÓN BOCA ARRIBA",
       "tiempo": 120,
-      "descripcion": "Ayuda a controlar la falta de aire y,a proporcionar una forma rápida y fácil de bajar el ritmo de respiración haciendo que cada respiración sea más efectiva.",
-      "animacion": "respiracion_con_labios_fruncidos"
+      "descripcion": "Ayuda a aumentar la cantidad de oxigeno en la sangre, disminuye la presion arterial y la frecuencia cardiaca y reduce la tension muscular.",
+      "animacion": "respiracion_boca_arriba"
     },
     {
-      "nombre": "RESPIRACIÓN DIAFRAGMÁTICA",
+      "nombre": "RESPIRACIÓN BOCA ABAJO",
       "tiempo": 300,
-      "descripcion": "Ayuda a aumentar la cantidad de oxigeno, disminuye la presión arterial y la frecuencia cardiaca, y reduce la tensión arterial. ",
-      "animacion": "respiracion_diafragmatica"
+      "descripcion": "Permite una mayor entrada de oxigeno al cuerpo,lo que puede ser útil durante un ejercicio intenso o en situaciones de estrés.Ayuda con problemas nasales crónicos o obstruciones nasales a respirar más fácilmente  ",
+      "animacion": "respiracion_profunda_boca_abajo"
     },
     {
-      "nombre": "RESPIRACIÓN NASAL ALTERNA",
+      "nombre": "RESPIRACIÓN PROFUNDA SENTADO",
       "tiempo": 300,
-      "descripcion": "Reduce la ansiedad, el estrés y la depresión a través de la relajación y la realineación de la mente, cuerpo y respiración. ",
-      "animacion": "respiracion_nasal_alterna"
+      "descripcion": "Ayuda a reducir el estrés y la ansiedad,promoviendo un estado de calma y relajación.Aumenta la oxigenación cerebral y disminuye los problemas respiratorios y cardiovasculares. ",
+      "animacion": "respiracion_mientras_esta_sentado"
     },
     {
-      "nombre": "RESPIRACIÓN EQUILIBRADA",
+      "nombre": "BOSTEZO HASTA SONREIR",
       "tiempo": 60,
-      "descripcion": "Mejora la capacidad pulmonar previniendo el organismos de enfermedades respiratorias.Además brinda mayor elasticidad a este órgano,favoreciendo su resistencia ante el esfuerzo.Aumenta la vitalidad del corazón.",
-      "animacion": "respiracion_equilibrada"
+      "descripcion": "Ayuda a aumentar la coordinación y desarrollar fuerza en los brazos y hombros.También abre los músculos del pecho para que el diafragma tenga espacio para expandirse.",
+      "animacion": "bostezo_hasta_sonreir"
     },
     {
-      "nombre": "RESPIRACIÓN SITALI",
-      "tiempo": 120,
-      "descripcion": "ayuda a bajar la temperatura corporal,también induce una sensación de calma y bienestar, contrarrestando el estrés y la fatiga que puede acompañar el calor intenso..",
-      "animacion": "respiracion_sitali"
-    },
-    {
-      "nombre": "RESPIRACIÓN DEL ABEJORRO",
-      "tiempo": 120,
-      "descripcion": "Alivia la frustración,la ansiedad y la ira.Ayuda a reducir la frecuencia cardíaca, pensar con más claridad y sentirse menos irritable o estresado.",
-      "animacion": "respiracion_del_abejorro"
     }
   ]
 }

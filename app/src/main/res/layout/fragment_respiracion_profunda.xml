@@ -37,76 +37,52 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/respiracion_boca_arriba"
         android:layout_width="200dp"
         android:layout_height="130dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="2dp"
-        android:src="@drawable/respiracion_profunda1"
-        app:layout_constraintEnd_toStartOf="@id/imageView10"
+        android:src="@drawable/respiracion_boca_arriba"
+        app:layout_constraintEnd_toStartOf="@id/respiracion_boca_abajo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/respiracion_boca_abajo"
         android:layout_width="200dp"
         android:layout_height="130dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/respiracion_profunda2"
+        android:src="@drawable/respiracion_boca_abajo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView9"
+        app:layout_constraintStart_toEndOf="@id/respiracion_boca_arriba"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/respiracion_sentado"
         android:layout_width="200dp"
         android:layout_height="129dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="2dp"
-        android:src="@drawable/respiracion_profunda3"
-        app:layout_constraintEnd_toStartOf="@id/imageView12"
+        android:src="@drawable/respiracion_sentado"
+        app:layout_constraintEnd_toStartOf="@id/bostezo_hasta_sonreir"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@id/respiracion_boca_arriba" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/bostezo_hasta_sonreir"
         android:layout_width="200dp"
         android:layout_height="129dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/respiracion_profunda4"
+        android:src="@drawable/respiracion_sonreir"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView11"
-        app:layout_constraintTop_toBottomOf="@id/imageView10" />
-
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="2dp"
-        android:src="@drawable/respiracion_profunda5"
-        app:layout_constraintEnd_toStartOf="@id/imageView14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView11" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="200dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/respiracion_profunda6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView13"
-        app:layout_constraintTop_toBottomOf="@id/imageView12" />
+        app:layout_constraintStart_toEndOf="@id/respiracion_sentado"
+        app:layout_constraintTop_toBottomOf="@id/respiracion_boca_abajo" />
 
     <Button
         android:id="@+id/empezar"
