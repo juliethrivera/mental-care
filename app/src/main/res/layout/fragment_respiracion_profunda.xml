@@ -38,11 +38,11 @@
 
     <ImageView
         android:id="@+id/respiracion_boca_arriba"
-        android:layout_width="200dp"
-        android:layout_height="130dp"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="2dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/respiracion_boca_arriba"
         app:layout_constraintEnd_toStartOf="@id/respiracion_boca_abajo"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,10 +50,10 @@
 
     <ImageView
         android:id="@+id/respiracion_boca_abajo"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="130dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="47dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/respiracion_boca_abajo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
 
     <ImageView
         android:id="@+id/respiracion_sentado"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="129dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="50dp"
@@ -74,10 +74,10 @@
 
     <ImageView
         android:id="@+id/bostezo_hasta_sonreir"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="129dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/respiracion_sonreir"
         app:layout_constraintEnd_toEndOf="parent"

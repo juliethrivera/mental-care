@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6CDF6"
-    android:textAlignment="inherit"
+    android:textAlignment="textEnd"
     tools:context=".fragments.TestMentalBlankFragment">
 
     <ImageView
@@ -19,6 +19,7 @@
         android:src="@drawable/arrow_back_"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/testMental"
         android:layout_width="wrap_content"
@@ -39,7 +40,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:progress="0"
+        android:progress="50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/testMental" />
@@ -59,11 +60,11 @@
 
     <TextView
         android:id="@+id/pregunta"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
         android:text="1.Te sientes abrumad@ por las actividades de tu vida diaria?"
         android:textAlignment="textStart"
         android:textColor="#000000"
@@ -74,41 +75,48 @@
 
     <RadioGroup
         android:id="@+id/opciones"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="32dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/pregunta">
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/opcion_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Nunca"
             android:textColor="#000000" />
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
+
             android:id="@+id/opcion_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Raramente"
             android:textColor="#000000" />
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
+
             android:id="@+id/opcion_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="A veces"
             android:textColor="#000000" />
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
+
             android:id="@+id/opcion_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Frecuentemente"
             android:textColor="#000000" />
 
-        <RadioButton
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/opcion_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

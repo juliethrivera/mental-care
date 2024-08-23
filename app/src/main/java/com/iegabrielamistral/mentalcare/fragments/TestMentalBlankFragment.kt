@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -22,7 +23,7 @@ import java.io.InputStream
 
 class TestMentalBlankFragment : Fragment() {
 
-    private lateinit var anterior : ImageButton
+    private lateinit var anterior : ImageView
     private lateinit var testMental: TextView
     private lateinit var progreso : ProgressBar
     private lateinit var cantidadPreguntas : TextView

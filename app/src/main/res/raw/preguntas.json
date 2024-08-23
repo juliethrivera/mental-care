@@ -48,7 +48,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "6. Sientes que la tension o la inquietud afectan tu capacidad para enfrentar situaciones cotidianas?",
+            "pregunta" : "6. Sientes que la tensión o la inquietud afectan tu capacidad para enfrentar situaciones cotidianas?",
             "categoria": "Ansiedad",
             "opcion1": "Muy poco",
             "opcion2": "Poco",
@@ -57,7 +57,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "7. Experimentas con mucha frecuencua sintomas fisicos como palpitaciones, sudoración excesivo o dificultad para respirar?",
+            "pregunta" : "7. Experimentas con mucha frecuencia sintomas físicos como palpitaciones, sudoración excesivo o dificultad para respirar?",
             "categoria": "Ansiedad",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -66,7 +66,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "8. Sientes mucha tension en lugares con demasiadas personas?",
+            "pregunta" : "8. Sientes mucha tensión en lugares con demasiadas personas?",
             "categoria": "Ansiedad",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -75,7 +75,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "9. Con que frecuencia te sientes triste o desanimado sin nunguna razon?",
+            "pregunta" : "9. Con que frecuencia te sientes triste o desanimado sin ninguna razon?",
             "categoria": "Depresion",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -84,7 +84,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "10. Con que frecuencia experimentas falta de interes o placer en actividades que antes disfrutabaas?",
+            "pregunta" : "10. Con que frecuencia experimentas falta de interés o placer en actividades que antes disfrutabaas?",
             "categoria": "Depresion",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -102,7 +102,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "12. Crees que la trsiteza y desesperanza estan afectando tu bienestar emocional?",
+            "pregunta" : "12. Crees que la tristeza y desesperanza estan afectando tu bienestar emocional?",
             "categoria": "Depresion",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -174,7 +174,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "20. Sientes que las criticas de los demas afectan en tu percepcion de ti mismo/a?",
+            "pregunta" : "20. Sientes que las criticas de los demas afectan en tu percepción de ti mismo/a?",
             "categoria": "Autoestima",
             "opcion1": "Muy poco",
             "opcion2": "Poco",

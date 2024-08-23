@@ -4,7 +4,7 @@
       "nombre": "RESPIRACIÓN BOCA ARRIBA",
       "tiempo": 120,
       "descripcion": "Ayuda a aumentar la cantidad de oxigeno en la sangre, disminuye la presion arterial y la frecuencia cardiaca y reduce la tension muscular.",
-      "animacion": "respiracion_boca_arriba"
+      "animacion": "respiracion_profunda_boca_arriba"
     },
     {
       "nombre": "RESPIRACIÓN BOCA ABAJO",
@@ -22,7 +22,7 @@
       "nombre": "BOSTEZO HASTA SONREIR",
       "tiempo": 60,
       "descripcion": "Ayuda a aumentar la coordinación y desarrollar fuerza en los brazos y hombros.También abre los músculos del pecho para que el diafragma tenga espacio para expandirse.",
-      "animacion": "bostezo_hasta_sonreir"
+      "animacion": "bostezo_sonreir"
     },
     {
     }
