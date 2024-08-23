@@ -13,11 +13,13 @@
         android:theme="@style/Theme.MentalCare"
         tools:targetApi="31">
         <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.MentalCare" >
-        </activity>
+            android:theme="@style/Theme.MentalCare"></activity>
         <activity
             android:name=".LoginActivity"
             android:exported="true">
