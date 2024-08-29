@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -64,12 +65,25 @@ class ResultadosFragment(val selecciones: List<Int>) : Fragment() {
         porcentajeAutoestima.text = selecciones[4].toString() + "%"
 
 
-        progresoEstres.progress = selecciones[0]
-        progresoAnsiedad.progress = selecciones[1]
-        progresoDepresion.progress = selecciones[2]
-        progresoHumor.progress = selecciones[3]
-        progresoAutoestima.progress = selecciones[4]
+        ObjectAnimator.ofInt(progresoEstres, "progress", selecciones[0])
+            .setDuration(1000)
+            .start()
 
+        ObjectAnimator.ofInt(progresoDepresion, "progress", selecciones[2])
+            .setDuration(1000)
+            .start();
+
+        ObjectAnimator.ofInt(progresoHumor, "progress", selecciones[3])
+            .setDuration(1000)
+            .start();
+
+        ObjectAnimator.ofInt(progresoAutoestima, "progress", selecciones[4])
+            .setDuration(1000)
+            .start();
+
+        ObjectAnimator.ofInt(progresoAnsiedad, "progress", selecciones[1])
+            .setDuration(1000)
+            .start();
 
 
         anterior.setOnClickListener {
