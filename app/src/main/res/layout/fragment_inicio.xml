@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/material_dynamic_primary80"
-    tools:context=".usuario.inicioFragment">
+    tools:context=".usuario.InicioFragment">
 
     <ImageView
         android:id="@+id/imageV"
@@ -40,17 +40,29 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
         android:hint="Contraseña"
+        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/telefono" />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginTop="24dp"
+        android:text="Olvidastes las contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contraseña" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:text="Regresar"
         app:layout_constraintEnd_toStartOf="@id/button2"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +72,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:text="Iniciar sesión"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button"
