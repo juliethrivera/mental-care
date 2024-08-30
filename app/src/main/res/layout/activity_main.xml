@@ -10,7 +10,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.iegabrielamistral.mentalcare.fragments.BlankFragment"
+        android:name="com.iegabrielamistral.mentalcare.fragments.TestMentalBlankFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bnvView"
