@@ -26,9 +26,6 @@ import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
 
 class RegistroFragment : Fragment() {
-
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/system_error_dark"
+    android:background="@color/white"
     tools:context=".fragments.TestFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,5 +13,12 @@
         android:layout_height="wrap_content"
         android:text="TEST"
         android:textSize="50dp" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Comenzar Test"
+        android:textColor="@color/white" />
 
 </FrameLayout>

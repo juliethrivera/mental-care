@@ -15,36 +15,54 @@
         android:layout_marginTop="16dp"
         android:src="@drawable/back"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/registro"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/registro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="25dp"
         android:text="Registro"
         android:textColor="#000000"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back" />
+        app:layout_constraintStart_toEndOf="@id/back"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
 
     <EditText
-        android:id="@+id/nombre"
+        android:id="@+id/textNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
-        android:hint="Nombre completo"
+        android:hint="Nombre "
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registro" />
 
+
     <EditText
-        android:id="@+id/fecha"
+        android:id="@+id/textApellido"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:hint="Apellido"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textNombre" />
+
+    <EditText
+        android:id="@+id/textFecha"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -55,10 +73,10 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nombre" />
+        app:layout_constraintTop_toBottomOf="@id/textApellido" />
 
     <EditText
-        android:id="@+id/correo"
+        android:id="@+id/textCorreo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -69,10 +87,10 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fecha" />
+        app:layout_constraintTop_toBottomOf="@id/textFecha" />
 
     <EditText
-        android:id="@+id/contraseña"
+        android:id="@+id/textContraseña"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -83,15 +101,16 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/correo" />
+        app:layout_constraintTop_toBottomOf="@id/textCorreo" />
 
     <Button
         android:id="@+id/guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="40dp"
-        android:text="guardar tu información"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/contraseña" />
+        android:layout_marginEnd="32dp"
+        android:drawableLeft="@drawable/baseline_save"
+        android:text="guardar "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textContraseña" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -28,6 +31,7 @@ private const val ARG_PARAM2 = "param2"
 class PerfilFragment : Fragment() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var googleSignInClient: GoogleSignInClient
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,10 +41,19 @@ class PerfilFragment : Fragment() {
         sing_out_button.setOnClickListener {
             signOut()
         }
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+
+        auth = Firebase.auth
     }
     private fun signOut() {
         // [START auth_sign_out]
         auth.signOut()
+        googleSignInClient.signOut()
         // [END auth_sign_out]
         val intent = Intent(requireActivity(),LoginActivity::class.java)
         startActivity(intent)

@@ -29,12 +29,16 @@ class VistaFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // TODO: Use the ViewModel
-
         Handler().postDelayed({
-            val registroFragment = RegistroFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView2, registroFragment).commit()
+            // Check if the fragment is still attached before proceeding
+            if (isAdded && requireActivity().isFinishing.not()) {
+                val registroFragment = RegistroFragment()
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView2, registroFragment).commit()
+            }
         }, 2000)
+
+
     }
 
 }

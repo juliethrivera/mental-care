@@ -1,6 +1,8 @@
 package com.iegabrielamistral.mentalcare
 
+import android.content.Context
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -51,7 +53,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-
     }
     private fun loadFragment(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()

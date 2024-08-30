@@ -72,7 +72,6 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 
     // Add the dependency for the Firebase Authentication library
