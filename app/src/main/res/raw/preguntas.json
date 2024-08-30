@@ -10,7 +10,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "2. Que tanto afecto tu capacidad para concentrarte en tus tareas o actividades del colegio?",
+            "pregunta" : "2. Que tanto afecta tu capacidad para concentrarte en tus tareas o actividades del colegio?",
             "categoria": "Estres",
             "opcion1": "Muy poco",
             "opcion2": "Poco",
@@ -39,7 +39,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "5. Experimentas con mucha frecuencia la preocupacion intensa o nerviosismo?",
+            "pregunta" : "5. Experimentas con mucha frecuencia la preocupación intensa o nerviosismo?",
             "categoria": "Ansiedad",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -75,7 +75,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "9. Con que frecuencia te sientes triste o desanimado sin ninguna razon?",
+            "pregunta" : "9. Con que frecuencia te sientes triste o desanimado sin ninguna razón?",
             "categoria": "Depresion",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -111,7 +111,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "13. Con que frecuencia experimentas cambios repentinos en tu estado de animo?",
+            "pregunta" : "13. Con que frecuencia experimentas cambios repentinos en tu estado de ánimo?",
             "categoria": "Cambios de humor ",
             "opcion1": "Nunca",
             "opcion2": "Raramente",
@@ -120,7 +120,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "14. Sientes que los cambios en tu estado de animo afectan tus relaciones personales o tu vida cotidiana?",
+            "pregunta" : "14. Sientes que los cambios en tu estado de ánimo afectan tus relaciones personales o tu vida cotidiana?",
             "categoria": "Cambios de humor ",
             "opcion1": "Muy poco",
             "opcion2": "Poco",
@@ -138,7 +138,7 @@
             "opcion5": "Siempre"
         },
         {
-            "pregunta" : "16. Crees que tu estado de animo este afectando en tu bienestar emocional? ",
+            "pregunta" : "16. Crees que tu estado de ánimo este afectando en tu bienestar emocional? ",
             "categoria": "Cambios de humor ",
             "opcion1": "Muy poco",
             "opcion2": "Poco",
@@ -174,7 +174,7 @@
             "opcion5": "Mucho"
         },
         {
-            "pregunta" : "20. Sientes que las criticas de los demas afectan en tu percepción de ti mismo/a?",
+            "pregunta" : "20. Sientes que las criticas de los demás afectan en tu percepción de ti mismo/a?",
             "categoria": "Autoestima",
             "opcion1": "Muy poco",
             "opcion2": "Poco",

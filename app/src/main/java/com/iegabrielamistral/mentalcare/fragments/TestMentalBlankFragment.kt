@@ -3,13 +3,12 @@ package com.iegabrielamistral.mentalcare.fragments
 import android.content.Context
 import androidx.fragment.app.viewModels
 import android.os.Bundle
-import android.os.Handler
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RadioButton
@@ -58,7 +57,7 @@ class TestMentalBlankFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        anterior = view.findViewById(R.id.anterior)
+        anterior = view.findViewById(R.id.home)
         testMental = view.findViewById(R.id.testMental)
         progreso = view.findViewById(R.id.progreso)
         cantidadPreguntas = view.findViewById(R.id.cantidadPreguntas)
@@ -82,9 +81,10 @@ class TestMentalBlankFragment : Fragment() {
         cargarPregunta(testMental)
 
         siguiente.setOnClickListener {
+            obtenerSeleccion()
             question++
             if (question < 20) {
-                obtenerSeleccion()
+
                 cargarPregunta(testMental)
             } else {
                 val resultadosFragment = ResultadosFragment(selecciones)
@@ -111,6 +111,8 @@ class TestMentalBlankFragment : Fragment() {
 
     fun obtenerSeleccion() {
 
+        Log.e("TestMental", "question: $question")
+
         val categoria = if (question >= 0 && question <= 3) {
             0
         } else if (question >= 4 && question <= 7) {
@@ -123,13 +125,17 @@ class TestMentalBlankFragment : Fragment() {
             4
         }
 
+        Log.w("TestMental", "categoria: $categoria")
+
         when (opciones.checkedRadioButtonId) {
             opcion_1.id -> {
                 selecciones[categoria] += 0
+
             }
 
             opcion_2.id -> {
                 selecciones[categoria] += 10
+
             }
 
             opcion_3.id -> {
@@ -141,9 +147,11 @@ class TestMentalBlankFragment : Fragment() {
             }
 
             opcion_5.id -> {
-                selecciones[4] += 25
+                selecciones[categoria] += 25
             }
         }
+
+        Log.d("TestMental", "selecciones: ${selecciones[categoria]}")
     }
 
     fun cargarPregunta(testMental: TestMental) {

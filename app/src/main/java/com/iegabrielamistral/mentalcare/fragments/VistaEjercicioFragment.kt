@@ -50,7 +50,7 @@ class VistaEjercicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        anterior = view.findViewById(R.id.anterior)
+        anterior = view.findViewById(R.id.home)
         titulo = view.findViewById(R.id.titulo)
         contador = view.findViewById(R.id.contador)
         texto_contador = view.findViewById(R.id.texto_contador)

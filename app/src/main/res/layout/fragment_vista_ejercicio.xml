@@ -8,7 +8,7 @@
     tools:context=".fragments.VistaEjercicioFragment">
 
     <ImageView
-        android:id="@+id/anterior"
+        android:id="@+id/home"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="16dp"

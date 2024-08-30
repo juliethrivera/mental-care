@@ -38,7 +38,7 @@ class RespiracionProfundaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val anterior: ImageView = view.findViewById(R.id.anterior)
+        val anterior: ImageView = view.findViewById(R.id.home)
         val empezar: Button = view.findViewById(R.id.empezar)
 
 

@@ -46,7 +46,7 @@ class ResultadosFragment(val selecciones: List<Int>) : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        anterior = view.findViewById(R.id.anterior)
+        anterior = view.findViewById(R.id.home)
         progresoDepresion = view.findViewById(R.id.progresoDepresion)
         porcentajeDepresion = view.findViewById(R.id.porcentajeDepresion)
         progresoAnsiedad= view.findViewById(R.id.progresoAnsiedad)

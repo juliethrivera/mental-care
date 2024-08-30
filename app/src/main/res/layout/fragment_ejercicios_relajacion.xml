@@ -8,7 +8,7 @@
     tools:context=".fragments.EjerciciosRelajacionFragment">
 
     <ImageButton
-        android:id="@+id/anterior"
+        android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -29,7 +29,7 @@
         android:text="Ejercicios De Relajación"
         android:textColor="@color/black"
         android:textSize="25sp"
-        app:layout_constraintStart_toEndOf="@id/anterior"
+        app:layout_constraintStart_toEndOf="@id/home"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -44,7 +44,7 @@
         app:cardElevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/anterior">
+        app:layout_constraintTop_toBottomOf="@id/home">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

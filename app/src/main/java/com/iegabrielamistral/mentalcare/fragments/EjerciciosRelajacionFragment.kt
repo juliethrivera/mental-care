@@ -48,7 +48,7 @@ class EjerciciosRelajacionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        anterior = view.findViewById(R.id.anterior)
+        anterior = view.findViewById(R.id.home)
         ejerciciosDeRelajacion = view.findViewById(R.id.titulo)
         cardYoga = view.findViewById(R.id.cardYoga)
         imagenYoga = view.findViewById(R.id.imagenYoga)

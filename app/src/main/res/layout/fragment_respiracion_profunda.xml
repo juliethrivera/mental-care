@@ -10,7 +10,7 @@
     tools:context=".fragments.RespiracionProfundaFragment">
 
     <ImageView
-        android:id="@+id/anterior"
+        android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/anterior"
+        app:layout_constraintStart_toEndOf="@id/home"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

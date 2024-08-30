@@ -9,30 +9,32 @@
     tools:context=".fragments.ResultadosFragment">
 
     <ImageView
-        android:id="@+id/anterior"
+        android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        android:src="@drawable/arrow_back_"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/home"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="90dp"
         android:text="Resultados"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/anterior"
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="parent"
+
+
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -46,6 +48,31 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo"
         >
+
+        <ProgressBar
+            android:id="@+id/progresoDepresion"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#0000F4"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenDepresion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeDepresion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoDepresion"
+            app:layout_constraintEnd_toEndOf="@id/progresoDepresion"
+            app:layout_constraintTop_toTopOf="@id/progresoDepresion" />
 
         <ImageView
             android:id="@+id/imagenDepresion"
@@ -71,31 +98,6 @@
             app:layout_constraintTop_toBottomOf="@id/imagenDepresion"
             />
 
-        <TextView
-            android:id="@+id/porcentajeDepresion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="100%"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            app:layout_constraintBottom_toBottomOf="@id/progresoDepresion"
-            app:layout_constraintEnd_toEndOf="@id/progresoDepresion"
-            app:layout_constraintTop_toTopOf="@id/progresoDepresion" />
-
-        <ProgressBar
-            android:id="@+id/progresoDepresion"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:progressBackgroundTint="#A64545"
-            android:progressTint="#0000F4"
-            android:scaleY="10"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imagenDepresion"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,6 +111,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraint1"
         >
+
+        <ProgressBar
+            android:id="@+id/progresoAnsiedad"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#FE5D05"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenAnsiedad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/porcentajeAnsiedad"
@@ -146,19 +161,6 @@
             app:layout_constraintTop_toTopOf="parent"
             />
 
-        <ProgressBar
-            android:id="@+id/progresoAnsiedad"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:progressBackgroundTint="#A64545"
-            android:progressTint="#FE5D05"
-            android:scaleY="10"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imagenAnsiedad"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -183,6 +185,19 @@
             app:layout_constraintStart_toStartOf="@id/imagenAutoestima"
             app:layout_constraintTop_toBottomOf="@id/imagenAutoestima"
             />
+
+        <ProgressBar
+            android:id="@+id/progresoAutoestima"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#048F27"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenAutoestima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/porcentajeAutoestima"
@@ -209,18 +224,6 @@
             app:layout_constraintTop_toTopOf="parent"
             />
 
-        <ProgressBar
-            android:id="@+id/progresoAutoestima"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:progressBackgroundTint="#A64545"
-            android:progressTint="#048F27"
-            android:scaleY="10"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imagenAutoestima"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -243,6 +246,19 @@
             app:layout_constraintEnd_toEndOf="@id/imagenEstres"
             app:layout_constraintStart_toStartOf="@id/imagenEstres"
             app:layout_constraintTop_toBottomOf="@id/imagenEstres" />
+
+        <ProgressBar
+            android:id="@+id/progresoEstres"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#FE0000"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenEstres"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/porcentajeEstres"
@@ -268,18 +284,6 @@
             app:layout_constraintStart_toEndOf="@id/progresoEstres"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ProgressBar
-            android:id="@+id/progresoEstres"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:progressBackgroundTint="#A64545"
-            android:progressTint="#FE0000"
-            android:scaleY="10"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/imagenEstres"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
