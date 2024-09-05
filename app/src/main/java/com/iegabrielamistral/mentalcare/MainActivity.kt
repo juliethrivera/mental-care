@@ -9,10 +9,12 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
 import com.iegabrielamistral.mentalcare.fragments.RelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.TestFragment
+import com.iegabrielamistral.mentalcare.fragments.TestMentalBlankFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.RELAJACION ->{
-                    loadFragment(RelajacionFragment())
+                    loadFragment(EjerciciosRelajacionFragment())
                     true
                 }
                 R.id.perfil_usuario ->{

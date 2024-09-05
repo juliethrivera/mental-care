@@ -68,11 +68,6 @@ class EjerciciosRelajacionFragment : Fragment() {
 
 
 
-        anterior.setOnClickListener {
-            activity?.onBackPressedDispatcher?.onBackPressed()
-        }
-
-
         cardYoga.setOnClickListener {
             val yogaFragment = YogaFragment()
             requireActivity().supportFragmentManager.beginTransaction()

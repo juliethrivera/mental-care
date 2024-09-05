@@ -23,7 +23,6 @@ import java.io.InputStream
 
 class TestMentalBlankFragment : Fragment() {
 
-    private lateinit var anterior: ImageView
     private lateinit var testMental: TextView
     private lateinit var progreso: ProgressBar
     private lateinit var cantidadPreguntas: TextView
@@ -57,7 +56,7 @@ class TestMentalBlankFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        anterior = view.findViewById(R.id.home)
+
         testMental = view.findViewById(R.id.testMental)
         progreso = view.findViewById(R.id.progreso)
         cantidadPreguntas = view.findViewById(R.id.cantidadPreguntas)
@@ -79,6 +78,7 @@ class TestMentalBlankFragment : Fragment() {
             gson.fromJson(jsonString, object : TypeToken<TestMental>() {}.type)
 
         cargarPregunta(testMental)
+
 
         siguiente.setOnClickListener {
             obtenerSeleccion()

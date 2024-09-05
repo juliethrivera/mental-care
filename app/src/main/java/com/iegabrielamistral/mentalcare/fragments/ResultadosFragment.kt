@@ -87,9 +87,9 @@ class ResultadosFragment(val selecciones: List<Int>) : Fragment() {
 
 
         anterior.setOnClickListener {
-            val testMentalBlankFragment = TestMentalBlankFragment()
+            val HomeFragment= HomeFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, testMentalBlankFragment).commit()
+                .replace(R.id.fragmentContainerView, HomeFragment).commit()
 
         }
 
