@@ -36,42 +36,41 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="164dp"
-        android:layout_height="166dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/respiraacion_profunda_boca_arriba"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="94dp" />
+        android:layout_width="172dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/Respiracion_Profunda_Sentado"
+        app:layout_constraintStart_toStartOf="parent"
+        android:ap
+        tools:ignore="MissingConstraints,MissingPrefix"
+        tools:layout_editor_absoluteY="95dp" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="190dp"
-        android:layout_height="164dp"
-        android:layout_marginStart="12dp"
-        android:src="@drawable/resoiracion_profunda_boca_abajo"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="94dp" />
+        android:layout_width="176dp"
+        android:layout_height="132dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/Respiracion_Profunda_Hasta_Sonrreir"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="99dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="202dp"
-        android:layout_height="158dp"
-        android:layout_marginStart="4dp"
-        android:src="@drawable/resoiracion_profunda_mientras_esta_sentado"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="280dp" />
+        android:layout_width="171dp"
+        android:layout_height="125dp"
+        android:src="@drawable/Respiracion_Profunda_Voca_Bajo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="248dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="181dp"
-        android:layout_height="160dp"
-        android:layout_marginEnd="4dp"
-        android:src="@drawable/bostezo_asta_sonreir"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="280dp" />
+        android:layout_width="176dp"
+        android:layout_height="118dp"
+        android:src="@drawable/Respiracion_Profunda_Voca_Riba"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="254dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
