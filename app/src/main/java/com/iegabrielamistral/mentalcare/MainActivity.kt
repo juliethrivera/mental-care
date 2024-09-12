@@ -12,6 +12,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
+import com.iegabrielamistral.mentalcare.fragments.PerfilUsuarioFragment
 import com.iegabrielamistral.mentalcare.fragments.RelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.TestFragment
 import com.iegabrielamistral.mentalcare.fragments.TestMentalBlankFragment
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.perfil_usuario ->{
-                    loadFragment(PerfilFragment())
+                    loadFragment(PerfilUsuarioFragment())
                     true
                 }
                 else ->{

@@ -13,19 +13,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/cerebro_canva2" />
+        android:src="@drawable/canva4" />
 
 
     <Button
         android:id="@+id/testButton"
-        android:layout_width="280dp"
+        android:layout_width="260dp"
         android:layout_height="60dp"
         android:layout_marginStart="70dp"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="120dp"
         android:text="Comenzar Test"
         android:textColor="@color/black"
-        android:textColorHint="#C1A8ED"
+        android:textColorHint="#9868EB"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
