@@ -19,7 +19,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.usuario.RegistroFragment
 
-class LoginActivity : AppCompatActivity() {
+class  LoginActivity : AppCompatActivity() {
 
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
@@ -118,6 +118,15 @@ class LoginActivity : AppCompatActivity() {
                         "Authentication failed.",
                         Toast.LENGTH_SHORT,
                     ).show()
+                }
+            }
+    }
+
+    fun passwordRecover(email: String){
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+
                 }
             }
     }

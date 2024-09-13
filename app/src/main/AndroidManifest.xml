@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MentalCare"
         tools:targetApi="31">
         <activity
+            android:name=".RestablecerActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
