@@ -27,6 +27,7 @@ class  LoginActivity : AppCompatActivity() {
 
     private lateinit var googleSignInClient: GoogleSignInClient
 
+
     //
     override fun onStart() {
         super.onStart()
@@ -126,7 +127,6 @@ class  LoginActivity : AppCompatActivity() {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-
                 }
             }
     }

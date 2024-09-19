@@ -19,13 +19,13 @@
 
 
     <EditText
-        android:id="@+id/telefono"
+        android:id="@+id/textCorreo1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:layout_marginEnd="50dp"
-        android:hint="Telefono o Correo electronico"
+        android:hint="Correo electronico"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,15 +45,15 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/telefono" />
+        app:layout_constraintTop_toBottomOf="@id/textCorreo1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="56dp"
 
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:text="Olvidastes la contraseña"
         android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableLeft="@drawable/back"
         android:text="Regresar"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toStartOf="@id/button2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/contraseña" />
@@ -74,7 +78,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
+        android:backgroundTint="#FFFFFF"
         android:text="Iniciar sesión"
+        android:textColor="#000000"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button"
         app:layout_constraintTop_toBottomOf="@id/contraseña" />
