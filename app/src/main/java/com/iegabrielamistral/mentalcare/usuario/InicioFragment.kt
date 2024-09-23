@@ -10,12 +10,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.google.android.material.textfield.TextInputEditText
 import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 
 class InicioFragment : Fragment() {
-    lateinit var password : TextView
+    //lateinit var password : TextView
 
     companion object {
         fun newInstance() = InicioFragment()
@@ -31,16 +32,17 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val correo: TextView = view.findViewById(R.id.textCorreo1)
-        val contraseña: TextView = view.findViewById(R.id.contraseña)
+        val correo: TextInputEditText = view.findViewById(R.id.textCorreo1)
+        val contraseña: TextInputEditText = view.findViewById(R.id.contraseña)
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
 
-        password = view.findViewById(R.id.textPassword)
+       val  password : TextView = view.findViewById(R.id.textPassword)
 
         password.setOnClickListener {
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)
+           val restablecerFragment = RestablecerFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2,restablecerFragment).commit()
 
         }
 
@@ -54,7 +56,7 @@ class InicioFragment : Fragment() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 button2.isEnabled =
-                    (correo.text.isNotEmpty() && contraseña.text.isNotEmpty())
+                    (correo.text!!.isNotEmpty() && contraseña.text!!.isNotEmpty())
             }
 
             override fun afterTextChanged(p0: Editable?) {

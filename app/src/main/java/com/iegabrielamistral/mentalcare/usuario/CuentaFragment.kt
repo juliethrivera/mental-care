@@ -14,6 +14,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.google.android.material.textfield.TextInputEditText
 import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.R
 
@@ -23,7 +24,11 @@ class CuentaFragment : Fragment() {
         fun newInstance() = CuentaFragment()
     }
 
-    lateinit var editText: EditText
+    lateinit var editText: TextInputEditText
+    lateinit var textContraseña: TextInputEditText
+    lateinit var textCorreo: TextInputEditText
+    lateinit var textApellido: TextInputEditText
+    lateinit var textNombre: TextInputEditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -35,17 +40,18 @@ class CuentaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val back : ImageView = view.findViewById(R.id.back)
-        val textNombre : EditText = view.findViewById(R.id.textNombre)
-        val textApellido : EditText = view.findViewById(R.id.textApellido)
-        val textCorreo : EditText = view.findViewById(R.id.textCorreo)
-        val textContraseña : EditText = view.findViewById(R.id.textContraseña)
-        val guadar : Button = view.findViewById(R.id.guardar)
+        val back: ImageView = view.findViewById(R.id.back)
+        textNombre = view.findViewById(R.id.textNombre)
+        textApellido = view.findViewById(R.id.textApellido)
+        textCorreo = view.findViewById(R.id.textCorreo)
+        textContraseña = view.findViewById(R.id.textContraseña)
+        val guadar: Button = view.findViewById(R.id.guardar)
 
         editText = view.findViewById(R.id.Editext)
 
 
-        editText.setOnClickListener { shwDatePikerDialog()
+        editText.setOnClickListener {
+            shwDatePikerDialog()
         }
 
         guadar.isEnabled = false
@@ -57,9 +63,10 @@ class CuentaFragment : Fragment() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 guadar.isEnabled =
-                    (textNombre.text.isNotEmpty() && textApellido.text.isNotEmpty()
-                            && editText .text.isNotEmpty() && textCorreo.text.isNotEmpty()
-                            && textContraseña.text.isNotEmpty())
+                    (
+                            textNombre.text!!.isNotEmpty() && textApellido.text!!.isNotEmpty() &&
+                                    editText.text!!.isNotEmpty() && textCorreo.text!!.isNotEmpty()
+                                    && textContraseña.text!!.isNotEmpty())
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -69,7 +76,7 @@ class CuentaFragment : Fragment() {
 
         textNombre.addTextChangedListener(textWatcher)
         textApellido.addTextChangedListener(textWatcher)
-        editText .addTextChangedListener(textWatcher)
+        editText.addTextChangedListener(textWatcher)
         textCorreo.addTextChangedListener(textWatcher)
         textContraseña.addTextChangedListener(textWatcher)
 
@@ -83,7 +90,7 @@ class CuentaFragment : Fragment() {
         textApellido.setText(apellido)
 
         var fecha = pref.getString("fecha", "")
-        editText .setText(fecha)
+        editText.setText(fecha)
 
         var correo = pref.getString("correo", "")
         textCorreo.setText(correo)
@@ -97,12 +104,12 @@ class CuentaFragment : Fragment() {
             var editor = pref.edit()
             editor.putString("nombre", textNombre.text.toString())
             editor.putString("apellido", textApellido.text.toString())
-            editor.putString("fecha", editText .text.toString())
+            editor.putString("fecha", editText.text.toString())
             editor.putString("correo", textCorreo.text.toString())
             editor.putString("contraseña", textContraseña.text.toString())
             editor.commit()
-            Toast.makeText(requireActivity(), "Se ha guardado exitosamente", Toast.LENGTH_LONG)
-                .show()
+            /*Toast.makeText(requireActivity(), "Se ha guardado exitosamente", Toast.LENGTH_LONG)
+                .show()*/
 
             /*requireActivity().getSharedPreferences("datos personales", Context.MODE_PRIVATE)
             val intent = Intent(requireActivity(), MainActivity::class.java)
@@ -122,12 +129,14 @@ class CuentaFragment : Fragment() {
         }
 
     }
+
     private fun shwDatePikerDialog() {
-        val datePicker = DatePickerFragment {day, month, year -> onDateSelected(day,month,year) }
+        val datePicker = DatePickerFragment { day, month, year -> onDateSelected(day, month, year) }
         datePicker.show(requireActivity().supportFragmentManager, "datePicker")
 
     }
-    fun onDateSelected(day:Int,month:Int,year:Int){
+
+    fun onDateSelected(day: Int, month: Int, year: Int) {
 
         var nmonth = month + 1
 

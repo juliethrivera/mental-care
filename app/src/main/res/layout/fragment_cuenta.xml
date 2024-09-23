@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textNombre"
+        android:id="@+id/textLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -43,13 +43,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/registro" >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
             android:hint="Nombre " />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textApellido"
+        android:id="@+id/textLayout1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -59,71 +62,82 @@
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textNombre" >
+        app:layout_constraintTop_toBottomOf="@id/textLayout" >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textApellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
             android:hint="Apellido " />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Editext"
-        android:layout_width="390dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="24sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        android:clickable="false"
-        android:focusable="false"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textApellido"  >
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Seleccina tu fecha "
-            android:drawableEnd="@drawable/calendar"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textCorreo"
+        android:id="@+id/textLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:inputType="textEmailAddress"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textLayout1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Editext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/calendar"
+            android:clickable="false"
+            android:focusable="false"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:hint="Seleccina tu fecha " />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Editext" >
+        app:layout_constraintTop_toBottomOf="@id/textLayout2" >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textCorreo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:drawableEnd="@drawable/email"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
             android:hint="Correo electronico" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textContraseña"
+        android:id="@+id/textLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
-        android:inputType="textPassword"
         android:textColor="#000000"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textCorreo" >
+        app:layout_constraintTop_toBottomOf="@id/textLayout3" >
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textContraseña"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColorHint="#000000"
+            android:textColor="#000000"
             android:hint="Crea una contraseña" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,6 +152,6 @@
         android:text="Guardar "
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textContraseña" />
+        app:layout_constraintTop_toBottomOf="@id/textLayout4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

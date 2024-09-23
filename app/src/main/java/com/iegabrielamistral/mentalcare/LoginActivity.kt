@@ -127,6 +127,7 @@ class  LoginActivity : AppCompatActivity() {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+Log.d("FirebaseAuth", "isSuccessful")
                 }
             }
     }
