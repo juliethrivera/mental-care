@@ -13,17 +13,20 @@ import com.iegabrielamistral.mentalcare.R
 class PerfilUsuarioFragment : Fragment() {
 
     lateinit var editaPerfil : Button
+    lateinit var guardarCambios : Button
+    lateinit var nombre_usuario : TextInputLayout
     lateinit var correo_electronico : TextInputLayout
     lateinit var contraseña : TextInputLayout
     lateinit var verInformacion : Button
     lateinit var fecha_de_nacimiento : TextInputLayout
-    lateinit var resultados_de_test_anteriores : TextInputLayout
+
 
 
     val correousuario: String = ""
+    val nombreusuario: String = ""
     val contraseñausuario: String = ""
     val fechausuario: String = ""
-    val resultadostestusuario: String = ""
+
 
 
     companion object {
@@ -49,11 +52,13 @@ class PerfilUsuarioFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
        editaPerfil = view.findViewById(R.id.editaPerfil)
-        correo_electronico = view.findViewById(R.id.textField1)
-        contraseña = view.findViewById(R.id.textField2)
+        guardarCambios = view.findViewById(R.id.guardarCambios)
+        nombre_usuario = view.findViewById(R.id.textField1)
+        correo_electronico = view.findViewById(R.id.textField2)
+        contraseña = view.findViewById(R.id.textField3)
         verInformacion = view.findViewById(R.id.verInformacion)
-        fecha_de_nacimiento = view.findViewById(R.id.textField3)
-        resultados_de_test_anteriores = view.findViewById(R.id.textField4)
+        fecha_de_nacimiento = view.findViewById(R.id.textField4)
+
 
 
         editaPerfil.setOnClickListener {
@@ -67,12 +72,22 @@ class PerfilUsuarioFragment : Fragment() {
             }else{
                 View.VISIBLE
             }
+            nombre_usuario.visibility = if(nombre_usuario.visibility == View.VISIBLE){
+                View.GONE
+            }else{
+                View.VISIBLE
+            }
+
+
+        }
+
+        guardarCambios.setOnClickListener {
 
         }
 
         verInformacion.setOnClickListener {
-            fecha_de_nacimiento.visibility = View.VISIBLE
-            resultados_de_test_anteriores.visibility = View.VISIBLE
+
+
         }
 
 
