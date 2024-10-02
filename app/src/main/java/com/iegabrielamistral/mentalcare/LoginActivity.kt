@@ -19,7 +19,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.usuario.RegistroFragment
 
-class  LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     // [START declare_auth]
     private lateinit var auth: FirebaseAuth
@@ -103,7 +103,7 @@ class  LoginActivity : AppCompatActivity() {
             }
     }
 
-    fun signInWithEmailAndPassword(email: String, password: String){
+    fun signInWithEmailAndPassword(email: String, password: String) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -122,12 +122,17 @@ class  LoginActivity : AppCompatActivity() {
                 }
             }
     }
-
-    fun passwordRecover(email: String){
+        // Esta funcion es para restablecer la contraseña
+    fun passwordRecover(email: String) {
+        Log.d("FirebaseAuth", "email: $email")
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-Log.d("FirebaseAuth", "isSuccessful")
+                    Log.d("FirebaseAuth", "isSuccessful")
+                    Toast.makeText(this,"Se ha enviado un mensaje al correo", Toast.LENGTH_SHORT).show()
+                } else {
+                    Log.d("FirebaseAuth", "error: ${task.exception?.message}")
+                    Toast.makeText(this,"Error ${task.exception?.message}  ", Toast.LENGTH_SHORT).show()
                 }
             }
     }

@@ -41,7 +41,7 @@ class RestablecerFragment : Fragment() {
 
             (requireActivity() as LoginActivity).apply{
 
-                passwordRecover(btnResetPassaword.text.toString())
+                passwordRecover(ediTxtEmail.text.toString())
             }
         }
     }

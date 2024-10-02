@@ -12,6 +12,7 @@
         android:id="@+id/Mental"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:text="-M-"
         android:textColor="#040000"
         android:textSize="50dp"
