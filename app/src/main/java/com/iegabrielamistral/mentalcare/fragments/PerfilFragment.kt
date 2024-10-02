@@ -36,6 +36,7 @@ class PerfilFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         val sing_out_button : Button = view.findViewById(R.id.sing_out_button)
 
         sing_out_button.setOnClickListener {

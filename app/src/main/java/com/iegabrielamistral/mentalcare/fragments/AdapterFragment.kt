@@ -4,20 +4,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.iegabrielamistral.mentalcare.R
+import de.hdodenhof.circleimageview.CircleImageView
 
-class AvatarsAdapter(val onAvactarSelected: OnAvactarSelected) : RecyclerView.Adapter<AvatarsAdapter.ViewHolder>() {
+class AdapterFragment(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Adapter<AdapterFragment.ViewHolder>() {
 
     val avatars = listOf(
 
-        R.drawable.avatar_nino1
-
+        R.drawable.avatar_nino1,
+        R.drawable.avatar_nino2,
+        R.drawable.avatar_nino3,
+        R.drawable.avatar_nino4,
+        R.drawable.avatar_nino5,
+        R.drawable.avatar_nina1,
+        R.drawable.avatar_nina2,
+        R.drawable.avatar_nina3,
+        R.drawable.avatar_nina4,
+        R.drawable.avatar_nina5,
 
     )
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val profileAvatar: CircleImageView = itemView.findViewById(R.id.profile_Image)
-
+        val profileAvatar: CircleImageView = itemView.findViewById(R.id.profileAvatar)
 
     }
 
@@ -33,23 +41,10 @@ class AvatarsAdapter(val onAvactarSelected: OnAvactarSelected) : RecyclerView.Ad
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.profileAvatar.setImageResource(avatars[position])
 
-        holder.profileAvatar.set
+        holder.profileAvatar.setOnClickListener {
+            onAvatarSelected.onAvactarClick(avatars[position])
+        }
     }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
