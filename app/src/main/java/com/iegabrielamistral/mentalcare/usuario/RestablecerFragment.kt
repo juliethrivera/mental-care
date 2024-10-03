@@ -20,6 +20,13 @@ class RestablecerFragment : Fragment() {
     lateinit var btnResetPassaword: Button
     private lateinit var auth: FirebaseAuth
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        return inflater.inflate(R.layout.fragment_restablecer, container, false)
+    }
+
     companion object {
         fun newInstance() = RestablecerFragment()
     }
@@ -48,10 +55,5 @@ class RestablecerFragment : Fragment() {
 
 
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_restablecer, container, false)
-    }
+
 }
