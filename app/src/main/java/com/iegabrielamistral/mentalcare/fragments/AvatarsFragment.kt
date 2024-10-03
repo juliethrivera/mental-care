@@ -28,7 +28,7 @@ class AvatarsFragment(val onAvatarSelected: OnAvatarSelected) : BottomSheetDialo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
 
         listaAvatars = view.findViewById(R.id.listaAvatars)
@@ -45,6 +45,5 @@ class AvatarsFragment(val onAvatarSelected: OnAvatarSelected) : BottomSheetDialo
 
     }
 
-    const val SAVED_AVATAR_PROFILE= "saved_avatar_profile"
 
 

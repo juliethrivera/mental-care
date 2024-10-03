@@ -1,15 +1,20 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
+import android.content.RestrictionEntry.TYPE_NULL
 import androidx.fragment.app.viewModels
 import android.os.Bundle
+import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
+import androidx.compose.material.icons.materialIcon
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -18,7 +23,9 @@ import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.LoginActivity
+import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
+import de.hdodenhof.circleimageview.CircleImageView
 
 class PerfilUsuarioFragment : Fragment() {
 
@@ -27,21 +34,10 @@ class PerfilUsuarioFragment : Fragment() {
     private lateinit var googleSignInClient: GoogleSignInClient
 
 
-    lateinit var editaPerfil : Button
-    lateinit var guardarCambios : Button
-    lateinit var nombre_usuario : TextInputLayout
-    lateinit var correo_electronico : TextInputLayout
-    lateinit var contraseña : TextInputLayout
-    lateinit var verInformacion : Button
-    lateinit var fecha_de_nacimiento : TextInputLayout
     lateinit var edit: ImageView
-
-
-
-    val correousuario: String = ""
-    val nombreusuario: String = ""
-    val contraseñausuario: String = ""
-    val fechausuario: String = ""
+    lateinit var usuario : CircleImageView
+    lateinit var cerrar_sesion : ImageView
+    lateinit var nombre_usuario : EditText
 
 
 
@@ -67,72 +63,31 @@ class PerfilUsuarioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-       editaPerfil = view.findViewById(R.id.editaPerfil)
-        guardarCambios = view.findViewById(R.id.guardarCambios)
-        nombre_usuario = view.findViewById(R.id.textField1)
-        correo_electronico = view.findViewById(R.id.textField2)
-        contraseña = view.findViewById(R.id.textField3)
-        verInformacion = view.findViewById(R.id.verInformacion)
-        fecha_de_nacimiento = view.findViewById(R.id.textField4)
+
         edit = view.findViewById(R.id.Edit)
-        val cerrarSesion: Button = view.findViewById(R.id.cerrarSesion)
+        usuario = view.findViewById(R.id.usuario)
+        cerrar_sesion = view.findViewById(R.id.cerrar_sesion)
+        nombre_usuario = view.findViewById(R.id.nombre_usuario)
+        nombre_usuario.isEnabled = false
+        nombre_usuario.isFocusable = false
 
 
+        cerrar_sesion.setOnClickListener {
 
-
-        editaPerfil.setOnClickListener {
-            correo_electronico.visibility = if(correo_electronico.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-            contraseña.visibility = if(contraseña.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-            nombre_usuario.visibility = if(nombre_usuario.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-
-
-        }
-
-        guardarCambios.setOnClickListener {
-
-            correo_electronico.visibility = if(correo_electronico.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-            contraseña.visibility = if(contraseña.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-            nombre_usuario.visibility = if(nombre_usuario.visibility == View.VISIBLE){
-                View.GONE
-            }else{
-                View.VISIBLE
-            }
-
-
-            guardarCambios()
-
-        }
-
-        verInformacion.setOnClickListener {
-
-
-        }
-
-        cerrarSesion.setOnClickListener {
             signOut()
+
         }
+
+        edit.setOnClickListener {
+            nombre_usuario.isEnabled = true
+            nombre_usuario.isFocusable = true
+
+
+        }
+
+
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
+            //.requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
@@ -140,29 +95,54 @@ class PerfilUsuarioFragment : Fragment() {
 
         auth = Firebase.auth
 
+
+
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+
+       val avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 1)
+
+        val avatars = listOf(
+
+            R.drawable.avatar_nino1,
+            R.drawable.avatar_nino2,
+            R.drawable.avatar_nino3,
+            R.drawable.avatar_nino4,
+            R.drawable.avatar_nino5,
+            R.drawable.avatar_nina1,
+            R.drawable.avatar_nina2,
+            R.drawable.avatar_nina3,
+            R.drawable.avatar_nina4,
+            R.drawable.avatar_nina5,
+
+            )
+
+        usuario.setImageResource(avatars[avatar!!])
+
+        usuario.setOnClickListener {
+
+
+        }
+
     }
+
+    private fun extracted() {
+        nombre_usuario
+    }
+
+
     private fun signOut() {
         // [START auth_sign_out]
         auth.signOut()
         googleSignInClient.signOut()
         // [END auth_sign_out]
-        val intent = Intent(requireActivity(), LoginActivity::class.java)
+        val intent = Intent(requireActivity(),LoginActivity::class.java)
         startActivity(intent)
         requireActivity().finish()
     }
 
-    fun guardarCambios(){
 
-        val sharedPreferences = requireContext().getSharedPreferences("PerfilUsuario",
-            MODE_PRIVATE)
-
-        val editor = sharedPreferences.edit()
-        editor.putString("nombre", nombreusuario)
-        editor.putString("corre_electronico", contraseñausuario)
-        editor.putString("contraseña", contraseñausuario)
-
-        editor.apply()
-
-    }
 
 }
+
+
+const val SAVED_AVATAR_PROFILE= "saved_avatar_profile"

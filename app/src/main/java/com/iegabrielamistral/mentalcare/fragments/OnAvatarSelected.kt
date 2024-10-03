@@ -1,5 +1,5 @@
 package com.iegabrielamistral.mentalcare.fragments
 
 interface OnAvatarSelected {
-    fun onAvactarClick(avatar:Int)
+    fun onAvatarClick(avatar:Int)
 }

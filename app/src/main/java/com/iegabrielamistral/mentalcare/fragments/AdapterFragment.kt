@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,6 +30,7 @@ class AdapterFragment(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Ada
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_avatar, parent, false)
             return ViewHolder(itemView)
@@ -42,7 +44,7 @@ class AdapterFragment(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Ada
         holder.profileAvatar.setImageResource(avatars[position])
 
         holder.profileAvatar.setOnClickListener {
-            onAvatarSelected.onAvactarClick(avatars[position])
+            onAvatarSelected.onAvatarClick(avatars[position])
         }
     }
 }
