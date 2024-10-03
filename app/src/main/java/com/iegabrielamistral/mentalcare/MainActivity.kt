@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(TestFragment())
                     true
                 }
-                R.id.RELAJACION ->{
+                R.id.Relajación ->{
                     loadFragment(RelajacionFragment())
                     true
                 }

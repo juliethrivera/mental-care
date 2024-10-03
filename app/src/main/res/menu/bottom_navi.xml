@@ -10,7 +10,7 @@
         android:icon="@drawable/test"
         android:title="Test" />
     <item
-        android:id="@+id/Relajacion"
+        android:id="@+id/Relajación"
         android:icon="@drawable/relajacion"
         android:title="Relajacion" />
     <item

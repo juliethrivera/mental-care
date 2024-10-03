@@ -40,7 +40,7 @@ class CuentaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val back: ImageView = view.findViewById(R.id.back)
+        val back: Button = view.findViewById(R.id.back)
         textNombre = view.findViewById(R.id.textNombre)
         textApellido = view.findViewById(R.id.textApellido)
         textCorreo = view.findViewById(R.id.textCorreo)
