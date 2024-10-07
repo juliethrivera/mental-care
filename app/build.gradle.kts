@@ -44,6 +44,7 @@ android {
     }
     buildFeatures {
         compose = true
+        viewBinding = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -79,10 +80,11 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.firebase.common.ktx)
+    implementation(libs.androidx.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 
     // Add the dependency for the Firebase Authentication library
@@ -93,5 +95,9 @@ dependencies {
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-analytics")
 
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
 
+    implementation ("com.google.code.gson:gson:2.11.0")
+
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
 }

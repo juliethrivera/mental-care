@@ -27,7 +27,6 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var googleSignInClient: GoogleSignInClient
 
-
     //
     override fun onStart() {
         super.onStart()
@@ -52,7 +51,7 @@ class LoginActivity : AppCompatActivity() {
         // [START config_signin]
         // Configure Google Sign In
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            //.requestIdToken(getString(R.string.default_web_client_id))
+//            .requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
 
@@ -103,7 +102,7 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
-    fun signInWithEmailAndPassword(email: String, password: String) {
+    fun signInWithEmailAndPassword(email: String, password: String){
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
@@ -119,20 +118,6 @@ class LoginActivity : AppCompatActivity() {
                         "Authentication failed.",
                         Toast.LENGTH_SHORT,
                     ).show()
-                }
-            }
-    }
-        // Esta funcion es para restablecer la contraseña
-    fun passwordRecover(email: String) {
-        Log.d("FirebaseAuth", "email: $email")
-        auth.sendPasswordResetEmail(email)
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    Log.d("FirebaseAuth", "isSuccessful")
-                    Toast.makeText(this,"Se ha enviado un mensaje al correo", Toast.LENGTH_SHORT).show()
-                } else {
-                    Log.d("FirebaseAuth", "error: ${task.exception?.message}")
-                    Toast.makeText(this,"Error ${task.exception?.message}  ", Toast.LENGTH_SHORT).show()
                 }
             }
     }

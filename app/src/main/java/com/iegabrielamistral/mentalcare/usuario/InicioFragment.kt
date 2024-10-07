@@ -10,16 +10,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
+import android.widget.Toast
 import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 
-class InicioFragment : Fragment() {
-    //lateinit var password : TextView
+class inicioFragment : Fragment() {
 
     companion object {
-        fun newInstance() = InicioFragment()
+        fun newInstance() = inicioFragment()
     }
 
     override fun onCreateView(
@@ -32,20 +31,10 @@ class InicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val correo: TextInputEditText = view.findViewById(R.id.textCorreo1)
-        val contraseña: TextInputEditText = view.findViewById(R.id.contraseña)
+        val telefono: TextView = view.findViewById(R.id.telefono)
+        val contraseña: TextView = view.findViewById(R.id.contraseña)
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
-
-       val  password : TextView = view.findViewById(R.id.textPassword)
-
-        password.setOnClickListener {
-           val restablecerFragment = RestablecerFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView2,restablecerFragment).commit()
-
-        }
-
 
         button2.isEnabled = false
 
@@ -56,7 +45,7 @@ class InicioFragment : Fragment() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 button2.isEnabled =
-                    (correo.text!!.isNotEmpty() && contraseña.text!!.isNotEmpty())
+                    (telefono.text.isNotEmpty() && contraseña.text.isNotEmpty())
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -64,7 +53,7 @@ class InicioFragment : Fragment() {
             }
         }
 
-        correo.addTextChangedListener(textWatcher)
+        telefono.addTextChangedListener(textWatcher)
         contraseña.addTextChangedListener(textWatcher)
 
 
@@ -78,11 +67,11 @@ class InicioFragment : Fragment() {
             startActivity(intent)
 
             Toast.makeText(requireActivity(),"La información es incorrecta ",Toast.LENGTH_LONG).show()
-*/
 
-            (requireActivity() as LoginActivity).apply {
-                signInWithEmailAndPassword(correo.text.toString(), contraseña.text.toString())
-            }
+
+           (requireActivity() as LoginActivity).apply {
+                signInWithEmailAndPassword(telefono.text.toString(), contraseña.text.toString())
+            }*/
         }
 
     }

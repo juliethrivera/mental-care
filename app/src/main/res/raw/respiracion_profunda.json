@@ -1,0 +1,41 @@
+{
+  "ejercicios": [
+    {
+      "nombre": "RESPIRACIÓN BOCA ARRIBA",
+      "tiempo": 120,
+      "descripcion": "Ayuda a aumentar la cantidad de oxigeno en la sangre, disminuye la presion arterial y la frecuencia cardiaca y reduce la tension muscular.",
+      "animacion": "respiracion_profunda_boca_arriba"
+    },
+    {
+      "nombre": "RESPIRACIÓN BOCA ABAJO",
+      "tiempo": 300,
+      "descripcion": "Permite una mayor entrada de oxigeno al cuerpo,lo que puede ser útil durante un ejercicio intenso o en situaciones de estrés.Ayuda con problemas nasales crónicos o obstruciones nasales a respirar más fácilmente  ",
+      "animacion": "respiracion_profunda_boca_abajo"
+    },
+    {
+      "nombre": "RESPIRACIÓN PROFUNDA SENTADO",
+      "tiempo": 300,
+      "descripcion": "Ayuda a reducir el estrés y la ansiedad,promoviendo un estado de calma y relajación.Aumenta la oxigenación cerebral y disminuye los problemas respiratorios y cardiovasculares. ",
+      "animacion": "respiracion_mientras_esta_sentado"
+    },
+    {
+      "nombre": "BOSTEZO HASTA SONREIR",
+      "tiempo": 60,
+      "descripcion": "Ayuda a aumentar la coordinación y desarrollar fuerza en los brazos y hombros.También abre los músculos del pecho para que el diafragma tenga espacio para expandirse.",
+      "animacion": "bostezo_sonreir"
+    },
+    {
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+

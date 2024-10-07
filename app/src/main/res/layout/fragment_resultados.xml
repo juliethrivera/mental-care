@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:background="#F6CDF6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ResultadosFragment">
+
+    <ImageView
+        android:id="@+id/home"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="90dp"
+        android:text="Resultados"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        >
+
+        <ProgressBar
+            android:id="@+id/progresoDepresion"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#0000F4"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenDepresion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeDepresion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoDepresion"
+            app:layout_constraintEnd_toEndOf="@id/progresoDepresion"
+            app:layout_constraintTop_toTopOf="@id/progresoDepresion" />
+
+        <ImageView
+            android:id="@+id/imagenDepresion"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/depresion1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progresoDepresion"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/depresion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Depresión"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/imagenDepresion"
+            app:layout_constraintStart_toStartOf="@id/imagenDepresion"
+            app:layout_constraintTop_toBottomOf="@id/imagenDepresion"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint1"
+        >
+
+        <ProgressBar
+            android:id="@+id/progresoAnsiedad"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#FE5D05"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenAnsiedad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeAnsiedad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoAnsiedad"
+            app:layout_constraintEnd_toEndOf="@id/progresoAnsiedad"
+            app:layout_constraintTop_toTopOf="@id/progresoAnsiedad" />
+
+        <TextView
+            android:id="@+id/ansiedad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ansiedad"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/imagenAnsiedad"
+            app:layout_constraintStart_toStartOf="@id/imagenAnsiedad"
+            app:layout_constraintTop_toBottomOf="@id/imagenAnsiedad"
+            />
+
+        <ImageView
+            android:id="@+id/imagenAnsiedad"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ansiedad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progresoAnsiedad"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint2"
+        >
+
+        <TextView
+            android:id="@+id/autoestima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Autoestima"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/imagenAutoestima"
+            app:layout_constraintStart_toStartOf="@id/imagenAutoestima"
+            app:layout_constraintTop_toBottomOf="@id/imagenAutoestima"
+            />
+
+        <ProgressBar
+            android:id="@+id/progresoAutoestima"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#048F27"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenAutoestima"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeAutoestima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoAutoestima"
+            app:layout_constraintEnd_toEndOf="@id/progresoAutoestima"
+            app:layout_constraintTop_toTopOf="@id/progresoAutoestima" />
+
+        <ImageView
+            android:id="@+id/imagenAutoestima"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/autoestima"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progresoAutoestima"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrain4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint3">
+
+        <TextView
+            android:id="@+id/estres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estrés"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/imagenEstres"
+            app:layout_constraintStart_toStartOf="@id/imagenEstres"
+            app:layout_constraintTop_toBottomOf="@id/imagenEstres" />
+
+        <ProgressBar
+            android:id="@+id/progresoEstres"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#FE0000"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenEstres"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeEstres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoEstres"
+            app:layout_constraintEnd_toEndOf="@id/progresoEstres"
+            app:layout_constraintTop_toTopOf="@id/progresoEstres" />
+
+        <ImageView
+            android:id="@+id/imagenEstres"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/estres1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progresoEstres"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constrain4">
+
+        <TextView
+            android:id="@+id/cambios_de_humor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Altibajos"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/imagenHumor"
+            app:layout_constraintStart_toStartOf="@id/imagenHumor"
+            app:layout_constraintTop_toBottomOf="@id/imagenHumor" />
+
+        <ProgressBar
+            android:id="@+id/progresoHumor"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:progressBackgroundTint="#A64545"
+            android:progressTint="#6B2346"
+            android:scaleY="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imagenHumor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/porcentajeHumor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="100%"
+            android:textColor="#0B0B0B"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@id/progresoHumor"
+            app:layout_constraintEnd_toEndOf="@id/progresoHumor"
+            app:layout_constraintTop_toTopOf="@id/progresoHumor" />
+
+        <ImageView
+            android:id="@+id/imagenHumor"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/add_reaction_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progresoHumor"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
