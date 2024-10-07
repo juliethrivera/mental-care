@@ -83,7 +83,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
 
     // Add the dependency for the Firebase Authentication library
@@ -93,5 +92,6 @@ dependencies {
     // Also add the dependency for the Google Play services library and specify its version
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-analytics")
+
 
 }
