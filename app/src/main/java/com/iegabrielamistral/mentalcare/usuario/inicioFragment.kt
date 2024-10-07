@@ -67,11 +67,11 @@ class inicioFragment : Fragment() {
             startActivity(intent)
 
             Toast.makeText(requireActivity(),"La información es incorrecta ",Toast.LENGTH_LONG).show()
-*/
 
-            (requireActivity() as LoginActivity).apply {
+
+           (requireActivity() as LoginActivity).apply {
                 signInWithEmailAndPassword(telefono.text.toString(), contraseña.text.toString())
-            }
+            }*/
         }
 
     }

@@ -37,10 +37,9 @@ class RegistroFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
         val iniciar: Button = view.findViewById(R.id.iniciar)
         val crear: Button = view.findViewById(R.id.crear)
-        val button: SignInButton = view.findViewById(R.id.button)
+        // val button: SignInButton = view.findViewById(R.id.button)
 
 
         iniciar.setOnClickListener {
@@ -53,30 +52,29 @@ class RegistroFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView2, cuentaFragment).commit()
         }
-        button.setOnClickListener {
-            (requireActivity() as LoginActivity).apply {
-                signIn()
-            }
-        }
+        /* button.setOnClickListener {
+             (requireActivity() as LoginActivity).apply {
+                 signIn()
+             }*/
     }
-
-    // [START on_start_check_user]
-
-
-    // [END on_start_check_user]
-
-    // [START onactivityresult]
-
-    // [END onactivityresult]
-
-    // [START auth_with_google]
-
-    companion object {
-        private const val TAG = "GoogleActivity"
-
-        fun newInstance() = RegistroFragment()
-    }
-
-    private val viewModel: RegistroViewModel by viewModels()
-
 }
+
+// [START on_start_check_user]
+
+
+// [END on_start_check_user]
+
+// [START onactivityresult]
+
+// [END onactivityresult]
+
+// [START auth_with_google]
+
+/*object {
+    private const val TAG = "GoogleActivity"
+
+    fun newInstance() = RegistroFragment()
+}
+*/
+
+
