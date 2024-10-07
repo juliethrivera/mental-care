@@ -36,7 +36,6 @@ class InicioFragment : Fragment() {
         val contraseña: TextInputEditText = view.findViewById(R.id.contraseña)
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
-
        val  password : TextView = view.findViewById(R.id.textPassword)
 
         password.setOnClickListener {
