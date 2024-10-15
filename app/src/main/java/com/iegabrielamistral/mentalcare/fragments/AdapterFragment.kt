@@ -12,18 +12,19 @@ class AdapterFragment(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Ada
 
     val avatars = listOf(
 
-        R.drawable.avatar_nino1,
-        R.drawable.avatar_nino2,
-        R.drawable.avatar_nino3,
-        R.drawable.avatar_nino4,
-        R.drawable.avatar_nino5,
-        R.drawable.avatar_nina1,
-        R.drawable.avatar_nina2,
-        R.drawable.avatar_nina3,
-        R.drawable.avatar_nina4,
-        R.drawable.avatar_nina5,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nino1,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nino2,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nino3,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nino4,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nino5,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nina1,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nina2,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nina3,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nina4,
+        com.iegabrielamistral.mentalcare.R.drawable.avatar_nina5,
 
-    )
+
+        )
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val profileAvatar: CircleImageView = itemView.findViewById(R.id.profileAvatar)

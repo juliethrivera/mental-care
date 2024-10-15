@@ -7,8 +7,12 @@ import android.content.RestrictionEntry.TYPE_NULL
 import androidx.fragment.app.viewModels
 import android.os.Bundle
 import android.text.InputType
+import android.view.ContextMenu
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
@@ -36,8 +40,9 @@ class PerfilUsuarioFragment : Fragment() {
 
     lateinit var edit: ImageView
     lateinit var usuario: CircleImageView
-    lateinit var cerrar_sesion: ImageView
+    lateinit var cerrarSesion: Button
     lateinit var nombre_usuario: EditText
+    lateinit var resultado : Button
 
 
     companion object {
@@ -59,20 +64,27 @@ class PerfilUsuarioFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_perfil_usuario, container, false)
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
         edit = view.findViewById(R.id.Edit)
         usuario = view.findViewById(R.id.usuario)
-        cerrar_sesion = view.findViewById(R.id.cerrar_sesion)
+        cerrarSesion = view.findViewById(R.id.cerrarSesion)
         nombre_usuario = view.findViewById(R.id.nombre_usuario)
+        resultado = view.findViewById(R.id.resultado)
         nombre_usuario.isEnabled = false
         nombre_usuario.isFocusable = false
 
+        resultado.setOnClickListener {
+            val resultadoTest = ResultadoTest()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, resultadoTest).commit()
+        }
 
-        cerrar_sesion.setOnClickListener {
 
+        cerrarSesion.setOnClickListener {
             signOut()
 
         }
@@ -90,7 +102,7 @@ class PerfilUsuarioFragment : Fragment() {
             .requestEmail()
             .build()
 
-        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gson)
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
 
         auth = Firebase.auth
 
@@ -116,16 +128,16 @@ class PerfilUsuarioFragment : Fragment() {
 
         usuario.setImageResource(avatars[avatar!!])
 
+
+
         usuario.setOnClickListener {
+
 
 
         }
 
     }
 
-    private fun extracted() {
-        nombre_usuario
-    }
 
 
     private fun signOut() {
@@ -137,6 +149,6 @@ class PerfilUsuarioFragment : Fragment() {
         startActivity(intent)
         requireActivity().finish()
     }
-
+}
 
     const val SAVED_AVATAR_PROFILE = "saved_avatar_profile"

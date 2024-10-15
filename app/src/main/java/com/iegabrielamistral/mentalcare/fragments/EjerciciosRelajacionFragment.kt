@@ -17,7 +17,6 @@ import com.iegabrielamistral.mentalcare.meditacion.MeditacionFragment
 class EjerciciosRelajacionFragment : Fragment() {
 
 
-    private lateinit var anterior: ImageButton
     private lateinit var ejerciciosDeRelajacion: TextView
     private lateinit var cardYoga: CardView
     private lateinit var imagenYoga: ImageView
@@ -48,7 +47,7 @@ class EjerciciosRelajacionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        anterior = view.findViewById(R.id.home)
+
         ejerciciosDeRelajacion = view.findViewById(R.id.titulo)
         cardYoga = view.findViewById(R.id.cardYoga)
         imagenYoga = view.findViewById(R.id.imagenYoga)

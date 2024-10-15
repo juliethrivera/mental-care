@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,7 +54,7 @@
 
 
         <TextView
-            android:id="@+id/nombre_usuario3"
+            android:id="@+id/informacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -65,7 +65,7 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <EditText
+        <TextView
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -74,11 +74,12 @@
             android:inputType="text"
             android:text="Nombre Usuario"
             android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nombre_usuario3" />
+            app:layout_constraintTop_toBottomOf="@id/informacion" />
 
-        <EditText
+        <TextView
             android:id="@+id/correo_electronico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,11 +88,12 @@
             android:inputType="text"
             android:text="Correo Electronico"
             android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nombre" />
 
-        <EditText
+        <TextView
             android:id="@+id/fecha_nacimiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -100,6 +102,7 @@
             android:inputType="text"
             android:text="Fecha de nacimiento"
             android:textColor="#000000"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/correo_electronico" />
@@ -111,16 +114,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraint2">
 
+        <TextView
+            android:id="@+id/opciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opciones"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
         <Button
             android:id="@+id/resultado"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"
             android:backgroundTint="@color/design_default_color_secondary"
             android:text="Resultado De Test Anterior"
             android:textColor="#000000"
@@ -128,19 +145,27 @@
             app:cornerRadius="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintTop_toBottomOf="@id/opciones" />
 
-    <ImageView
-        android:id="@+id/cerrar_sesion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/more_vert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/cerrar_sesion" />
+        <Button
+            android:id="@+id/cerrarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:drawableEnd="@drawable/exit"
+            android:text="Cerrar Sesión"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/design_default_color_secondary"
+            android:textColorLink="#2089BA"
+            android:textSize="20sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/resultado" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
