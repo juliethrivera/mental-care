@@ -18,6 +18,7 @@ import com.iegabrielamistral.mentalcare.R
 class RestablecerFragment : Fragment() {
     lateinit var ediTxtEmail: EditText
     lateinit var btnResetPassaword: Button
+    lateinit var  regresar : Button
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
@@ -36,12 +37,20 @@ class RestablecerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         ediTxtEmail = view.findViewById(R.id.ediTxtEmail)
         btnResetPassaword = view.findViewById(R.id.btnResetPassaword)
+        regresar = view.findViewById(R.id.back_regresar)
 
 
         auth = Firebase.auth
 
+        regresar.setOnClickListener {
+            val vistaFragment = VistaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2,vistaFragment).commit()
+
+        }
 
 
         btnResetPassaword.setOnClickListener {
@@ -52,8 +61,5 @@ class RestablecerFragment : Fragment() {
             }
         }
     }
-
-
-
 
 }
