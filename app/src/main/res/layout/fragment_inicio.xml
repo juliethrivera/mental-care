@@ -24,9 +24,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="65dp"
         android:layout_marginEnd="30dp"
-
         android:textColorHint="#000000"
-        app:boxStrokeColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageV"
@@ -53,7 +51,6 @@
         android:layout_marginEnd="30dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
-        app:boxStrokeColor="@color/black"
         app:endIconMode="password_toggle"
         app:endIconTint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
