@@ -83,7 +83,7 @@ class PerfilUsuarioFragment : Fragment() {
                 .replace(R.id.fragmentContainerView, resultadoTest).commit()
         }
 
-
+///
         cerrarSesion.setOnClickListener {
             signOut()
 
