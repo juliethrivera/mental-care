@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.fragment.app.replace
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -18,6 +19,7 @@ import com.iegabrielamistral.mentalcare.R
 class RestablecerFragment : Fragment() {
     lateinit var ediTxtEmail: EditText
     lateinit var btnResetPassaword: Button
+    lateinit var back_regresar : Button
     private lateinit var auth: FirebaseAuth
 
     override fun onCreateView(
@@ -36,12 +38,20 @@ class RestablecerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         ediTxtEmail = view.findViewById(R.id.ediTxtEmail)
         btnResetPassaword = view.findViewById(R.id.btnResetPassaword)
+        back_regresar = view.findViewById(R.id.back_regresar)
 
 
         auth = Firebase.auth
 
+        back_regresar.setOnClickListener {
+            val vistaFragment = VistaFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2,vistaFragment).commit()
+
+        }
 
 
         btnResetPassaword.setOnClickListener {
