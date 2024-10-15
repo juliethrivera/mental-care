@@ -35,10 +35,9 @@ class PerfilUsuarioFragment : Fragment() {
 
 
     lateinit var edit: ImageView
-    lateinit var usuario : CircleImageView
-    lateinit var cerrar_sesion : ImageView
-    lateinit var nombre_usuario : EditText
-
+    lateinit var usuario: CircleImageView
+    lateinit var cerrar_sesion: ImageView
+    lateinit var nombre_usuario: EditText
 
 
     companion object {
@@ -91,15 +90,14 @@ class PerfilUsuarioFragment : Fragment() {
             .requestEmail()
             .build()
 
-        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), gson)
 
         auth = Firebase.auth
 
 
-
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
-       val avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 1)
+        val avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 1)
 
         val avatars = listOf(
 
@@ -135,14 +133,10 @@ class PerfilUsuarioFragment : Fragment() {
         auth.signOut()
         googleSignInClient.signOut()
         // [END auth_sign_out]
-        val intent = Intent(requireActivity(),LoginActivity::class.java)
+        val intent = Intent(requireActivity(), LoginActivity::class.java)
         startActivity(intent)
         requireActivity().finish()
     }
 
 
-
-}
-
-
-const val SAVED_AVATAR_PROFILE= "saved_avatar_profile"
+    const val SAVED_AVATAR_PROFILE = "saved_avatar_profile"
