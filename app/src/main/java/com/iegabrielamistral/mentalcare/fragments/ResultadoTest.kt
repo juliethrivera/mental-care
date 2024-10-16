@@ -45,6 +45,8 @@ class ResultadoTest : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, perfilUsuarioFragment).commit()
         }
+
+
     }
 
 

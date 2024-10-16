@@ -93,5 +93,6 @@ class ResultadosFragment(val selecciones: List<Int>) : Fragment() {
 
         }
 
+
     }
 }

@@ -129,12 +129,14 @@ class PerfilUsuarioFragment : Fragment() {
         usuario.setImageResource(avatars[avatar!!])
 
 
-
         usuario.setOnClickListener {
-
+            val avatarsFragment = AvatarsFragment(onAvatarSelected = OnAvatarSelected) : BottomSheetDialogFragment())
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, avatarsFragment).commit()
 
 
         }
+
 
     }
 

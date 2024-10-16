@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.iegabrielamistral.mentalcare.R
 import de.hdodenhof.circleimageview.CircleImageView
 
-class AdapterFragment(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Adapter<AdapterFragment.ViewHolder>() {
+class AvatarsAdapter(val onAvatarSelected: OnAvatarSelected) : RecyclerView.Adapter<AvatarsAdapter.ViewHolder>() {
 
     val avatars = listOf(
 

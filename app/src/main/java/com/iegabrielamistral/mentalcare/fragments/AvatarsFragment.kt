@@ -15,7 +15,7 @@ class AvatarsFragment(val onAvatarSelected: OnAvatarSelected) : BottomSheetDialo
 
     lateinit var listaAvatars : RecyclerView
 
-    var avatarsAdapter : AdapterFragment? = null
+    var avatarsAdapter : AvatarsAdapter? = null
 
 
     override fun onCreateView(
@@ -31,10 +31,12 @@ class AvatarsFragment(val onAvatarSelected: OnAvatarSelected) : BottomSheetDialo
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
 
-        listaAvatars = view.findViewById(R.id.listaAvatars)
-        avatarsAdapter = AdapterFragment(onAvatarSelected)
+        listaAvatars = view.findViewById(R.id.listaDeAvatars)
+        avatarsAdapter = AvatarsAdapter(onAvatarSelected)
 
-        val gridLayoutManager = GridLayoutManager(requireContext(), 3)
+        val gridLayoutManager = GridLayoutManager(requireContext(), 2)
+
+
 
         listaAvatars.apply {
             layoutManager = gridLayoutManager
