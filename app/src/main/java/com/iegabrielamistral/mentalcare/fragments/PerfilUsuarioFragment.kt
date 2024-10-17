@@ -30,19 +30,21 @@ import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import de.hdodenhof.circleimageview.CircleImageView
+import com.iegabrielamistral.mentalcare.fragments.OnAvatarSelected as OnAvatarSelected1
 
-class PerfilUsuarioFragment : Fragment() {
+class PerfilUsuarioFragment : Fragment(){
 
 
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
 
 
-    lateinit var edit: ImageView
+
     lateinit var usuario: CircleImageView
     lateinit var cerrarSesion: Button
     lateinit var nombre_usuario: EditText
     lateinit var resultado : Button
+    lateinit var edit : ImageView
 
 
     companion object {
@@ -69,13 +71,14 @@ class PerfilUsuarioFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        edit = view.findViewById(R.id.Edit)
+
         usuario = view.findViewById(R.id.usuario)
         cerrarSesion = view.findViewById(R.id.cerrarSesion)
         nombre_usuario = view.findViewById(R.id.nombre_usuario)
         resultado = view.findViewById(R.id.resultado)
-        nombre_usuario.isEnabled = false
-        nombre_usuario.isFocusable = false
+        edit = view.findViewById(R.id.edit)
+
+
 
         resultado.setOnClickListener {
             val resultadoTest = ResultadoTest()
@@ -86,13 +89,6 @@ class PerfilUsuarioFragment : Fragment() {
 ///
         cerrarSesion.setOnClickListener {
             signOut()
-
-        }
-
-        edit.setOnClickListener {
-            nombre_usuario.isEnabled = true
-            nombre_usuario.isFocusable = true
-
 
         }
 
@@ -109,10 +105,11 @@ class PerfilUsuarioFragment : Fragment() {
 
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
-        val avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 1)
+        var avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 0)
+
 
         val avatars = listOf(
-
+            R.drawable.foto_perfil,
             R.drawable.avatar_nino1,
             R.drawable.avatar_nino2,
             R.drawable.avatar_nino3,
@@ -123,14 +120,19 @@ class PerfilUsuarioFragment : Fragment() {
             R.drawable.avatar_nina3,
             R.drawable.avatar_nina4,
             R.drawable.avatar_nina5,
-
             )
 
-        usuario.setImageResource(avatars[avatar!!])
+
+        if(avatar!! >= avatars.size){
+            avatar = 0
+        }
 
 
-        usuario.setOnClickListener {
-            val avatarsFragment = AvatarsFragment(onAvatarSelected = OnAvatarSelected) : BottomSheetDialogFragment())
+        usuario.setImageResource(avatars[avatar])
+
+
+        edit.setOnClickListener {
+            val avatarsFragment = AvatarsFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, avatarsFragment).commit()
 
@@ -151,6 +153,7 @@ class PerfilUsuarioFragment : Fragment() {
         startActivity(intent)
         requireActivity().finish()
     }
+
 }
 
     const val SAVED_AVATAR_PROFILE = "saved_avatar_profile"
