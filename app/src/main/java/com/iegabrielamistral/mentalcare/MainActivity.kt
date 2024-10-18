@@ -1,13 +1,9 @@
 package com.iegabrielamistral.mentalcare
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,11 +15,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
-import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilUsuarioFragment
-import com.iegabrielamistral.mentalcare.fragments.RelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.TestFragment
-import com.iegabrielamistral.mentalcare.fragments.TestMentalBlankFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth

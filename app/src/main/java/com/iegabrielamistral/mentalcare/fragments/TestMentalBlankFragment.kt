@@ -87,6 +87,21 @@ class TestMentalBlankFragment : Fragment() {
 
                 cargarPregunta(testMental)
             } else {
+                val sharedPref1 = activity?.getPreferences(Context.MODE_PRIVATE)
+                sharedPref1?.edit()?.putInt(SAVED_RESULTADO_1,selecciones[0])?.apply()
+
+                val sharedPref2 = activity?.getPreferences(Context.MODE_PRIVATE)
+                //sharedPref2?.edit()?.putInt((SAVED_RESULTADO_2,selecciones[1])?.apply()
+
+                val sharedPref3 = activity?.getPreferences(Context.MODE_PRIVATE)
+                sharedPref3?.edit()?.putInt(SAVED_RESULTADO_3,selecciones[2])?.apply()
+
+                val sharedPref4 = activity?.getPreferences(Context.MODE_PRIVATE)
+                sharedPref4?.edit()?.putInt(SAVED_RESULTADO_4,selecciones[3])?.apply()
+
+                val sharedPref5 = activity?.getPreferences(Context.MODE_PRIVATE)
+                sharedPref5?.edit()?.putInt(SAVED_RESULTADO_5,selecciones[4])?.apply()
+
                 val resultadosFragment = ResultadosFragment(selecciones)
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView, resultadosFragment).commit()
@@ -179,3 +194,13 @@ class TestMentalBlankFragment : Fragment() {
 
 
 }
+
+const val SAVED_RESULTADO_1 = "saved_resultado_1"
+const val SAVED_RESULTADO_2 = "saved_resultado_2"
+const val SAVED_RESULTADO_3 = "saved_resultado_3"
+const val SAVED_RESULTADO_4 = "saved_resultado_4"
+const val SAVED_RESULTADO_5 = "saved_resultado_5"
+
+
+
+

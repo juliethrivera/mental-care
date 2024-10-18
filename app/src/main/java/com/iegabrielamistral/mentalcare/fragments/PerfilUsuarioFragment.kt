@@ -1,50 +1,39 @@
 package com.iegabrielamistral.mentalcare.fragments
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
 import android.content.Intent
-import android.content.RestrictionEntry.TYPE_NULL
 import androidx.fragment.app.viewModels
 import android.os.Bundle
-import android.text.InputType
-import android.view.ContextMenu
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import androidx.compose.material.icons.materialIcon
+import android.widget.TextView
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.LoginActivity
-import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import de.hdodenhof.circleimageview.CircleImageView
-import com.iegabrielamistral.mentalcare.fragments.OnAvatarSelected as OnAvatarSelected1
 
-class PerfilUsuarioFragment : Fragment(){
+class PerfilUsuarioFragment : Fragment() {
 
 
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
 
 
-
     lateinit var usuario: CircleImageView
-    lateinit var cerrarSesion: Button
+    lateinit var cerrarSesion: TextView
     lateinit var nombre_usuario: EditText
-    lateinit var resultado : Button
-    lateinit var edit : ImageView
+    lateinit var resultado: TextView
+    lateinit var edit: ImageView
 
 
     companion object {
@@ -80,13 +69,15 @@ class PerfilUsuarioFragment : Fragment(){
 
 
 
-        resultado.setOnClickListener {
-            val resultadoTest = ResultadoTest()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, resultadoTest).commit()
-        }
+     resultado.setOnClickListener{
+         val resultadoTest = ResultadoTest()
+         requireActivity().supportFragmentManager.beginTransaction()
+             .replace(R.id.fragmentContainerView, resultadoTest).commit()
 
-///
+
+     }
+
+
         cerrarSesion.setOnClickListener {
             signOut()
 
@@ -120,10 +111,10 @@ class PerfilUsuarioFragment : Fragment(){
             R.drawable.avatar_nina3,
             R.drawable.avatar_nina4,
             R.drawable.avatar_nina5,
-            )
+        )
 
 
-        if(avatar!! >= avatars.size){
+        if (avatar!! >= avatars.size) {
             avatar = 0
         }
 
@@ -143,7 +134,6 @@ class PerfilUsuarioFragment : Fragment(){
     }
 
 
-
     private fun signOut() {
         // [START auth_sign_out]
         auth.signOut()
@@ -156,4 +146,4 @@ class PerfilUsuarioFragment : Fragment(){
 
 }
 
-    const val SAVED_AVATAR_PROFILE = "saved_avatar_profile"
+const val SAVED_AVATAR_PROFILE = "saved_avatar_profile"

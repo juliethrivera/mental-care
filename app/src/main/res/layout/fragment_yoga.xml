@@ -132,12 +132,14 @@
 
     <Button
         android:id="@+id/empezar"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
-        android:text="EMPEZAR"
-        app:cornerRadius="3dp"
+        android:backgroundTint="@color/white"
+        android:text="Empezar"
+        android:textColor="@color/black"
+        app:cornerRadius="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
