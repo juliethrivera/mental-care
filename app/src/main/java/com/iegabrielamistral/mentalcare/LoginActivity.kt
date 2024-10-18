@@ -63,6 +63,7 @@ class LoginActivity : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
         // [END initialize_auth]
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

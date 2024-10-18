@@ -5,7 +5,7 @@
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@color/blue"
     tools:context=".usuario.RestablecerFragment">
 
     <com.google.android.material.textfield.TextInputLayout
@@ -26,8 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/email"
-            android:inputType="textEmailAddress"
             android:hint="Correo electronico"
+            android:inputType="textEmailAddress"
             android:textColor="#000000"
             android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -37,12 +37,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="@color/white"
         android:text="Regresar"
         android:textColor="#000000"
         app:cornerRadius="4dp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@id/btnResetPassaword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textInpu" />
@@ -52,9 +53,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
-        android:backgroundTint="#03A9F4"
+        android:backgroundTint="@color/white"
         android:text="Restablecer contraseña"
         android:textColor="@color/black"
         android:textSize="12sp"

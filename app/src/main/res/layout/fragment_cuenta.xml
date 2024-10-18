@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_primary70"
+    android:background="@color/blue"
     tools:context=".usuario.CuentaFragment">
 
 
@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre"
+            android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -47,7 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Apellido "
+            android:inputType="textPersonName"
             android:textColor="@color/black"
             android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +70,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +85,7 @@
             android:drawableEnd="@drawable/calendar"
             android:focusable="false"
             android:hint="Seleccina tu fecha "
+            android:inputType="date"
             android:textColor="@color/black"
             android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -92,7 +95,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:textColorHint="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,7 +118,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -131,19 +134,19 @@
             android:layout_height="wrap_content"
             android:hint="Crear password"
             android:inputType="textPassword"
-            android:textColorHint="#000000 "
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:textColorHint="#000000 " />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#FFFFFF"
         android:text="Regresar"
         android:textColor="#000000"
-        app:cornerRadius="10dp"
+        app:cornerRadius="4dp"
         app:layout_constraintEnd_toStartOf="@id/guardar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textLayout4" />
@@ -152,12 +155,12 @@
         android:id="@+id/guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="15dp"
         android:backgroundTint="#FFFFFF"
         android:drawableLeft="@drawable/baseline_save"
         android:text="Guardar "
         android:textColor="#000000"
-        app:cornerRadius="7dp"
+        app:cornerRadius="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/back"
         app:layout_constraintTop_toBottomOf="@id/textLayout4" />

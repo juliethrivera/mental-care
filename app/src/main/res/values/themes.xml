@@ -4,5 +4,11 @@
 
     </style>
 
-    <style name="Theme.MentalCare" parent="Base.Theme.MentalCare" />
-</resources>
+    <style name="Theme.MentalCare" parent="Base.Theme.MentalCare"/>
+
+
+
+
+
+
+    </resources>

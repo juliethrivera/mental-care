@@ -12,18 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MentalCare"
         tools:targetApi="31">
-        <activity
-            android:name=".FacebookActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RestablecerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".RegistroActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

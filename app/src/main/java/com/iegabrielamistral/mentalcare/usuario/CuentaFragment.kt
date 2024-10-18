@@ -10,15 +10,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.Usuario
 
 class CuentaFragment : Fragment() {
+
 
     companion object {
         fun newInstance() = CuentaFragment()
@@ -29,6 +32,7 @@ class CuentaFragment : Fragment() {
     lateinit var textCorreo: TextInputEditText
     lateinit var textApellido: TextInputEditText
     lateinit var textNombre: TextInputEditText
+    lateinit var guardar: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -40,12 +44,14 @@ class CuentaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val database = FirebaseDatabase.getInstance().reference
+
         val back: Button = view.findViewById(R.id.back)
         textNombre = view.findViewById(R.id.textNombre)
         textApellido = view.findViewById(R.id.textApellido)
         textCorreo = view.findViewById(R.id.textCorreo)
         textContraseña = view.findViewById(R.id.textContraseña)
-        val guadar: Button = view.findViewById(R.id.guardar)
+        guardar = view.findViewById(R.id.guardar)
 
         editText = view.findViewById(R.id.Editext)
 
@@ -54,7 +60,7 @@ class CuentaFragment : Fragment() {
             shwDatePikerDialog()
         }
 
-        guadar.isEnabled = false
+        guardar.isEnabled = false
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -62,7 +68,7 @@ class CuentaFragment : Fragment() {
             }
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                guadar.isEnabled =
+                guardar.isEnabled =
                     (
                             textNombre.text!!.isNotEmpty() && textApellido.text!!.isNotEmpty() &&
                                     editText.text!!.isNotEmpty() && textCorreo.text!!.isNotEmpty()
@@ -98,7 +104,7 @@ class CuentaFragment : Fragment() {
         var contraseña = pref.getString("contraseña", "")
         textContraseña.setText(contraseña)
 
-        guadar.setOnClickListener {
+        guardar.setOnClickListener {
             var pref =
                 requireActivity().getSharedPreferences("nombre_personal", Context.MODE_PRIVATE)
             var editor = pref.edit()
@@ -121,14 +127,26 @@ class CuentaFragment : Fragment() {
                     textContraseña.text.toString()
                 )
             }
+
+            val usuario = Usuario(
+                FirebaseAuth.getInstance().currentUser?.uid ?: "1",
+                textNombre.text.toString(),
+                textApellido.text.toString(),
+                editText.text.toString(),
+                textCorreo.text.toString()
+            )
+            database.child("Usuarios").push().setValue(usuario)
         }
+
         back.setOnClickListener {
             val registroFragment = RegistroFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView2, registroFragment).commit()
         }
 
+
     }
+
 
     private fun shwDatePikerDialog() {
         val datePicker = DatePickerFragment { day, month, year -> onDateSelected(day, month, year) }
