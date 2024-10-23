@@ -129,7 +129,7 @@ private const val ARG_PARAM2 = "param2"
             (activity as MainActivity).bnvView.selectedItemId = R.id.test
         }
         EjerciciosRelajación.setOnClickListener {
-            (activity as MainActivity).bnvView.selectedItemId = R.id.RELAJACION
+            (activity as MainActivity).bnvView.selectedItemId = R.id.Relajación
         }
 
     }
@@ -139,13 +139,13 @@ private const val ARG_PARAM2 = "param2"
 
 
 
-private fun signOut() {
+/*private fun signOut() {
     // [START auth_sign_out]
     Firebase.auth.signOut()
     // [END auth_sign_out]
 
 
-}
+}*/
 
 
     fun mostrarMensajes(mensaje : String){

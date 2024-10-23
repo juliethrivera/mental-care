@@ -1,44 +1,26 @@
 {
   "project_info": {
-    "project_number": "584162803996",
-    "project_id": "mental-care-55c69",
-    "storage_bucket": "mental-care-55c69.appspot.com"
+    "project_number": "233364681796",
+    "project_id": "mental-care-d0148",
+    "storage_bucket": "mental-care-d0148.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:584162803996:android:5ef95d20f15670f2f7bad9",
+        "mobilesdk_app_id": "1:233364681796:android:0e407308aa1726d321f811",
         "android_client_info": {
           "package_name": "com.iegabrielamistral.mentalcare"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "584162803996-ku9q46esf7kuq6eeoo2hkadtnebl43e1.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.iegabrielamistral.mentalcare",
-            "certificate_hash": "830c00fd315073e60ebc9be2327a21fb7af02dcb"
-          }
-        },
-        {
-          "client_id": "584162803996-3c6ku4hv72v8c7p6050qcvu07888ms5g.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDS9H7VR4t-FncsokbOOIr0pr1neV2QPpc"
+          "current_key": "AIzaSyDaOEhUbSNgtQQu_roddpJ-pHEZcllCR6s"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "584162803996-3c6ku4hv72v8c7p6050qcvu07888ms5g.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }
