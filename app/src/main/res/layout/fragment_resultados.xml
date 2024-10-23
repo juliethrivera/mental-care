@@ -3,20 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout2"
-    android:background="#F6CDF6"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F6CDF6"
+    android:fitsSystemWindows="true"
     tools:context=".fragments.ResultadosFragment">
 
     <ImageView
         android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@null"
+        android:backgroundTint="#000000"
         android:scaleType="fitCenter"
-        android:src="@drawable/home"
+        android:src="@drawable/home_filled"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,7 +26,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="90dp"
         android:text="Resultados"
         android:textAlignment="center"
@@ -44,10 +44,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo">
 
         <ProgressBar
             android:id="@+id/progresoDepresion"
@@ -84,8 +83,7 @@
             android:src="@drawable/depresion1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/progresoDepresion"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/depresion"
@@ -95,8 +93,7 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/imagenDepresion"
             app:layout_constraintStart_toStartOf="@id/imagenDepresion"
-            app:layout_constraintTop_toBottomOf="@id/imagenDepresion"
-            />
+            app:layout_constraintTop_toBottomOf="@id/imagenDepresion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -107,10 +104,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint1"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint1">
 
         <ProgressBar
             android:id="@+id/progresoAnsiedad"
@@ -145,8 +141,7 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/imagenAnsiedad"
             app:layout_constraintStart_toStartOf="@id/imagenAnsiedad"
-            app:layout_constraintTop_toBottomOf="@id/imagenAnsiedad"
-            />
+            app:layout_constraintTop_toBottomOf="@id/imagenAnsiedad" />
 
         <ImageView
             android:id="@+id/imagenAnsiedad"
@@ -158,8 +153,7 @@
             android:src="@drawable/ansiedad"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/progresoAnsiedad"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -170,10 +164,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/constraint2"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraint2">
 
         <TextView
             android:id="@+id/autoestima"
@@ -183,8 +176,7 @@
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/imagenAutoestima"
             app:layout_constraintStart_toStartOf="@id/imagenAutoestima"
-            app:layout_constraintTop_toBottomOf="@id/imagenAutoestima"
-            />
+            app:layout_constraintTop_toBottomOf="@id/imagenAutoestima" />
 
         <ProgressBar
             android:id="@+id/progresoAutoestima"
@@ -221,8 +213,7 @@
             android:src="@drawable/autoestima"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/progresoAutoestima"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -233,8 +224,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constraint3">
 
         <TextView
@@ -293,8 +284,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/constrain4">
 
         <TextView

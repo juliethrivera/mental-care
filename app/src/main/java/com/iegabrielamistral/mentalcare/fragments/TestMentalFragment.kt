@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -87,20 +86,14 @@ class TestMentalBlankFragment : Fragment() {
 
                 cargarPregunta(testMental)
             } else {
-                val sharedPref1 = activity?.getPreferences(Context.MODE_PRIVATE)
-                sharedPref1?.edit()?.putInt(SAVED_RESULTADO_1,selecciones[0])?.apply()
-
-                val sharedPref2 = activity?.getPreferences(Context.MODE_PRIVATE)
-                //sharedPref2?.edit()?.putInt((SAVED_RESULTADO_2,selecciones[1])?.apply()
-
-                val sharedPref3 = activity?.getPreferences(Context.MODE_PRIVATE)
-                sharedPref3?.edit()?.putInt(SAVED_RESULTADO_3,selecciones[2])?.apply()
-
-                val sharedPref4 = activity?.getPreferences(Context.MODE_PRIVATE)
-                sharedPref4?.edit()?.putInt(SAVED_RESULTADO_4,selecciones[3])?.apply()
-
-                val sharedPref5 = activity?.getPreferences(Context.MODE_PRIVATE)
-                sharedPref5?.edit()?.putInt(SAVED_RESULTADO_5,selecciones[4])?.apply()
+                val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+                sharedPref?.apply {
+                    edit()?.putInt(SAVED_RESULTADO_1,selecciones[0])?.apply()
+                    edit()?.putInt(SAVED_RESULTADO_2,selecciones[1])?.apply()
+                    edit()?.putInt(SAVED_RESULTADO_3,selecciones[2])?.apply()
+                    edit()?.putInt(SAVED_RESULTADO_4,selecciones[3])?.apply()
+                    edit()?.putInt(SAVED_RESULTADO_5,selecciones[4])?.apply()
+                }
 
                 val resultadosFragment = ResultadosFragment(selecciones)
                 requireActivity().supportFragmentManager.beginTransaction()

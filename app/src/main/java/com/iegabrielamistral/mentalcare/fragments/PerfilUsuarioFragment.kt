@@ -70,9 +70,6 @@ class PerfilUsuarioFragment : Fragment() {
 
 
      resultado.setOnClickListener{
-         val resultadoTest = ResultadoTest()
-         requireActivity().supportFragmentManager.beginTransaction()
-             .replace(R.id.fragmentContainerView, resultadoTest).commit()
 
 
      }
