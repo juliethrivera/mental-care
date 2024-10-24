@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilUsuarioFragment
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.Relajación ->{
-                    loadFragment(RespiracionProfundaFragment())
+                    loadFragment(EjerciciosRelajacionFragment())
                     true
                 }
                 R.id.perfil_usuario ->{

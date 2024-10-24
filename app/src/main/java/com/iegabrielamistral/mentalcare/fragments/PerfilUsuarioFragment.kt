@@ -36,6 +36,8 @@ class PerfilUsuarioFragment : Fragment() {
     lateinit var edit: ImageView
 
 
+
+
     companion object {
         fun newInstance() = PerfilUsuarioFragment()
     }
@@ -71,8 +73,7 @@ class PerfilUsuarioFragment : Fragment() {
 
      resultado.setOnClickListener{
 
-
-     }
+    }
 
 
         cerrarSesion.setOnClickListener {
@@ -94,6 +95,8 @@ class PerfilUsuarioFragment : Fragment() {
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
         var avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 0)
+
+
 
 
         val avatars = listOf(
