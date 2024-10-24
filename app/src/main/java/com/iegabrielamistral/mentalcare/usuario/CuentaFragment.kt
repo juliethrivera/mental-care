@@ -52,15 +52,17 @@ class CuentaFragment : Fragment() {
         textCorreo = view.findViewById(R.id.textCorreo)
         textContraseña = view.findViewById(R.id.textContraseña)
         guardar = view.findViewById(R.id.guardar)
-
         editText = view.findViewById(R.id.Editext)
+
+        guardar.isEnabled = false
+        guardar.alpha = 0.5f
 
 
         editText.setOnClickListener {
             shwDatePikerDialog()
         }
 
-        guardar.isEnabled = false
+
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -73,6 +75,12 @@ class CuentaFragment : Fragment() {
                             textNombre.text!!.isNotEmpty() && textApellido.text!!.isNotEmpty() &&
                                     editText.text!!.isNotEmpty() && textCorreo.text!!.isNotEmpty()
                                     && textContraseña.text!!.isNotEmpty())
+
+                if(guardar.isEnabled){
+                    guardar.alpha = 1f
+                }else{
+                    guardar.alpha = 0.5f
+                }
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -114,12 +122,6 @@ class CuentaFragment : Fragment() {
             editor.putString("correo", textCorreo.text.toString())
             editor.putString("contraseña", textContraseña.text.toString())
             editor.commit()
-            /*Toast.makeText(requireActivity(), "Se ha guardado exitosamente", Toast.LENGTH_LONG)
-                .show()*/
-
-            /*requireActivity().getSharedPreferences("datos personales", Context.MODE_PRIVATE)
-            val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)*/
 
             (requireActivity() as LoginActivity).apply {
                 createUserWithEmailAndPassword(

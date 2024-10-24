@@ -22,7 +22,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bnvView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:itemIconTint="@color/color"
         app:itemTextColor="@color/color"
         app:layout_constraintBottom_toBottomOf="parent"
