@@ -74,12 +74,11 @@ private const val ARG_PARAM2 = "param2"
         val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
 
         val mensajesHorrible = listOf(
-            "Aunque hoy te sientas roto, recuerda que los pedazos pueden reconstruirse más fuertes.",
-            "Tu valentía para enfrentar este día ya te hace más fuerte de lo que crees.",
-            "La tormenta más oscura precede al día más brillante. Aguanta un poco más, el sol volverá a brillar.",
-            "No estás solo en esta batalla. Hay personas que te aman y están dispuestas a apoyarte.",
-            "La cicatrización comienza desde adentro. Permítete sanar y crecer a tu propio ritmo."
+            "A veces, lo que necesitamos es simplemente seguir, incluso cuando es difícil. El cambio llegará. Recomendación: Mantén una rutina básica, incluso en los días difíciles. A veces, el simple acto de seguir adelante puede hacer una gran diferencia en cómo te sientes.",
+            "Cada día es una nueva oportunidad para sanar y avanzar, por más pequeño que sea el paso.  Recomendación: Establece metas pequeñas y alcanzables cada día. Lo importante no es la rapidez, sino avanzar a tu propio ritmo.",
+
         )
+
         val mensajesMal = listOf(
             "Hoy puede ser un mal día, pero mañana es una nueva oportunidad para empezar de nuevo.",
             "No estás solo en esta batalla; hay personas dispuestas a ayudarte y acompañarte en tu camino hacia la recuperación.",
@@ -94,6 +93,7 @@ private const val ARG_PARAM2 = "param2"
             "La creatividad puede ser la chispa que encienda tu espíritu cuando te sientas aburrido.",
             "La vida está llena de aventuras esperando a ser vividas. ¡Ve y crea las tuyas!"
         )
+
         val mensajeBien = listOf(
             "Que la felicidad que sientes hoy ilumine cada rincón de tu vida.",
             "Sigue cultivando tu bienestar mental y emocional; mereces sentirte así todos los días.",
@@ -134,20 +134,6 @@ private const val ARG_PARAM2 = "param2"
 
     }
 
-
-
-
-
-
-/*private fun signOut() {
-    // [START auth_sign_out]
-    Firebase.auth.signOut()
-    // [END auth_sign_out]
-
-
-}*/
-
-
     fun mostrarMensajes(mensaje : String){
         val mensajeBottomDialog = MensajeBottomDialog()
         val bundle = Bundle()
@@ -175,6 +161,4 @@ private const val ARG_PARAM2 = "param2"
                 }
             }
     }
-
-
 }
