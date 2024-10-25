@@ -36,8 +36,6 @@ class PerfilUsuarioFragment : Fragment() {
     lateinit var edit: ImageView
 
 
-
-
     companion object {
         fun newInstance() = PerfilUsuarioFragment()
     }
@@ -71,9 +69,6 @@ class PerfilUsuarioFragment : Fragment() {
 
 
 
-     resultado.setOnClickListener{
-
-    }
 
 
         cerrarSesion.setOnClickListener {
@@ -96,7 +91,21 @@ class PerfilUsuarioFragment : Fragment() {
 
         var avatar = sharedPref?.getInt(SAVED_AVATAR_PROFILE, 0)
 
+        sharedPref?.apply {
 
+            val lista = listOf(
+                getInt(SAVED_RESULTADO_1, 0), getInt(SAVED_RESULTADO_2, 0), getInt(
+                    SAVED_RESULTADO_3, 0
+                ), getInt(SAVED_RESULTADO_4, 0), getInt(SAVED_RESULTADO_5, 0)
+            )
+
+            resultado.setOnClickListener {
+                val resultadosFragment = ResultadosFragment(lista)
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, resultadosFragment).commit()
+
+            }
+        }
 
 
         val avatars = listOf(

@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:text="Ejercicios de meditación"
+        android:text="Ejercicios de Meditación"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,9 +38,9 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_liberacion_del_viento_1"
+        android:src="@drawable/meditacion_1"
         app:layout_constraintEnd_toStartOf="@id/sentadilla_hindu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -50,9 +50,9 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/sentadilla_hindu5"
+        android:src="@drawable/meditacion_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/liberacion_del_viento"
         app:layout_constraintTop_toBottomOf="@id/textView" />
@@ -63,7 +63,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_low_lunge_3"
+        android:src="@drawable/meditacion_3"
         app:layout_constraintEnd_toStartOf="@id/postura_de_la_silla"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/liberacion_del_viento" />
@@ -74,7 +74,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_de_la_silla_4"
+        android:src="@drawable/meditacion_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/postura_low_lunge"
         app:layout_constraintTop_toBottomOf="@id/sentadilla_hindu" />
@@ -85,7 +85,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_liberacion_del_aire_5"
+        android:src="@drawable/meditacion_5"
         app:layout_constraintEnd_toStartOf="@id/angulo_hacia_delante_con_giro"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/postura_low_lunge" />
@@ -96,7 +96,7 @@
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/flexion_en_angulo_hacia_delante_con_giro_6"
+        android:src="@drawable/meditacion_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/liberacion_del_aire"
         app:layout_constraintTop_toBottomOf="@id/postura_de_la_silla" />

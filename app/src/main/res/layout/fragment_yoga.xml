@@ -40,9 +40,9 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_de_la_montana_1"
+        android:src="@drawable/yoga_1"
         app:layout_constraintEnd_toStartOf="@id/High_lunge"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ejercicioYoga" />
@@ -52,9 +52,9 @@
         android:layout_width="0dp"
         android:layout_height="120dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/high_lunge_2"
+        android:src="@drawable/yoga_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/Postura_de_la_montana"
         app:layout_constraintTop_toBottomOf="@id/ejercicioYoga" />
@@ -66,7 +66,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/uttanasana_3"
+        android:src="@drawable/yoga_3"
         app:layout_constraintEnd_toStartOf="@id/Plancha_lateral"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Postura_de_la_montana" />
@@ -78,7 +78,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/plancha_lateral_4"
+        android:src="@drawable/yoga_4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/Uttanasana"
         app:layout_constraintTop_toBottomOf="@id/High_lunge" />
@@ -90,7 +90,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_arriba_5"
+        android:src="@drawable/yoga_5"
         app:layout_constraintEnd_toStartOf="@id/Postura_del_perro_hacia_abajo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Uttanasana" />
@@ -102,40 +102,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_perro_hacia_abajo_6"
+        android:src="@drawable/yoga_6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/Postura_del_perro_hacia_arriba"
         app:layout_constraintTop_toBottomOf="@id/Plancha_lateral" />
-
-    <ImageView
-        android:id="@+id/Postura_del_gato_y_la_vaca"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_gato_y_la_vaca_7"
-        app:layout_constraintEnd_toStartOf="@id/Postura_del_nino"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Postura_del_perro_hacia_arriba" />
-
-    <ImageView
-        android:id="@+id/Postura_del_nino"
-        android:layout_width="0dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/postura_del_nino_8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/Postura_del_gato_y_la_vaca"
-        app:layout_constraintTop_toBottomOf="@id/Postura_del_perro_hacia_abajo" />
 
     <Button
         android:id="@+id/empezar"
         android:layout_width="160dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
         android:layout_marginBottom="64dp"
         android:backgroundTint="@color/white"
         android:text="Empezar"
@@ -144,7 +119,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Postura_del_gato_y_la_vaca" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

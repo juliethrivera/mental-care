@@ -25,18 +25,6 @@
       "animacion": "postura_plancha_lateral"
     },
     {
-      "nombre": "POSTURA DEL PERRO HACIA ARRIBA",
-      "tiempo":60,
-      "descripcion": "Fortalece los musculos de la espalda, abdomen y piernas.Fortalece tobillos y muñecas,estira isquiotibiales y gemelos.Estimula el sistema nervioso.",
-      "animacion": "postura_perro_hacia_arriba"
-    },
-    {
-      "nombre": "POSTURA DEL PERRO HACIA ABAJO",
-      "tiempo": 60,
-      "descripcion": "Estira,fortalece,alarga la rotacion interna de los flexores de la cadera junto con la extension hacia adelante de la columna,fortalece la pelvis y la espalda baja.",
-      "animacion": "postura_perro_hacia_abajo"
-    },
-    {
       "nombre": "POSTURA DEL GATO Y LA VACA",
       "tiempo": 900,
       "descripcion": "Estira y moviliza la culumna vertebral, alivia la tension en la espalda baja y mejora la flexibilidad en esta area.Tambien ayuda a fortalecer los musculos de la espalda y el abdomen.",

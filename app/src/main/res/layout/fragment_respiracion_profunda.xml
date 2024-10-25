@@ -14,12 +14,11 @@
         android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:background="@null"
         android:scaleType="fitCenter"
         android:src="@drawable/arrow_back_"
-        app:layout_constraintEnd_toStartOf="@id/titulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,15 +26,26 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:text="Ejercicios de Respiración Profunda"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="16dp"
+        android:text="Ejercicios de respiración"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/home"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profunda"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        />
 
     <ImageView
         android:id="@+id/respiracion_boca_arriba"
@@ -47,26 +57,26 @@
         android:src="@drawable/respiracion_boca_arriba"
         app:layout_constraintEnd_toStartOf="@id/respiracion_boca_abajo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
+        app:layout_constraintTop_toBottomOf="@id/pro" />
 
     <ImageView
         android:id="@+id/respiracion_boca_abajo"
         android:layout_width="0dp"
         android:layout_height="130dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/respiracion_boca_abajo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/respiracion_boca_arriba"
-        app:layout_constraintTop_toBottomOf="@id/titulo" />
+        app:layout_constraintTop_toBottomOf="@id/pro" />
 
     <ImageView
         android:id="@+id/respiracion_sentado"
         android:layout_width="0dp"
         android:layout_height="129dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="2dp"
         android:src="@drawable/respiracion_sentado"
         app:layout_constraintEnd_toStartOf="@id/bostezo_hasta_sonreir"
@@ -78,7 +88,7 @@
         android:layout_width="0dp"
         android:layout_height="129dp"
         android:layout_marginStart="2dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:src="@drawable/respiracion_sonreir"
         app:layout_constraintEnd_toEndOf="parent"

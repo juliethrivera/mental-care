@@ -28,6 +28,8 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
   class HomeFragment : Fragment() {
+
+      lateinit var card : CardView
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -72,6 +74,7 @@ private const val ARG_PARAM2 = "param2"
         val excelenteText: TextView = view.findViewById(R.id.excelente_text)
         val cardTest : CardView = view.findViewById(R.id.card_test)
         val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
+        card = view.findViewById(R.id.card_edi)
 
         val mensajesHorrible = listOf(
 
@@ -136,6 +139,11 @@ private const val ARG_PARAM2 = "param2"
         }
         EjerciciosRelajación.setOnClickListener {
             (activity as MainActivity).bnvView.selectedItemId = R.id.Relajación
+        }
+        card.setOnClickListener {
+            /*val resultadosFragment = ResultadosFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, resultadosFragment).commit()*/
         }
 
     }

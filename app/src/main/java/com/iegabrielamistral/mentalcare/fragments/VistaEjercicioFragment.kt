@@ -3,6 +3,7 @@ package com.iegabrielamistral.mentalcare.fragments
 import android.content.Context
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -102,8 +103,6 @@ class VistaEjercicioFragment : Fragment() {
 
         }
 
-        var jsonObject = JSONObject(jsonString)
-
         val gson = Gson()
 
         val data: `EjerciciosRelajacion` =
@@ -116,7 +115,20 @@ class VistaEjercicioFragment : Fragment() {
 
         siguienteEjercicio.setOnClickListener {
             numeroEjercicio++
-            cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
+            Log.d("EjercicioFragment", "numeroEjercicio $numeroEjercicio  julieth fastidiosa ${ejercicios.size}")
+            if (numeroEjercicio < ejercicios.size ) {
+                cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
+
+            }else if(numeroEjercicio == ejercicios.size){
+                siguienteEjercicio.text = "Finalizar"
+            }
+            else{
+                val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
+
+            }
+
         }
 
     }
