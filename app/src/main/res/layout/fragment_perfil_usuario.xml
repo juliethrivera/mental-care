@@ -5,8 +5,21 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFB6C1"
     tools:context=".fragments.PerfilUsuarioFragment">
+
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_azul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/usuario"
@@ -129,43 +142,48 @@
             android:id="@+id/opciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="5dp"
-            android:text="Opciones"
+            android:layout_marginEnd="32dp"
 
+            android:text="Opciones"
             android:textColor="@color/black"
             android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
-        <TextView
+        <Button
             android:id="@+id/resultado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
-            android:backgroundTint="@color/design_default_color_secondary"
-            android:text="Resultado De Test Anterior"
-            android:textColor="#000000"
-            android:textSize="20sp"
-
-            app:cornerRadius="10dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/custom_botton"
+            android:text="Resultado de Test Anterior"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/opciones" />
 
-        <TextView
+        <Button
             android:id="@+id/cerrarSesion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/design_default_color_secondary"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/custom_botton"
             android:text="Cerrar Sesión"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorLink="#2089BA"
-            android:textSize="20sp"
-            app:cornerRadius="10dp"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/resultado" />
 

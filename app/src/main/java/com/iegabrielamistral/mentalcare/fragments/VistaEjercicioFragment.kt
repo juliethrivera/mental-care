@@ -115,7 +115,7 @@ class VistaEjercicioFragment : Fragment() {
 
         siguienteEjercicio.setOnClickListener {
             numeroEjercicio++
-            Log.d("EjercicioFragment", "numeroEjercicio $numeroEjercicio  julieth fastidiosa ${ejercicios.size}")
+            Log.d("EjercicioFragment", "numeroEjercicio $numeroEjercicio   ${ejercicios.size}")
             if (numeroEjercicio < ejercicios.size ) {
                 cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
 

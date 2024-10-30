@@ -9,6 +9,17 @@
     tools:context=".fragments.YogaFragment">
 
     <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_azul"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/atras"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -109,13 +120,15 @@
 
     <Button
         android:id="@+id/empezar"
-        android:layout_width="160dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginBottom="64dp"
-        android:backgroundTint="@color/white"
+        android:background="@drawable/custom_botton"
         android:text="Empezar"
-        android:textColor="@color/black"
-        app:cornerRadius="4dp"
+        android:textColor="@color/white"
+        app:cornerRadius="50dp"
+        android:textSize="16sp"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

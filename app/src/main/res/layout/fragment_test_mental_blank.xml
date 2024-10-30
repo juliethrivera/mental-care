@@ -8,6 +8,15 @@
     android:textAlignment="textEnd"
     tools:context=".fragments.TestMentalBlankFragment">
 
+    <ImageView
+        android:id="@+id/fondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_azul"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="408dp" />
+
     <TextView
         android:id="@+id/testMental"
         android:layout_width="wrap_content"
@@ -67,8 +76,9 @@
         android:id="@+id/opciones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,18 +122,20 @@
             android:layout_height="wrap_content"
             android:text="Siempre"
             android:textColor="#000000" />
+
     </RadioGroup>
 
     <Button
         android:id="@+id/Siguiente"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="45dp"
         android:text="Siguiente "
-        android:textColor="@color/black"
-        android:backgroundTint="@color/white"
-        android:textSize="20sp"
-        app:cornerRadius="4dp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_botton"
+        android:textSize="16sp"
+        app:cornerRadius="50dp"
+        android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

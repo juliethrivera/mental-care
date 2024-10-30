@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#F6CDF6"
-    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
     tools:context=".fragments.ResultadosFragment">
+
 
     <ImageView
         android:id="@+id/home"

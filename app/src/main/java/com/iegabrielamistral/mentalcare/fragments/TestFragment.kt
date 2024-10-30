@@ -62,6 +62,7 @@ class TestFragment : Fragment() {
             val testMentalBlankFragment = TestMentalBlankFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, testMentalBlankFragment).commit()
+
         }
     }
 
