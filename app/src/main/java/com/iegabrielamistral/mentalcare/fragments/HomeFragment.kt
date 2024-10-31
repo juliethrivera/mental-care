@@ -1,5 +1,6 @@
 package com.iegabrielamistral.mentalcare.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,6 +17,7 @@ import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.dialogs.MENSAJE
 import com.iegabrielamistral.mentalcare.dialogs.MensajeBottomDialog
+import java.lang.reflect.Array.getInt
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -140,11 +142,23 @@ private const val ARG_PARAM2 = "param2"
         EjerciciosRelajación.setOnClickListener {
             (activity as MainActivity).bnvView.selectedItemId = R.id.Relajación
         }
-        card.setOnClickListener {
-            /*val resultadosFragment = ResultadosFragment()
-            requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView, resultadosFragment).commit()*/
+        val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+        sharedPref?.apply {
+            val lista = listOf(
+                getInt(SAVED_RESULTADO_1, 0), getInt(SAVED_RESULTADO_2, 0), getInt(
+                    SAVED_RESULTADO_3, 0
+                ), getInt(SAVED_RESULTADO_4, 0), getInt(SAVED_RESULTADO_5, 0)
+            )
+            card.setOnClickListener {
+                val resultadosFragment = ResultadosFragment(lista)
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView, resultadosFragment).commit()
+            }
+
+
         }
+
+
 
     }
 

@@ -7,19 +7,9 @@
     android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:textAlignment="center"
-    android:background="#FFB6C1"
+    android:background="@color/blue"
     tools:context=".fragments.RespiracionProfundaFragment">
 
-    <ImageView
-        android:id="@+id/fondo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imagen_azul"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/home"
@@ -112,8 +102,8 @@
         android:layout_height="50dp"
         android:layout_marginBottom="120dp"
         android:text="Empezar"
-        android:textColor="@color/white"
-        android:background="@drawable/custom_botton"
+        android:textColor="@color/black"
+        android:background="@color/white"
         android:textSize="16sp"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -5,20 +5,8 @@
     android:id="@+id/frameLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context=".fragments.PerfilUsuarioFragment">
-
-    <ImageView
-        android:id="@+id/fondo"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imagen_azul"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -35,7 +23,7 @@
         android:id="@+id/edit"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/add_circle"
+        android:src="@drawable/baseline_add_circle_outline_24"
         app:layout_constraintBottom_toBottomOf="@id/usuario"
         app:layout_constraintEnd_toEndOf="@id/usuario" />
 
@@ -161,9 +149,9 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="80dp"
-            android:background="@drawable/custom_botton"
+            android:background="@color/white"
             android:text="Resultado de Test Anterior"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -177,9 +165,9 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="80dp"
-            android:background="@drawable/custom_botton"
+            android:background="@color/white"
             android:text="Cerrar Sesión"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textColorLink="#2089BA"
             android:textSize="16sp"
             android:textAllCaps="false"

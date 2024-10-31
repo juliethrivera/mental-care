@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul"
+    android:background="@color/blue"
     tools:context=".fragments.ResultadosFragment">
 
 
@@ -13,7 +13,7 @@
         android:id="@+id/home"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="16dp"
         android:background="@null"
         android:backgroundTint="#000000"
@@ -27,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="90dp"
         android:text="Resultados"
         android:textAlignment="center"
