@@ -83,6 +83,7 @@ class TestMentalBlankFragment : Fragment() {
             obtenerSeleccion()
             question++
             if (question < 20) {
+                siguiente.text = "Finalizar"
 
                 cargarPregunta(testMental)
             } else {

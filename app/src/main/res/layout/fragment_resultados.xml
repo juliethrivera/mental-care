@@ -186,7 +186,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:progressBackgroundTint="#A64545"
-            android:progressTint="#048F27"
+            android:progressTint="#29D11A"
             android:scaleY="10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/imagenAutoestima"
