@@ -65,29 +65,47 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
 
+
         <TextView
-            android:id="@+id/nombre"
+            android:id="@+id/nombre_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Nombre Usuario"
+            android:text="Nombre"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/informacion" />
+
+        <TextView
+            android:id="@+id/apellido_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Apellido"
             android:textColor="#000000"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/informacion" />
+            app:layout_constraintTop_toBottomOf="@id/nombre_1" />
 
         <TextView
             android:id="@+id/correo_electronico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="5dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="text"
             android:text="Correo Electronico"
@@ -95,15 +113,15 @@
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/nombre" />
+            app:layout_constraintTop_toBottomOf="@id/apellido_1" />
 
         <TextView
             android:id="@+id/fecha_nacimiento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
             android:ems="10"
             android:inputType="text"
             android:text="Fecha de nacimiento"
