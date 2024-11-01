@@ -62,8 +62,6 @@ class CuentaFragment : Fragment() {
             shwDatePikerDialog()
         }
 
-
-
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
@@ -131,12 +129,18 @@ class CuentaFragment : Fragment() {
             }
 
             val usuario = Usuario(
-                FirebaseAuth.getInstance().currentUser?.uid ?: "1",
                 textNombre.text.toString(),
                 textApellido.text.toString(),
                 editText.text.toString(),
                 textCorreo.text.toString()
             )
+
+            val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+            userId?.let{
+                database.child("usuarios").child(it).setValue(usuario)
+            }
+
             database.child("Usuarios").push().setValue(usuario)
         }
 
