@@ -34,10 +34,11 @@
 
     <ImageView
         android:id="@+id/horrible_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/horrible"
+        android:layout_width="66dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/feo"
         app:layout_constraintEnd_toStartOf="@id/mal_imege"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Text" />
@@ -248,7 +249,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13dp"
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/diagrama"
                 app:cardCornerRadius="6dp"
