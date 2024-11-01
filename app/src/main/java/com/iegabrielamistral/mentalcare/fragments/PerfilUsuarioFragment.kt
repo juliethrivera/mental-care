@@ -149,19 +149,14 @@ class PerfilUsuarioFragment : Fragment() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         userId?.let {
-            database.child("usuarios").child(it).addValueEventListener(object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-                    val usuario = snapshot.getValue(Usuario::class.java)
+            database.child("usuarios").child(it).get().addOnSuccessListener { dataSnapshot ->
+                if(dataSnapshot.exists()){
+                    val usuario = dataSnapshot.getValue(Usuario::class.java)
                     usuario?.let {
 
                     }
                 }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-
-            })
+            }
         }
 
 
