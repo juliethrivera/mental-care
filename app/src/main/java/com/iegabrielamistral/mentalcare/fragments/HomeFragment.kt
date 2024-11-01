@@ -62,7 +62,7 @@ private const val ARG_PARAM2 = "param2"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val Mental : TextView = view.findViewById(R.id.Mental)
+        //val Mental : TextView = view.findViewById(R.id.Mental)
         val Text : TextView = view.findViewById(R.id.Text)
         val horribleImage : ImageView = view.findViewById(R.id.horrible_image)
         val horribleText : TextView = view.findViewById(R.id.horrible_text)
