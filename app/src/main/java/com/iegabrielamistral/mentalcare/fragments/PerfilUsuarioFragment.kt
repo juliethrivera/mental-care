@@ -18,8 +18,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.iegabrielamistral.mentalcare.LoginActivity
 import com.iegabrielamistral.mentalcare.R
+import com.iegabrielamistral.mentalcare.Usuario
 import de.hdodenhof.circleimageview.CircleImageView
 
 class PerfilUsuarioFragment : Fragment() {
@@ -137,6 +142,26 @@ class PerfilUsuarioFragment : Fragment() {
                 .replace(R.id.fragmentContainerView, avatarsFragment).commit()
 
 
+        }
+
+        val database = FirebaseDatabase.getInstance().reference
+
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        userId?.let {
+            database.child("usuarios").child(it).addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val usuario = snapshot.getValue(Usuario::class.java)
+                    usuario?.let {
+
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+            })
         }
 
 
