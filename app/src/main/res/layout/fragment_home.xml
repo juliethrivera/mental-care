@@ -34,10 +34,9 @@
 
     <ImageView
         android:id="@+id/horrible_image"
-        android:layout_width="66dp"
-        android:layout_height="57dp"
+        android:layout_width="69dp"
+        android:layout_height="63dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
         android:src="@drawable/feo"
         app:layout_constraintEnd_toStartOf="@id/mal_imege"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,10 +56,10 @@
 
     <ImageView
         android:id="@+id/mal_imege"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/mal"
+        android:layout_width="60dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/enojado"
         app:layout_constraintEnd_toStartOf="@id/aburrido_image"
         app:layout_constraintStart_toEndOf="@id/horrible_image"
         app:layout_constraintTop_toBottomOf="@id/Text" />
@@ -78,10 +77,10 @@
 
     <ImageView
         android:id="@+id/aburrido_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/aburrido"
+        android:layout_width="71dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/estresado"
         app:layout_constraintEnd_toStartOf="@id/bien_image"
         app:layout_constraintStart_toEndOf="@id/mal_imege"
         app:layout_constraintTop_toBottomOf="@id/Text" />
@@ -100,10 +99,10 @@
 
     <ImageView
         android:id="@+id/bien_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/bien"
+        android:layout_width="70dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/feliz"
         app:layout_constraintEnd_toStartOf="@id/excelente_image"
         app:layout_constraintStart_toEndOf="@id/aburrido_image"
         app:layout_constraintTop_toBottomOf="@id/Text" />
@@ -120,11 +119,11 @@
 
     <ImageView
         android:id="@+id/excelente_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_width="60dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:src="@drawable/excelente"
+        android:src="@drawable/contento"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Text" />
 
