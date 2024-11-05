@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
     android:layout_height="match_parent"
     android:background="@color/celeste"
+    android:fitsSystemWindows="true"
     tools:context=".fragments.YogaFragment">
 
 
@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Ejercicios De Yoga"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -112,16 +112,16 @@
         android:id="@+id/empezar"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_botton"
         android:text="Empezar"
-        android:textColor="@color/white"
-        app:cornerRadius="50dp"
-        android:textSize="16sp"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:cornerRadius="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Postura_del_perro_hacia_abajo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

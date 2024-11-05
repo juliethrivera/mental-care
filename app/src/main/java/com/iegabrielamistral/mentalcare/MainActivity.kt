@@ -1,20 +1,13 @@
 package com.iegabrielamistral.mentalcare
 
-import android.content.Context
 import android.os.Bundle
-import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.iegabrielamistral.mentalcare.fragments.EjerciciosRelajacionFragment
 import com.iegabrielamistral.mentalcare.fragments.HomeFragment
-import com.iegabrielamistral.mentalcare.fragments.PerfilFragment
 import com.iegabrielamistral.mentalcare.fragments.PerfilUsuarioFragment
-import com.iegabrielamistral.mentalcare.fragments.RelajacionFragment
-import com.iegabrielamistral.mentalcare.fragments.RespiracionProfundaFragment
 import com.iegabrielamistral.mentalcare.fragments.TestFragment
 
 class MainActivity : AppCompatActivity() {

@@ -35,23 +35,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/empezarTiempo"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:text="Iniciar Tiempo"
-        android:background="@color/white"
-        android:textColor="@color/black"
-        android:textSize="16sp"
-        app:cornerRadius="50dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/decripcion" />
-
     <FrameLayout
         android:id="@+id/contador"
         android:layout_width="wrap_content"
@@ -130,20 +113,36 @@
         app:layout_constraintTop_toBottomOf="@+id/nombreEjercicio" />
 
     <Button
-        android:id="@+id/siguienteEjercicio"
+        android:id="@+id/empezarTiempo"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginTop="20dp"
         android:background="@color/white"
-        android:text="Siguiente Ejercicio"
+        android:text="Iniciar Tiempo"
+        android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:cornerRadius="50dp"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/decripcion" />
+
+    <Button
+        android:id="@+id/siguienteEjercicio"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:text="Siguiente Ejercicio"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/empezarTiempo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
