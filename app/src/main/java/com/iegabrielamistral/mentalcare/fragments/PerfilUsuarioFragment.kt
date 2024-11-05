@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import androidx.fragment.app.viewModels
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -39,6 +39,10 @@ class PerfilUsuarioFragment : Fragment() {
     lateinit var nombre_usuario: EditText
     lateinit var resultado: TextView
     lateinit var edit: ImageView
+    lateinit var nbr: TextView
+    lateinit var apd: TextView
+    lateinit var electronico: TextView
+    lateinit var nacimiento: TextView
 
 
     companion object {
@@ -71,6 +75,10 @@ class PerfilUsuarioFragment : Fragment() {
         nombre_usuario = view.findViewById(R.id.nombre_usuario)
         resultado = view.findViewById(R.id.resultado)
         edit = view.findViewById(R.id.edit)
+        nbr = view.findViewById(R.id.nombre_1)
+        apd = view.findViewById(R.id.apellido_1)
+        electronico = view.findViewById(R.id.correo_electronico)
+        nacimiento = view.findViewById(R.id.fecha_nacimiento)
 
 
 
@@ -149,14 +157,22 @@ class PerfilUsuarioFragment : Fragment() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         userId?.let {
-            database.child("usuarios").child(it).get().addOnSuccessListener { dataSnapshot ->
-                if(dataSnapshot.exists()){
-                    val usuario = dataSnapshot.getValue(Usuario::class.java)
+            database.child("usuarios").child(it).addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val usuario = snapshot.getValue(Usuario::class.java)
                     usuario?.let {
-
+                        nbr.text = it.nombre
+                        apd.text = it.apellido
+                        electronico.text = it.correo
+                        nacimiento.text = it.fecha
                     }
                 }
-            }
+
+                override fun onCancelled(error: DatabaseError) {
+
+                }
+
+            })
         }
 
 

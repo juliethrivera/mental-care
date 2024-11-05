@@ -44,8 +44,6 @@ class CuentaFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val database = FirebaseDatabase.getInstance().reference
-
         val back: Button = view.findViewById(R.id.back)
         textNombre = view.findViewById(R.id.textNombre)
         textApellido = view.findViewById(R.id.textApellido)
@@ -93,7 +91,7 @@ class CuentaFragment : Fragment() {
         textContraseña.addTextChangedListener(textWatcher)
 
 
-        var pref = requireActivity().getSharedPreferences("datos_personales", Context.MODE_PRIVATE)
+        var pref = requireActivity().getSharedPreferences(requireActivity().packageName, Context.MODE_PRIVATE)
 
         var nombre = pref.getString("nombre", "")
         textNombre.setText(nombre)
@@ -111,15 +109,15 @@ class CuentaFragment : Fragment() {
         textContraseña.setText(contraseña)
 
         guardar.setOnClickListener {
-            var pref =
-                requireActivity().getSharedPreferences("nombre_personal", Context.MODE_PRIVATE)
-            var editor = pref.edit()
+            val pref =
+                requireActivity().getSharedPreferences(requireActivity().packageName, Context.MODE_PRIVATE)
+            val editor = pref.edit()
             editor.putString("nombre", textNombre.text.toString())
             editor.putString("apellido", textApellido.text.toString())
             editor.putString("fecha", editText.text.toString())
             editor.putString("correo", textCorreo.text.toString())
             editor.putString("contraseña", textContraseña.text.toString())
-            editor.commit()
+            editor.apply()
 
             (requireActivity() as LoginActivity).apply {
                 createUserWithEmailAndPassword(
@@ -127,21 +125,6 @@ class CuentaFragment : Fragment() {
                     textContraseña.text.toString()
                 )
             }
-
-            val usuario = Usuario(
-                textNombre.text.toString(),
-                textApellido.text.toString(),
-                editText.text.toString(),
-                textCorreo.text.toString()
-            )
-
-            val userId = FirebaseAuth.getInstance().currentUser?.uid
-
-            userId?.let{
-                database.child("usuarios").child(it).setValue(usuario)
-            }
-
-            database.child("Usuarios").push().setValue(usuario)
         }
 
         back.setOnClickListener {

@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.iegabrielamistral.mentalcare.usuario.RegistroFragment
 
 class LoginActivity : AppCompatActivity() {
@@ -91,6 +92,31 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
+
+
+                    val database = FirebaseDatabase.getInstance().reference
+
+                    val sharePref = getSharedPreferences(packageName, MODE_PRIVATE)
+
+
+                    val nombre = sharePref.getString("nombre", "")
+                    val apellido = sharePref.getString("apellido", "")
+                    val correo = sharePref.getString("correo", "")
+                    val fecha = sharePref.getString("fecha", "")
+
+                    val usuario = Usuario(
+                        nombre!!,
+                        apellido!!,
+                        correo!!,
+                        fecha!!
+                    )
+
+                    val userId = user?.uid
+
+                    userId?.let{
+                        database.child("usuarios").child(it).setValue(usuario)
+                    }
+
                     updateUI(user)
                 } else {
                     // If sign in fails, display a message to the user.
