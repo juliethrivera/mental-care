@@ -114,7 +114,7 @@ class LoginActivity : AppCompatActivity() {
                     val userId = user?.uid
 
                     userId?.let{
-                        database.child("usuarios").child(it).setValue(usuario)
+                        database.child("Usuarios").child(it).setValue(usuario)
                     }
 
                     updateUI(user)

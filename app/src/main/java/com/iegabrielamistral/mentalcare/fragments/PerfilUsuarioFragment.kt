@@ -151,20 +151,20 @@ class PerfilUsuarioFragment : Fragment() {
 
 
         }
-
+////
         val database = FirebaseDatabase.getInstance().reference
 
         val userId = FirebaseAuth.getInstance().currentUser?.uid
 
         userId?.let {
-            database.child("usuarios").child(it).addValueEventListener(object : ValueEventListener{
+            database.child("Usuarios").child(it).addValueEventListener(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val usuario = snapshot.getValue(Usuario::class.java)
                     usuario?.let {
                         nbr.text = it.nombre
                         apd.text = it.apellido
-                        electronico.text = it.correo
                         nacimiento.text = it.fecha
+                        electronico.text = it.correo
                     }
                 }
 
