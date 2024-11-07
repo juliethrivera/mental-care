@@ -102,14 +102,15 @@ class LoginActivity : AppCompatActivity() {
 
                     val nombre = sharePref.getString("nombre", "")
                     val apellido = sharePref.getString("apellido", "")
-                    val correo = sharePref.getString("correo", "")
                     val fecha = sharePref.getString("fecha", "")
+                    val correo = sharePref.getString("correo", "")
 
                     val usuario = Usuario(
                         nombre!!,
                         apellido!!,
-                        correo!!,
-                        fecha!!
+                        fecha!!,
+                        correo!!
+
                     )
 
                     val userId = user?.uid

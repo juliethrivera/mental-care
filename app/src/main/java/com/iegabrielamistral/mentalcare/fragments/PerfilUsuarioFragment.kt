@@ -161,6 +161,7 @@ class PerfilUsuarioFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     val usuario = snapshot.getValue(Usuario::class.java)
                     usuario?.let {
+
                         nbr.text = it.nombre
                         apd.text = it.apellido
                         nacimiento.text = it.fecha
