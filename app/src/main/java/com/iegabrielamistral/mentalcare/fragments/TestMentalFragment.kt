@@ -82,8 +82,8 @@ class TestMentalBlankFragment : Fragment() {
         siguiente.setOnClickListener {
             obtenerSeleccion()
             question++
-            if (question <= 20) {
-                siguiente.text = "Finalizar"
+            if (question < 20) {
+                siguiente.text = if(question == 19) "Finalizar" else "Siguiente"
 
                 cargarPregunta(testMental)
             } else {
