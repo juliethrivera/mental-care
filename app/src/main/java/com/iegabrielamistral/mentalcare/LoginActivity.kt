@@ -98,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
                     val database = FirebaseDatabase.getInstance().reference
 
                     val sharePref = getSharedPreferences(packageName, MODE_PRIVATE)
-
+                       //
 
                     val nombre = sharePref.getString("nombre", "")
                     val apellido = sharePref.getString("apellido", "")
