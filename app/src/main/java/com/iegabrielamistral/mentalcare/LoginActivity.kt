@@ -23,6 +23,7 @@ import com.iegabrielamistral.mentalcare.usuario.RegistroFragment
 class LoginActivity : AppCompatActivity() {
 
     // [START declare_auth]
+    //firebase
     private lateinit var auth: FirebaseAuth
     // [END declare_auth]
 
