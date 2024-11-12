@@ -139,22 +139,16 @@ class TestMentalBlankFragment : Fragment() {
         when (opciones.checkedRadioButtonId) {
             opcion_1.id -> {
                 selecciones[categoria] += 0
-
             }
-
             opcion_2.id -> {
                 selecciones[categoria] += 10
-
             }
-
             opcion_3.id -> {
                 selecciones[categoria] += 15
             }
-
             opcion_4.id -> {
                 selecciones[categoria] += 20
             }
-
             opcion_5.id -> {
                 selecciones[categoria] += 25
             }
@@ -178,17 +172,12 @@ class TestMentalBlankFragment : Fragment() {
         opcion_3.text = testMental.preguntas[question].opcion3
         opcion_4.text = testMental.preguntas[question].opcion4
         opcion_5.text = testMental.preguntas[question].opcion5
-
     }
-
     fun actualizarProgreso(pregunta: Int) {
         val p = 5 * pregunta
         progreso.progress = p
     }
-
-
 }
-
 const val SAVED_RESULTADO_1 = "saved_resultado_1"
 const val SAVED_RESULTADO_2 = "saved_resultado_2"
 const val SAVED_RESULTADO_3 = "saved_resultado_3"

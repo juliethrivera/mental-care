@@ -36,7 +36,6 @@ class PerfilUsuarioFragment : Fragment() {
 
     lateinit var usuario: CircleImageView
     lateinit var cerrarSesion: TextView
-    lateinit var nombre_usuario: EditText
     lateinit var resultado: TextView
     lateinit var edit: ImageView
     lateinit var nbr: TextView
@@ -72,7 +71,6 @@ class PerfilUsuarioFragment : Fragment() {
 
         usuario = view.findViewById(R.id.usuario)
         cerrarSesion = view.findViewById(R.id.cerrarSesion)
-        nombre_usuario = view.findViewById(R.id.nombre_usuario)
         resultado = view.findViewById(R.id.resultado)
         edit = view.findViewById(R.id.edit)
         nbr = view.findViewById(R.id.nombre_1)

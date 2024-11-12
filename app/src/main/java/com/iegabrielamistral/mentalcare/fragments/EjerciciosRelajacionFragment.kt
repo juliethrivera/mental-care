@@ -72,19 +72,15 @@ class EjerciciosRelajacionFragment : Fragment() {
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, yogaFragment).commit()
         }
-
         cardMeditacion.setOnClickListener {
             val meditacionFragment = MeditacionFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, meditacionFragment).commit()
-
         }
-
         cardRespiracionProfunda.setOnClickListener {
             val respiracionProfundaFragment = RespiracionProfundaFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView, respiracionProfundaFragment).commit()
-
 
         }
 

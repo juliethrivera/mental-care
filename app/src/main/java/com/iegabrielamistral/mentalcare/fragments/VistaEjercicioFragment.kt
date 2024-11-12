@@ -126,9 +126,7 @@ class VistaEjercicioFragment : Fragment() {
                 val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
-
             }
-
         }
 
     }

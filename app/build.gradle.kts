@@ -80,15 +80,14 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
+    //base de datos que contiene google
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
-
     implementation("com.google.firebase:firebase-auth-ktx")
-
     implementation("com.google.android.gms:play-services-auth:20.7.0")
     implementation("com.google.firebase:firebase-analytics")
-
+    //gson
     implementation ("com.google.code.gson:gson:2.11.0")
-
+    //gif animacion
     implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.29")
      //libreria del item avatar
     implementation ("de.hdodenhof:circleimageview:3.1.0")

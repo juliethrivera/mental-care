@@ -56,8 +56,6 @@ class TestFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         testButton = view.findViewById(R.id.testButton)
 
-
-
         testButton.setOnClickListener{
             val testMentalBlankFragment = TestMentalBlankFragment()
             requireActivity().supportFragmentManager.beginTransaction()

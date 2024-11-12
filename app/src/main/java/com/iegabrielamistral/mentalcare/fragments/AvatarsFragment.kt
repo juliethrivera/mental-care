@@ -45,7 +45,6 @@ class AvatarsFragment : Fragment(), OnAvatarSelected {
                 .replace(R.id.fragmentContainerView, perfilUsuarioFragment).commit()
         }
     }
-
     override fun onAvatarClick(avatar: Int) {
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
         sharedPref?.edit()?.putInt(SAVED_AVATAR_PROFILE, avatar)?.apply()
