@@ -94,11 +94,9 @@ class LoginActivity : AppCompatActivity() {
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
 
-
                     val database = FirebaseDatabase.getInstance().reference
 
                     val sharePref = getSharedPreferences(packageName, MODE_PRIVATE)
-                       //
 
                     val nombre = sharePref.getString("nombre", "")
                     val apellido = sharePref.getString("apellido", "")
@@ -112,9 +110,7 @@ class LoginActivity : AppCompatActivity() {
                         correo!!
 
                     )
-
                     val userId = user?.uid
-
                     userId?.let{
                         database.child("Usuarios").child(it).setValue(usuario)
                     }

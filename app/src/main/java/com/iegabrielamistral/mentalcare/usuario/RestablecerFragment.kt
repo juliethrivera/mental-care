@@ -78,14 +78,9 @@ class RestablecerFragment : Fragment() {
         ediTxtEmail.addTextChangedListener(textWatcher)
 
         btnResetPassaword.setOnClickListener {
-
-
             (requireActivity() as LoginActivity).apply {
-
                 passwordRecover(ediTxtEmail.text.toString())
-
             }
-
         }
     }
 

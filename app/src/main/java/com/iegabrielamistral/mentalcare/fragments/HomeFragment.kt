@@ -32,6 +32,8 @@ private const val ARG_PARAM2 = "param2"
   class HomeFragment : Fragment() {
 
       lateinit var card : CardView
+
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -62,8 +64,6 @@ private const val ARG_PARAM2 = "param2"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val Mental : TextView = view.findViewById(R.id.Mental)
-        val Text : TextView = view.findViewById(R.id.Text)
         val horribleImage : ImageView = view.findViewById(R.id.horrible_image)
         val horribleText : TextView = view.findViewById(R.id.horrible_text)
         val malImage : ImageView = view.findViewById(R.id.mal_imege)
@@ -142,7 +142,9 @@ private const val ARG_PARAM2 = "param2"
         EjerciciosRelajación.setOnClickListener {
             (activity as MainActivity).bnvView.selectedItemId = R.id.Relajación
         }
+
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
+
         sharedPref?.apply {
             val lista = listOf(
                 getInt(SAVED_RESULTADO_1, 0), getInt(SAVED_RESULTADO_2, 0), getInt(
