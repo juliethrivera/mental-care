@@ -23,9 +23,10 @@ import com.iegabrielamistral.mentalcare.model.Ejercicio
 import com.iegabrielamistral.mentalcare.model.`EjerciciosRelajacion`
 import org.json.JSONObject
 import java.io.InputStream
-
+//CLASE
 class VistaEjercicioFragment : Fragment() {
 
+    //declare las variables
     private lateinit var anterior: ImageView
     private lateinit var titulo: TextView
     private lateinit var tiempo: ImageView
@@ -38,8 +39,10 @@ class VistaEjercicioFragment : Fragment() {
     private lateinit var siguienteEjercicio: Button
     private lateinit var empezarTiempo: Button
 
+    // Variable que guardará la instancia del temporizador (CountDownTimer). Inicialmente está en null.
     var timer: CountDownTimer? = null
 
+    // Variable que guarda el número del ejercicio actual. Comienza en 0.
     var numeroEjercicio = 0
 
     companion object {
@@ -51,6 +54,7 @@ class VistaEjercicioFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //inicialice las variables
         anterior = view.findViewById(R.id.home)
         titulo = view.findViewById(R.id.titulo)
         contador = view.findViewById(R.id.contador)
@@ -65,57 +69,74 @@ class VistaEjercicioFragment : Fragment() {
 
 
 
-
+        // Se obtiene el tipo de ejercicio desde los argumentos del fragmento actual.
+        // Si no se encuentra el tipo de ejercicio, se asigna el valor por defecto "YOGA".
         val tipoEjercicio = requireArguments().getString(TIPO_EJERCICIO, YOGA)
 
+        // Se establece un OnClickListener para el botón o acción "anterior".
         anterior.setOnClickListener {
+            // Se crea una instancia de un fragmento vacío (por defecto, para manejarlo más tarde).
             var fragment = Fragment()
 
+            // Dependiendo del tipo de ejercicio (obtenido previamente), se selecciona el fragmento correspondiente.
             when(tipoEjercicio){
                 YOGA -> {
-                    fragment = YogaFragment()
+                    fragment = YogaFragment() // Si el tipo es "YOGA", se carga el fragmento YogaFragment.
                 }
                 MEDITACION -> {
-                    fragment = MeditacionFragment()
+                    fragment = MeditacionFragment() // Si el tipo es "MEDITACION", se carga el fragmento MeditacionFragment.
                 }
                 RESPIRACION_PROFUNDA -> {
-                    fragment = RespiracionProfundaFragment()
+                    fragment = RespiracionProfundaFragment() // Si el tipo es "RESPIRACION PROFUNDA", se carga el fragmento RespiracionProfundaFragment.
                 }
             }
-
-
+            // Se realiza la transacción para reemplazar el fragmento actual por el nuevo fragmento seleccionado.
             requireActivity().supportFragmentManager.beginTransaction()
+                // Reemplaza el fragmento en el contenedor especificado.
                 .replace(R.id.fragmentContainerView, fragment).commit()
         }
 
+
+        // Usamos una expresión 'when' para determinar el tipo de ejercicio y cargar el archivo JSON correspondiente
         val jsonString = when (tipoEjercicio) {
+            // Si el tipo de ejercicio es 'YOGA', se lee el archivo 'yoga.json' desde los recursos raw
             YOGA -> {
                 readJsonFromRaw(requireContext(), R.raw.yoga)
             }
-
+            // Si el tipo de ejercicio es 'MEDITACION', se lee el archivo 'MEDITACION.json' desde los recursos raw
             MEDITACION -> {
                 readJsonFromRaw(requireContext(), R.raw.meditacion)
             }
-
+            // Si el tipo de ejercicio es cualquier otro valor (por ejemplo, 'RESPIRACION_PROFUNDA'), se lee el archivo 'respiracion_profunda.json'
             else -> {
                 readJsonFromRaw(requireContext(), R.raw.respiracion_profunda)
             }
-
         }
 
+        // Se crea una instancia de Gson, que es una librería para convertir objetos Java a JSON y viceversa
         val gson = Gson()
 
+        // Usamos 'fromJson' para convertir el JSON (jsonString) en un objeto de la clase 'EjerciciosRelajacion'
+        // 'TypeToken' se usa para proporcionar la información de tipo genérico de 'EjerciciosRelajacion'
         val data: `EjerciciosRelajacion` =
             gson.fromJson(jsonString, object : TypeToken<`EjerciciosRelajacion`>() {}.type)
 
+        // Accedemos a la lista de 'ejercicios' que se encuentra en el objeto 'data' (el que fue deserializado desde el JSON)
         val ejercicios = data.ejercicios
 
 
+        // Llamamos a la función 'cargarSiguienteEjercicio' y le pasamos el ejercicio correspondiente
+        // Según el índice 'numeroEjercicio' (que indica cuál es el siguiente ejercicio)
         cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
 
+
+
         siguienteEjercicio.setOnClickListener {
+            // Incrementamos el contador 'numeroEjercicio' para avanzar al siguiente ejercicio
             numeroEjercicio++
+            // Se imprime en el log el valor actual de 'numeroEjercicio' y el tamaño de la lista 'ejercicios'
             Log.d("EjercicioFragment", "numeroEjercicio $numeroEjercicio   ${ejercicios.size}")
+            // Comprobamos si el número de ejercicio actual es menor que el total de ejercicios
             if (numeroEjercicio < ejercicios.size ) {
                 cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
 
@@ -130,6 +151,7 @@ class VistaEjercicioFragment : Fragment() {
         }
 
     }
+
 
     fun cargarSiguienteEjercicio(ejercicio: Ejercicio) {
         val e = numeroEjercicio + 1

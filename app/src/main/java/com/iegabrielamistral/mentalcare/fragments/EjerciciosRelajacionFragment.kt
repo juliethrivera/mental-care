@@ -13,10 +13,10 @@ import androidx.fragment.app.viewModels
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.meditacion.MeditacionFragment
 
-
+// se creo una clase
 class EjerciciosRelajacionFragment : Fragment() {
 
-
+    //declare las variables de lo que contiene la vista de ejercicios de relajacion
     private lateinit var ejerciciosDeRelajacion: TextView
     private lateinit var cardYoga: CardView
     private lateinit var imagenYoga: ImageView
@@ -47,7 +47,7 @@ class EjerciciosRelajacionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        //inicialice las variables
         ejerciciosDeRelajacion = view.findViewById(R.id.titulo)
         cardYoga = view.findViewById(R.id.cardYoga)
         imagenYoga = view.findViewById(R.id.imagenYoga)
@@ -64,12 +64,13 @@ class EjerciciosRelajacionFragment : Fragment() {
 
 
 
-
-
-
+        // Se establece un listener para el clic en el cardYoga
         cardYoga.setOnClickListener {
+            // Creamos una nueva instancia del fragmento YogaFragment
             val yogaFragment = YogaFragment()
+            // Iniciamos una transacción de fragmentos
             requireActivity().supportFragmentManager.beginTransaction()
+                // Reemplazamos el fragmento actual con el nuevo fragmento (YogaFragment)
                 .replace(R.id.fragmentContainerView, yogaFragment).commit()
         }
         cardMeditacion.setOnClickListener {
@@ -95,4 +96,5 @@ class EjerciciosRelajacionFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_ejercicios_relajacion, container, false)
     }
 }
+
 
