@@ -63,7 +63,7 @@ class LoginActivity : AppCompatActivity() {
 
         // [START initialize_auth]
         // Initialize Firebase Auth
-        auth = Firebase.auth
+        auth = FirebaseAuth.getInstance()
         // [END initialize_auth]
 
     }
@@ -76,9 +76,14 @@ class LoginActivity : AppCompatActivity() {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
                 // Google Sign In was successful, authenticate with Firebase
-                val account = task.getResult(ApiException::class.java)!!
+                val account = task.getResult(ApiException::class.java)
                 //Log.d(RegistroFragment.TAG, "firebaseAuthWithGoogle:" + account.id)
-                firebaseAuthWithGoogle(account.idToken!!)
+                account?.let {
+                    account.idToken?.let { id ->
+                        firebaseAuthWithGoogle(id)
+                    }
+                }
+
             } catch (e: ApiException) {
                 // Google Sign In failed, update UI appropriately
                 //Log.w(RegistroFragment.TAG, "Google sign in failed", e)
@@ -111,7 +116,7 @@ class LoginActivity : AppCompatActivity() {
 
                     )
                     val userId = user?.uid
-                    userId?.let{
+                    userId?.let {
                         database.child("Usuarios").child(it).setValue(usuario)
                     }
 
@@ -147,17 +152,20 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
-        // Esta funcion es para restablecer la contraseña
+
+    // Esta funcion es para restablecer la contraseña
     fun passwordRecover(email: String) {
         Log.d("FirebaseAuth", "email: $email")
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d("FirebaseAuth", "isSuccessful")
-                    Toast.makeText(this,"Se ha enviado un mensaje al correo", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Se ha enviado un mensaje al correo", Toast.LENGTH_SHORT)
+                        .show()
                 } else {
                     Log.d("FirebaseAuth", "error: ${task.exception?.message}")
-                    Toast.makeText(this,"Error ${task.exception?.message}  ", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Error ${task.exception?.message}  ", Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
     }
@@ -165,7 +173,7 @@ class LoginActivity : AppCompatActivity() {
     private fun firebaseAuthWithGoogle(idToken: String) {
         val credential = GoogleAuthProvider.getCredential(idToken, null)
         auth.signInWithCredential(credential)
-            .addOnCompleteListener(this@LoginActivity) { task ->
+            .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     //Log.d(RegistroFragment.TAG, "signInWithCredential:success")
