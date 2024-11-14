@@ -68,7 +68,7 @@ class PerfilUsuarioFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-
+        // Aqui estoy inicializando las variables
         usuario = view.findViewById(R.id.usuario)
         cerrarSesion = view.findViewById(R.id.cerrarSesion)
         resultado = view.findViewById(R.id.resultado)
@@ -78,16 +78,10 @@ class PerfilUsuarioFragment : Fragment() {
         electronico = view.findViewById(R.id.correo_electronico)
         nacimiento = view.findViewById(R.id.fecha_nacimiento)
 
-
-
-
-
+         // esto es para cerrar sesión
         cerrarSesion.setOnClickListener {
             signOut()
-
         }
-
-
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             //.requestIdToken(getString(R.string.default_web_client_id))
             .requestEmail()
@@ -149,7 +143,8 @@ class PerfilUsuarioFragment : Fragment() {
 
 
         }
-////
+
+        //todo es es para obtener los datos en los canpos de textos del perfil
         val database = FirebaseDatabase.getInstance().reference
 
         val userId = FirebaseAuth.getInstance().currentUser?.uid
@@ -177,7 +172,7 @@ class PerfilUsuarioFragment : Fragment() {
 
     }
 
-
+    // esta función es para cerrar sesión en google
     private fun signOut() {
         // [START auth_sign_out]
         auth.signOut()

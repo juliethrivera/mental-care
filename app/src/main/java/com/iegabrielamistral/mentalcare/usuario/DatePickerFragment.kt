@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.DatePicker
 import androidx.fragment.app.DialogFragment
 import java.util.Calendar
+// esta clase es para la función del calendario
 
 class DatePickerFragment(val listener:( day:Int, month:Int, year:Int )-> Unit): DialogFragment(),
     DatePickerDialog.OnDateSetListener{

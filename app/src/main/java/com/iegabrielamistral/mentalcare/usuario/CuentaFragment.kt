@@ -26,6 +26,7 @@ class CuentaFragment : Fragment() {
     companion object {
         fun newInstance() = CuentaFragment()
     }
+    // aqui estoy declarando los componentes del layout
 
     lateinit var editText: TextInputEditText
     lateinit var textContraseña: TextInputEditText
@@ -43,6 +44,7 @@ class CuentaFragment : Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //aqui estoy inicializando los componentes del layout
 
         val back: Button = view.findViewById(R.id.back)
         textNombre = view.findViewById(R.id.textNombre)
@@ -55,10 +57,11 @@ class CuentaFragment : Fragment() {
         editText.setOnClickListener {
             shwDatePikerDialog()
         }
-
+        // esto es para hinabilitar el boton de guardar
         guardar.isEnabled = false
+        // esto es para poner trasparente el boton de guardar
         guardar.alpha = 0.5f
-
+       // esto es para que se cumplan los campos de textos y darle ese color trasparente al boton
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
@@ -82,14 +85,14 @@ class CuentaFragment : Fragment() {
 
             }
         }
-
+       //Aqui estoy validando los campos de textos
         textNombre.addTextChangedListener(textWatcher)
         textApellido.addTextChangedListener(textWatcher)
         editText.addTextChangedListener(textWatcher)
         textCorreo.addTextChangedListener(textWatcher)
         textContraseña.addTextChangedListener(textWatcher)
 
-
+        //este es el boton para guardar los datos en getSharedPreferences y iniciar sesión
         guardar.setOnClickListener {
             val pref =
                 requireActivity().getSharedPreferences(requireActivity().packageName, Context.MODE_PRIVATE)
@@ -108,7 +111,7 @@ class CuentaFragment : Fragment() {
                 )
             }
         }
-
+      // esto es para regresar a la vista anterior
         back.setOnClickListener {
             val registroFragment = RegistroFragment()
             requireActivity().supportFragmentManager.beginTransaction()
@@ -118,13 +121,13 @@ class CuentaFragment : Fragment() {
 
     }
 
-
+        // aqui estoy llamando la clase del dataPiker
     private fun shwDatePikerDialog() {
         val datePicker = DatePickerFragment { day, month, year -> onDateSelected(day, month, year) }
         datePicker.show(requireActivity().supportFragmentManager, "datePicker")
 
     }
-
+        // esto es para el calenario
     fun onDateSelected(day: Int, month: Int, year: Int) {
 
         var nmonth = month + 1
