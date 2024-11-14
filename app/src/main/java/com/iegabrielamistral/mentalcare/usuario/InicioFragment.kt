@@ -36,17 +36,18 @@ class InicioFragment : Fragment() {
         val contraseña: TextInputEditText = view.findViewById(R.id.contraseña)
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
-       val  password : TextView = view.findViewById(R.id.textPassword)
+        val password: TextView = view.findViewById(R.id.textPassword)
 
         password.setOnClickListener {
-           val restablecerFragment = RestablecerFragment()
+            val restablecerFragment = RestablecerFragment()
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView2,restablecerFragment).commit()
+                .replace(R.id.fragmentContainerView2, restablecerFragment).commit()
 
         }
 
 
         button2.isEnabled = false
+        button2.alpha = 0.5f
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -56,6 +57,7 @@ class InicioFragment : Fragment() {
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 button2.isEnabled =
                     (correo.text!!.isNotEmpty() && contraseña.text!!.isNotEmpty())
+                button2.alpha = 1f
             }
 
             override fun afterTextChanged(p0: Editable?) {
@@ -73,11 +75,6 @@ class InicioFragment : Fragment() {
                 .replace(R.id.fragmentContainerView2, registroFragment).commit()
         }
         button2.setOnClickListener {
-            /*val intent = Intent(requireActivity(), MainActivity::class.java)
-            startActivity(intent)
-
-            Toast.makeText(requireActivity(),"La información es incorrecta ",Toast.LENGTH_LONG).show()
-*/
 
             (requireActivity() as LoginActivity).apply {
                 signInWithEmailAndPassword(correo.text.toString(), contraseña.text.toString())

@@ -52,13 +52,12 @@ class CuentaFragment : Fragment() {
         guardar = view.findViewById(R.id.guardar)
         editText = view.findViewById(R.id.Editext)
 
-        guardar.isEnabled = false
-        guardar.alpha = 0.5f
-
-
         editText.setOnClickListener {
             shwDatePikerDialog()
         }
+
+        guardar.isEnabled = false
+        guardar.alpha = 0.5f
 
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -90,23 +89,6 @@ class CuentaFragment : Fragment() {
         textCorreo.addTextChangedListener(textWatcher)
         textContraseña.addTextChangedListener(textWatcher)
 
-
-        var pref = requireActivity().getSharedPreferences(requireActivity().packageName, Context.MODE_PRIVATE)
-
-        var nombre = pref.getString("nombre", "")
-        textNombre.setText(nombre)
-
-        var apellido = pref.getString("apellido", "")
-        textApellido.setText(apellido)
-
-        var fecha = pref.getString("fecha", "")
-        editText.setText(fecha)
-
-        var correo = pref.getString("correo", "")
-        textCorreo.setText(correo)
-
-        var contraseña = pref.getString("contraseña", "")
-        textContraseña.setText(contraseña)
 
         guardar.setOnClickListener {
             val pref =
