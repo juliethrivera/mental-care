@@ -37,6 +37,7 @@ class InicioFragment : Fragment() {
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
         val password: TextView = view.findViewById(R.id.textPassword)
+        //
 
         password.setOnClickListener {
             val restablecerFragment = RestablecerFragment()
@@ -45,8 +46,9 @@ class InicioFragment : Fragment() {
 
         }
 
-
+        // esto es para hinabilitar el boton de guardar
         button2.isEnabled = false
+        // esto es para que se cumplan los campos de textos y darle ese color trasparente al boton
         button2.alpha = 0.5f
 
         val textWatcher = object : TextWatcher {
@@ -64,11 +66,11 @@ class InicioFragment : Fragment() {
 
             }
         }
-
+        //Aqui estoy validando los campos de textos
         correo.addTextChangedListener(textWatcher)
         contraseña.addTextChangedListener(textWatcher)
 
-
+//este es el boton para guardar los datos en getSharedPreferences y iniciar sesión
         button.setOnClickListener {
             val registroFragment = RegistroFragment()
             requireActivity().supportFragmentManager.beginTransaction()

@@ -23,23 +23,25 @@ class RegistroFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        //Aqui declare los componentes de la vista y los inicialise
 
         val iniciar: Button = view.findViewById(R.id.iniciar)
         val crear: Button = view.findViewById(R.id.crear)
         val button: SignInButton = view.findViewById(R.id.button)
 
-
+     //esto es para iniciar sesión en la aplicación
         iniciar.setOnClickListener {
             val inicioFragment = InicioFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView2, inicioFragment).commit()
         }
+        // esto es para crear una cuenta
         crear.setOnClickListener {
             val cuentaFragment = CuentaFragment()
             requireActivity().supportFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView2, cuentaFragment).commit()
         }
+        //este es el boton de google
         button.setOnClickListener {
             (requireActivity() as LoginActivity).apply {
                 signIn()

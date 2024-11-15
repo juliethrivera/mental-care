@@ -59,6 +59,7 @@ class RestablecerFragment : Fragment() {
                 .replace(R.id.fragmentContainerView2, vistaFragment).commit()
 
         }
+
         val textWatcher = object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
@@ -76,6 +77,7 @@ class RestablecerFragment : Fragment() {
             }
         }
         ediTxtEmail.addTextChangedListener(textWatcher)
+        //Aqui estoy llamando la función que esta en el loginActivity
 
         btnResetPassaword.setOnClickListener {
             (requireActivity() as LoginActivity).apply {

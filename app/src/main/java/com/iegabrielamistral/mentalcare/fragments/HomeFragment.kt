@@ -78,6 +78,8 @@ private const val ARG_PARAM2 = "param2"
         val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
         card = view.findViewById(R.id.card_edi)
 
+        // esto son todas las listas de consejos y recomendación para cada icono
+
         val mensajesHorrible = listOf(
 
             "A veces, lo que necesitamos es simplemente seguir, incluso cuando es difícil. El cambio llegará.\nRecomendación: Mantén una rutina básica, incluso en los días difíciles. A veces, el simple acto de seguir adelante puede hacer una gran diferencia en cómo te sientes.",
@@ -124,6 +126,7 @@ private const val ARG_PARAM2 = "param2"
             mostrarMensajes(mensajesHorrible.random())
 
         }
+        // Aqui le estoy parsando a todos los iconos el mensaje que debe mostrar
         malImage.setOnClickListener{
             mostrarMensajes(mensajesMal.random())
         }
@@ -163,6 +166,7 @@ private const val ARG_PARAM2 = "param2"
 
 
     }
+    // esta función es para mostrar los mensajes que contienes los iconos
 
     fun mostrarMensajes(mensaje : String){
         val mensajeBottomDialog = MensajeBottomDialog()

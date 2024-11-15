@@ -40,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    ///
+    // lo que hay en este codigo es para iniciar sesión co google y para recuperar contraseña
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
