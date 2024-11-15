@@ -99,24 +99,29 @@ class LoginActivity : AppCompatActivity() {
                     Log.d(TAG, "createUserWithEmail:success")
                     val user = auth.currentUser
 
+                    // Obtiene la referencia a la base de datos en tiempo real de Firebase.
                     val database = FirebaseDatabase.getInstance().reference
-
+                    // Obtiene las preferencias compartidas (SharedPreferences) usando el nombre del paquete.
                     val sharePref = getSharedPreferences(packageName, MODE_PRIVATE)
-
+                    // Recupera los datos almacenados en las preferencias compartidas: nombre, apellido, fecha y correo.
                     val nombre = sharePref.getString("nombre", "")
                     val apellido = sharePref.getString("apellido", "")
                     val fecha = sharePref.getString("fecha", "")
                     val correo = sharePref.getString("correo", "")
-
+                    // Crea un objeto Usuario con los datos recuperados de las preferencias compartidas.
+                    // Utiliza el operador !! para asegurar que los valores no sean nulos (aunque debería manejarse con más cuidado).
                     val usuario = Usuario(
-                        nombre!!,
-                        apellido!!,
-                        fecha!!,
-                        correo!!
-
+                        nombre!!,    // Asegura que 'nombre' no sea nulo
+                        apellido!!,  // Asegura que 'apellido' no sea nulo
+                        fecha!!,     // Asegura que 'fecha' no sea nulo
+                        correo!!     // Asegura que 'correo' no sea nulo
                     )
+                    // Obtiene el ID de usuario (uid) del objeto `user`, que podría ser un usuario autenticado en Firebase.
                     val userId = user?.uid
+                    // Si el userId no es nulo, ejecuta el bloque de código dentro de `let`.
                     userId?.let {
+                        // Guarda el objeto `usuario` en la base de datos de Firebase en la ruta "Usuarios/{userId}".
+                        // Utiliza el `uid` del usuario como el identificador único en la base de datos.
                         database.child("Usuarios").child(it).setValue(usuario)
                     }
 

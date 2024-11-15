@@ -37,8 +37,7 @@ class InicioFragment : Fragment() {
         val button: Button = view.findViewById(R.id.button)
         val button2: Button = view.findViewById(R.id.button2)
         val password: TextView = view.findViewById(R.id.textPassword)
-        //
-
+        // Configura un listener para el texto 'password' que lo a la vista de reslablecer con tgraseña
         password.setOnClickListener {
             val restablecerFragment = RestablecerFragment()
             requireActivity().supportFragmentManager.beginTransaction()
@@ -50,13 +49,15 @@ class InicioFragment : Fragment() {
         button2.isEnabled = false
         // esto es para que se cumplan los campos de textos y darle ese color trasparente al boton
         button2.alpha = 0.5f
-
+        // Se crea un TextWatcher para monitorear los cambios en los campos de texto
         val textWatcher = object : TextWatcher {
+            // Este método se llama antes de que el texto cambie
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
+                // No se realiza ninguna acción antes de que el texto cambie
             }
-
+            // Este método se llama cuando el texto ha cambiado
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                // Habilita o deshabilita el botón 'inicio' dependiendo de si todos los campos están llenos
                 button2.isEnabled =
                     (correo.text!!.isNotEmpty() && contraseña.text!!.isNotEmpty())
                 button2.alpha = 1f
@@ -70,7 +71,7 @@ class InicioFragment : Fragment() {
         correo.addTextChangedListener(textWatcher)
         contraseña.addTextChangedListener(textWatcher)
 
-//este es el boton para guardar los datos en getSharedPreferences y iniciar sesión
+        //este es el boton para guardar los datos en getSharedPreferences y iniciar sesión
         button.setOnClickListener {
             val registroFragment = RegistroFragment()
             requireActivity().supportFragmentManager.beginTransaction()

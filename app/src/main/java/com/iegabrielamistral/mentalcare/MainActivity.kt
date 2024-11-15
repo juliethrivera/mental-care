@@ -12,7 +12,8 @@ import com.iegabrielamistral.mentalcare.fragments.TestFragment
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var bnvView : BottomNavigationView
+    // Declaración de la variable 'bnvView' de tipo BottomNavigationView, que se inicializará más abajo
+    lateinit var bnvView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,27 +24,38 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }*/
-       loadFragment(HomeFragment())
+
+        // Carga el fragmento HomeFragment por defecto al inicio de la actividad
+        loadFragment(HomeFragment())
+        // Inicializa el BottomNavigationView con el ID 'bnvView'
         bnvView = findViewById(R.id.bnvView) as BottomNavigationView
+
+        // Establece un listener para manejar la selección de elementos en el BottomNavigationView
         bnvView.setOnItemSelectedListener {
-            when (it.itemId){
-                R.id.home ->{
+            // Dependiendo del ID del ítem seleccionado, carga el fragmento correspondiente
+            when (it.itemId) {
+                // Si se selecciona el ítem 'home', carga el fragmento HomeFragment
+                R.id.home -> {
                     loadFragment(HomeFragment())
                     true
                 }
+                // Si se selecciona el ítem 'test', carga el fragmento TestFragment
                 R.id.test -> {
                     loadFragment(TestFragment())
                     true
                 }
-                R.id.Relajación ->{
+                // Si se selecciona el ítem 'Relajación', carga el fragmento EjerciciosRelajacionFragment
+                R.id.Relajación -> {
                     loadFragment(EjerciciosRelajacionFragment())
                     true
                 }
-                R.id.perfil_usuario ->{
+                // Si se selecciona el ítem 'perfil_usuario', carga el fragmento PerfilUsuarioFragment
+                R.id.perfil_usuario -> {
                     loadFragment(PerfilUsuarioFragment())
                     true
                 }
-                else ->{
+                // Si no se selecciona ninguno de los ítems anteriores, carga el fragmento HomeFragment por defecto
+                else -> {
                     loadFragment(HomeFragment())
                     true
                 }
@@ -51,9 +63,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment(fragment: Fragment){
+    // Función privada para cargar un nuevo fragmento en el contenedor especificado
+    private fun loadFragment(fragment: Fragment) {
+        // Inicia una transacción de fragmentos con el FragmentManager de la actividad actual
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.fragmentContainerView,fragment)
+
+        // Reemplaza el fragmento actual en el contenedor con el nuevo fragmento proporcionado
+        transaction.replace(R.id.fragmentContainerView, fragment)
+
+        // Confirma la transacción para que se realice el cambio de fragmento
         transaction.commit()
     }
 }

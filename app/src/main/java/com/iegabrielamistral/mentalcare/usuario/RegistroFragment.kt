@@ -49,16 +49,6 @@ class RegistroFragment : Fragment() {
         }
     }
 
-    // [START on_start_check_user]
-
-
-    // [END on_start_check_user]
-
-    // [START onactivityresult]
-
-    // [END onactivityresult]
-
-    // [START auth_with_google]
 
     companion object {
         private const val TAG = "GoogleActivity"
