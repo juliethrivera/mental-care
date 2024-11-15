@@ -138,12 +138,15 @@ class VistaEjercicioFragment : Fragment() {
             Log.d("EjercicioFragment", "numeroEjercicio $numeroEjercicio   ${ejercicios.size}")
             // Comprobamos si el número de ejercicio actual es menor que el total de ejercicios
             if (numeroEjercicio < ejercicios.size ) {
+                // Si hay más ejercicios, cargar el siguiente ejercicio
                 cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
 
             }else if(numeroEjercicio == ejercicios.size){
+                // Si ya se han mostrado todos los ejercicios, cambiar el texto a "Finalizar"
                 siguienteEjercicio.text = "Finalizar"
             }
             else{
+                // Si el número de ejercicio es mayor que el tamaño de la lista, finalizar y mostrar fragmento de relajación
                 val ejerciciosRelajacionFragment = EjerciciosRelajacionFragment()
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.fragmentContainerView, ejerciciosRelajacionFragment).commit()
@@ -154,54 +157,69 @@ class VistaEjercicioFragment : Fragment() {
 
 
     fun cargarSiguienteEjercicio(ejercicio: Ejercicio) {
+        // Calcular el número del ejercicio (actual + 1) para mostrar en el título
         val e = numeroEjercicio + 1
         titulo.text = "Ejercicio #$e"
+        // Actualizar los campos de la interfaz con los datos del ejercicio
         nombreEjercicio.text = ejercicio.nombre
         descripcion.text = ejercicio.descripcion
         imagenEjercicio.setImageResource(obtenerImagen(ejercicio.animacion))
 
+        // Convertir el tiempo del ejercicio (en segundos) a milisegundos
         val millis = (ejercicio.tiempo * 1000).toLong()
-
+        // Cancelar cualquier temporizador anterior si existe
         if (timer != null) {
             timer!!.cancel()
         }
-
+        // Actualizar el contador en la interfaz con el tiempo formateado
         texto_contador.text = convertMillisToMinutesSeconds(millis)
 
+        // Configurar el botón para iniciar el temporizador cuando se haga clic
         empezarTiempo.setOnClickListener {
             iniciarTiempo(millis)
         }
     }
 
     fun iniciarTiempo(millis: Long) {
+        // Crear un temporizador de cuenta regresiva, donde 'millis' es el tiempo total
+        // y 1000 es el intervalo en milisegundos entre cada actualización (1 segundo).
         timer = object :
             CountDownTimer(millis, 1000) {
+            // Este método se ejecuta cada vez que pasa un segundo.
             override fun onTick(millisUntilFinished: Long) {
+                // Actualizar el contador en la interfaz con el tiempo restante formateado
                 texto_contador.text = convertMillisToMinutesSeconds(millisUntilFinished)
             }
 
-
+            // Este método se ejecuta cuando el temporizador llega a 0.
             override fun onFinish() {
 
             }
         }
+        // Iniciar el temporizador
         timer!!.start()
     }
 
     fun convertMillisToMinutesSeconds(millis: Long): String {
-        val minutos = (millis / 1000) / 60
-        val segundos = (millis / 1000) % 60
 
+        // Calcular los minutos. Primero, convertimos milisegundos a segundos, luego dividimos entre 60.
+        val minutos = (millis / 1000) / 60
+        // Calcular los segundos restantes. Usamos el operador módulo para obtener el resto de los segundos después de los minutos.
+        val segundos = (millis / 1000) % 60
+        // Formatear y devolver el tiempo en formato "mm:ss", asegurándonos de que siempre tenga 2 dígitos.
         return String.format("%02d:%02d", minutos, segundos)
     }
 
 
     fun convertirTiempo(tiempo: Int): String {
+        // Convertir tiempo (en segundos) a minutos y segundos
         val minutos = tiempo / 60
+        // Retornar el tiempo en formato "minutos:segundos", asegurándonos de que los segundos tengan dos dígitos
         return "$minutos:00"
     }
 
     fun obtenerImagen(nombreArchivo: String): Int {
+        // Obtener el ID del recurso de imagen basado en el nombre del archivo
         val iconResId =
             resources.getIdentifier(nombreArchivo, "drawable", requireContext().packageName)
         return iconResId
@@ -224,6 +242,7 @@ class VistaEjercicioFragment : Fragment() {
     }
 }
 
+//se creo los const para que no se cambien los valores asignados
 const val TIPO_EJERCICIO = "tipo_ejercicio"
 const val YOGA = "yoga"
 const val MEDITACION = "meditacion"

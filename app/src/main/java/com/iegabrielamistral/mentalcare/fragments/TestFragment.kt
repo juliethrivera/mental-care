@@ -32,18 +32,14 @@ class TestFragment : Fragment() {
         fragment.arguments = args
         return fragment
     }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
 
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
     }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -54,8 +50,10 @@ class TestFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //inicialice las variables
         testButton = view.findViewById(R.id.testButton)
 
+        //se creo un listener para mandar al test mental
         testButton.setOnClickListener{
             val testMentalBlankFragment = TestMentalBlankFragment()
             requireActivity().supportFragmentManager.beginTransaction()
