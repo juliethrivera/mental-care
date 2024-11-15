@@ -29,21 +29,31 @@ private const val ARG_PARAM2 = "param2"
  * Use the [HomeFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-  class HomeFragment : Fragment() {
-
-      lateinit var card : CardView
+class HomeFragment : Fragment() {
+    // Declaración de una variable 'card' de tipo CardView que se inicializará mas abajo
+    lateinit var card : CardView
 
 
     // TODO: Rename and change types of parameters
+    // Declaración de dos parámetros opcionales de tipo String que se inicializan como null
     private var param1: String? = null
     private var param2: String? = null
+
+    // Función estática para crear una nueva instancia del fragmento HomeFragment sin parámetros
     fun newInstance(): HomeFragment {
+        // Crea un nuevo objeto Bundle, que puede almacenar datos para el fragmento
         val args = Bundle()
 
+        // Crea una nueva instancia del fragmento HomeFragment
         val fragment = HomeFragment()
+
+        // Asocia el Bundle vacío (args) con los argumentos del fragmento
         fragment.arguments = args
+
+        // Devuelve la nueva instancia del fragmento
         return fragment
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -64,19 +74,20 @@ private const val ARG_PARAM2 = "param2"
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val horribleImage : ImageView = view.findViewById(R.id.horrible_image)
-        val horribleText : TextView = view.findViewById(R.id.horrible_text)
-        val malImage : ImageView = view.findViewById(R.id.mal_imege)
-        val malText : TextView = view.findViewById(R.id.mal_text)
-        val aburridoImage: ImageView = view.findViewById(R.id.aburrido_image)
-        val aburridoText : TextView = view.findViewById(R.id.aburrido_text)
-        val bienImage : ImageView = view.findViewById(R.id.bien_image)
-        val bienText : TextView = view.findViewById(R.id.bien_text)
-        val excelenteImage : ImageView = view.findViewById(R.id.excelente_image)
-        val excelenteText: TextView = view.findViewById(R.id.excelente_text)
-        val cardTest : CardView = view.findViewById(R.id.card_test)
-        val EjerciciosRelajación : CardView = view.findViewById(R.id.Ejercicios_relajación)
-        card = view.findViewById(R.id.card_edi)
+        // Inicializa las vistas (ImageView, TextView, CardView) a partir del layout del fragmento
+        val horribleImage: ImageView = view.findViewById(R.id.horrible_image)  // Imagen para "horrible"
+        val horribleText: TextView = view.findViewById(R.id.horrible_text)  // Texto para "horrible"
+        val malImage: ImageView = view.findViewById(R.id.mal_imege)  // Imagen para "mal"
+        val malText: TextView = view.findViewById(R.id.mal_text)  // Texto para "mal"
+        val aburridoImage: ImageView = view.findViewById(R.id.aburrido_image)  // Imagen para "aburrido"
+        val aburridoText: TextView = view.findViewById(R.id.aburrido_text)  // Texto para "aburrido"
+        val bienImage: ImageView = view.findViewById(R.id.bien_image)  // Imagen para "bien"
+        val bienText: TextView = view.findViewById(R.id.bien_text)  // Texto para "bien"
+        val excelenteImage: ImageView = view.findViewById(R.id.excelente_image)  // Imagen para "excelente"
+        val excelenteText: TextView = view.findViewById(R.id.excelente_text)  // Texto para "excelente"
+        val cardTest: CardView = view.findViewById(R.id.card_test)  // CardView para "test"
+        val EjerciciosRelajación: CardView = view.findViewById(R.id.Ejercicios_relajación)  // CardView para "ejercicios de relajación"
+        card = view.findViewById(R.id.card_edi)  // CardView para "editar"
 
         // esto son todas las listas de consejos y recomendación para cada icono
 
@@ -122,57 +133,92 @@ private const val ARG_PARAM2 = "param2"
             "Estar en un estado tan positivo te da claridad; utiliza esta perspectiva para tomar decisiones importantes.\nRecomendación: Reflexiona sobre cualquier decisión o cambio que hayas estado posponiendo. Tu mente clara y positiva puede ayudarte a ver opciones y soluciones que antes no habías considerado."
         )
 
-        horribleImage.setOnClickListener{
+        // Establece un listener para el clic en la imagen "horribleImage"
+        // Al hacer clic, se muestra un mensaje aleatorio de la lista mensajesHorrible
+        horribleImage.setOnClickListener {
             mostrarMensajes(mensajesHorrible.random())
-
         }
-        // Aqui le estoy parsando a todos los iconos el mensaje que debe mostrar
-        malImage.setOnClickListener{
+
+        // Establece un listener para el clic en la imagen "malImage"
+        // Al hacer clic, se muestra un mensaje aleatorio de la lista mensajesMal
+        malImage.setOnClickListener {
             mostrarMensajes(mensajesMal.random())
         }
-        aburridoImage.setOnClickListener{
+
+        // Establece un listener para el clic en la imagen "aburridoImage"
+        // Al hacer clic, se muestra un mensaje aleatorio de la lista mensajeAburrido
+        aburridoImage.setOnClickListener {
             mostrarMensajes(mensajeAburrido.random())
         }
-        bienImage.setOnClickListener{
+
+        // Establece un listener para el clic en la imagen "bienImage"
+        // Al hacer clic, se muestra un mensaje aleatorio de la lista mensajeBien
+        bienImage.setOnClickListener {
             mostrarMensajes(mensajeBien.random())
         }
-        excelenteImage.setOnClickListener{
+
+        // Establece un listener para el clic en la imagen "excelenteImage"
+        // Al hacer clic, se muestra un mensaje aleatorio de la lista mensajeExcelente
+        excelenteImage.setOnClickListener {
             mostrarMensajes(mensajeExcelente.random())
         }
-        cardTest.setOnClickListener{
+
+        // Establece un listener para el clic en la tarjeta "cardTest"
+        // Al hacer clic, selecciona el ítem "test" en el BottomNavigationView de MainActivity
+        cardTest.setOnClickListener {
             (activity as MainActivity).bnvView.selectedItemId = R.id.test
         }
+
+        // Establece un listener para el clic en "EjerciciosRelajación"
+        // Al hacer clic, selecciona el ítem "Relajación" en el BottomNavigationView de MainActivity
         EjerciciosRelajación.setOnClickListener {
             (activity as MainActivity).bnvView.selectedItemId = R.id.Relajación
         }
 
+        // Obtiene el SharedPreferences asociado a la actividad actual en modo privado
         val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE)
 
         sharedPref?.apply {
+            // Recupera los valores guardados en las SharedPreferences utilizando las claves definidas
+            // Si no existen, se asigna un valor por defecto (0 en este caso)
             val lista = listOf(
-                getInt(SAVED_RESULTADO_1, 0), getInt(SAVED_RESULTADO_2, 0), getInt(
-                    SAVED_RESULTADO_3, 0
-                ), getInt(SAVED_RESULTADO_4, 0), getInt(SAVED_RESULTADO_5, 0)
+                getInt(SAVED_RESULTADO_1, 0),
+                getInt(SAVED_RESULTADO_2, 0),
+                getInt(SAVED_RESULTADO_3, 0),
+                getInt(SAVED_RESULTADO_4, 0),
+                getInt(SAVED_RESULTADO_5, 0)
             )
+
+            // Establece un listener para el clic en el card
             card.setOnClickListener {
+                // Crea una nueva instancia de ResultadosFragment y le pasa la lista de resultados como argumento
                 val resultadosFragment = ResultadosFragment(lista)
+
+                // Reemplaza el fragmento actual con el nuevo ResultadosFragment en el contenedor especificado
                 requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView, resultadosFragment).commit()
+                    .replace(R.id.fragmentContainerView, resultadosFragment)  // Reemplaza el fragmento en el contenedor
+                    .commit()  // Realiza la transacción
             }
-
-
         }
-
 
 
     }
     // esta función es para mostrar los mensajes que contienes los iconos
 
-    fun mostrarMensajes(mensaje : String){
+    // Función que muestra un diálogo con un mensaje en un fragmento
+    fun mostrarMensajes(mensaje: String) {
+        // Crea una nueva instancia del fragmento MensajeBottomDialog
         val mensajeBottomDialog = MensajeBottomDialog()
+
+        // Crea un bundle para pasar datos al fragmento
         val bundle = Bundle()
+        // Pone el mensaje en el bundle, usando la constante MENSAJE como clave
         bundle.putString(MENSAJE, mensaje)
+
+        // Asigna el bundle como argumento del fragmento
         mensajeBottomDialog.arguments = bundle
+
+        // Muestra el fragmento en la actividad actual usando el FragmentManager
         mensajeBottomDialog.show(requireActivity().supportFragmentManager, "MensajeBottomDialog")
     }
 
@@ -187,9 +233,12 @@ private const val ARG_PARAM2 = "param2"
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
+        // Función estática para crear una nueva instancia de HomeFragment con parámetros personalizados
         fun newInstance(param1: String, param2: String) =
             HomeFragment().apply {
+                // Crea un Bundle para pasar los parámetros al fragmento
                 arguments = Bundle().apply {
+                    // Añade los parámetros al Bundle usando claves definidas (ARG_PARAM1, ARG_PARAM2)
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                 }

@@ -29,14 +29,18 @@ class VistaFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         // TODO: Use the ViewModel
+        // Usamos un Handler con un delay de 2 segundos (2000 ms) para ejecutar una acción de reemplazo de fragmento
         Handler().postDelayed({
-            // Check if the fragment is still attached before proceeding
+            // Verifica si el fragmento sigue agregado y si la actividad no está finalizando antes de realizar la transacción
             if (isAdded && requireActivity().isFinishing.not()) {
+                // Crea una nueva instancia del fragmento 'RegistroFragment'
                 val registroFragment = RegistroFragment()
+                // Realiza una transacción de fragmento para reemplazar el fragmento actual con 'registroFragment'
                 requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.fragmentContainerView2, registroFragment).commit()
+                    .replace(R.id.fragmentContainerView2, registroFragment) // Reemplaza el fragmento en el contenedor con ID 'fragmentContainerView2'
+                    .commit() // Realiza la transacción
             }
-        }, 2000)
+        }, 2000) // El código se ejecutará después de un retraso de 2000 milisegundos (2 segundos)
 
 
     }

@@ -146,9 +146,7 @@ class PerfilUsuarioFragment : Fragment() {
 
         //todo es es para obtener los datos en los canpos de textos del perfil
         val database = FirebaseDatabase.getInstance().reference
-
         val userId = FirebaseAuth.getInstance().currentUser?.uid
-
         userId?.let {
             database.child("Usuarios").child(it).addValueEventListener(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -161,9 +159,7 @@ class PerfilUsuarioFragment : Fragment() {
                         electronico.text = it.correo
                     }
                 }
-
                 override fun onCancelled(error: DatabaseError) {
-
                 }
 
             })
