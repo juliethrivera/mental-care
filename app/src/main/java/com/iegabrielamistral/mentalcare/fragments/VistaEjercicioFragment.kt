@@ -23,6 +23,8 @@ import com.iegabrielamistral.mentalcare.model.Ejercicio
 import com.iegabrielamistral.mentalcare.model.`EjerciciosRelajacion`
 import org.json.JSONObject
 import java.io.InputStream
+import kotlin.random.Random
+
 //CLASE
 class VistaEjercicioFragment : Fragment() {
 
@@ -67,7 +69,7 @@ class VistaEjercicioFragment : Fragment() {
         siguienteEjercicio = view.findViewById(R.id.siguienteEjercicio)
         empezarTiempo = view.findViewById(R.id.empezarTiempo)
 
-
+        val ejercicio = requireArguments().getBoolean(EJERCICIO, false)
 
         // Se obtiene el tipo de ejercicio desde los argumentos del fragmento actual.
         // Si no se encuentra el tipo de ejercicio, se asigna el valor por defecto "YOGA".
@@ -127,6 +129,13 @@ class VistaEjercicioFragment : Fragment() {
 
         // Llamamos a la función 'cargarSiguienteEjercicio' y le pasamos el ejercicio correspondiente
         // Según el índice 'numeroEjercicio' (que indica cuál es el siguiente ejercicio)
+
+        if (ejercicio) {
+            // Si la variable 'ejercicio' es verdadera, se genera un número aleatorio.
+            // Este número se utilizará para seleccionar un ejercicio al azar de la lista 'ejercicios'.
+            numeroEjercicio = Random.nextInt(0, ejercicios.size)
+        }
+
         cargarSiguienteEjercicio(ejercicios[numeroEjercicio])
 
 
@@ -228,6 +237,8 @@ const val TIPO_EJERCICIO = "tipo_ejercicio"
 const val YOGA = "yoga"
 const val MEDITACION = "meditacion"
 const val RESPIRACION_PROFUNDA = "respiracion_profunda"
+
+const val EJERCICIO = "ejercicio"
 
 
 

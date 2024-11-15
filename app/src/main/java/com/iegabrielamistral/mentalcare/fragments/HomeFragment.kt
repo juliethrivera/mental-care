@@ -16,6 +16,7 @@ import com.google.firebase.auth.auth
 import com.iegabrielamistral.mentalcare.MainActivity
 import com.iegabrielamistral.mentalcare.R
 import com.iegabrielamistral.mentalcare.dialogs.MENSAJE
+import com.iegabrielamistral.mentalcare.dialogs.MOOD
 import com.iegabrielamistral.mentalcare.dialogs.MensajeBottomDialog
 import java.lang.reflect.Array.getInt
 
@@ -122,22 +123,24 @@ private const val ARG_PARAM2 = "param2"
             "Estar en un estado tan positivo te da claridad; utiliza esta perspectiva para tomar decisiones importantes.\nRecomendación: Reflexiona sobre cualquier decisión o cambio que hayas estado posponiendo. Tu mente clara y positiva puede ayudarte a ver opciones y soluciones que antes no habías considerado."
         )
 
-        horribleImage.setOnClickListener{
-            mostrarMensajes(mensajesHorrible.random())
+        /* Aqui le estoy pasando a todos los iconos el mensaje que debe mostrar
+        y le estoy pasando el tipo de ejercicio que le corresponde*/
 
+        horribleImage.setOnClickListener{
+            mostrarMensajes(mensajesHorrible.random(), 0)
         }
-        // Aqui le estoy parsando a todos los iconos el mensaje que debe mostrar
+
         malImage.setOnClickListener{
-            mostrarMensajes(mensajesMal.random())
+            mostrarMensajes(mensajesMal.random(), 1)
         }
         aburridoImage.setOnClickListener{
-            mostrarMensajes(mensajeAburrido.random())
+            mostrarMensajes(mensajeAburrido.random(), 2)
         }
         bienImage.setOnClickListener{
-            mostrarMensajes(mensajeBien.random())
+            mostrarMensajes(mensajeBien.random(), 3)
         }
         excelenteImage.setOnClickListener{
-            mostrarMensajes(mensajeExcelente.random())
+            mostrarMensajes(mensajeExcelente.random(), 4)
         }
         cardTest.setOnClickListener{
             (activity as MainActivity).bnvView.selectedItemId = R.id.test
@@ -168,10 +171,11 @@ private const val ARG_PARAM2 = "param2"
     }
     // esta función es para mostrar los mensajes que contienes los iconos
 
-    fun mostrarMensajes(mensaje : String){
+    fun mostrarMensajes(mensaje : String, tipo : Int){
         val mensajeBottomDialog = MensajeBottomDialog()
         val bundle = Bundle()
         bundle.putString(MENSAJE, mensaje)
+        bundle.putInt(MOOD, tipo)
         mensajeBottomDialog.arguments = bundle
         mensajeBottomDialog.show(requireActivity().supportFragmentManager, "MensajeBottomDialog")
     }
